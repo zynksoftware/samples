@@ -1,5 +1,5 @@
-Zynk Examples and Scripts
--------------------------
+Zynk Samples and Scripts
+------------------------
 
 These example files and scripts in this repository are provided free of charge as examples of how to implement the server side of an integration with our Zynk Integration platform.
 
