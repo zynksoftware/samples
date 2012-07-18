@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectSamples", "http://localhost/ConnectSamples/ConnectSamples.csproj", "{037B15EE-BADC-4BC8-B0C9-D251ECA5960D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{037B15EE-BADC-4BC8-B0C9-D251ECA5960D}.Debug.ActiveCfg = Debug|.NET
+		{037B15EE-BADC-4BC8-B0C9-D251ECA5960D}.Debug.Build.0 = Debug|.NET
+		{037B15EE-BADC-4BC8-B0C9-D251ECA5960D}.Release.ActiveCfg = Release|.NET
+		{037B15EE-BADC-4BC8-B0C9-D251ECA5960D}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

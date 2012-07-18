@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Company>
+	<Products/>
+	<Customers>
+		<Customer>
+			<Id>1</Id>
+			<CompanyName>A1 Design Services</CompanyName>
+			<AccountReference>A1D001</AccountReference>
+			<VatNumber>GB238 3839 38</VatNumber>
+			<CustomerInvoiceAddress>
+				<Title/>
+				<Forename>Jim</Forename>
+				<Surname>Thomas</Surname>
+				<Company>A1 Design Services</Company>
+				<Address1>67a Station Road</Address1>
+				<Address2/>
+				<Address3/>
+				<Town>Blackpool</Town>
+				<Postcode>BP12 7HT</Postcode>
+				<County>Lancashire</County>
+				<Country>GB</Country>
+				<Telephone>01742 876 234</Telephone>
+				<Fax>01742 876 236</Fax>
+				<Mobile>01742 876 235</Mobile>
+				<Email/>
+			</CustomerInvoiceAddress>
+			<CustomerDeliveryAddress>
+				<Title/>
+				<Forename>Jim</Forename>
+				<Surname>Thomas</Surname>
+				<Company>A1 Design Services</Company>
+				<Address1>67a Station Road</Address1>
+				<Address2/>
+				<Address3/>
+				<Town>Blackpool</Town>
+				<Postcode>BP12 7HT</Postcode>
+				<County>Lancashire</County>
+				<Country>GB</Country>
+				<Telephone>01742 876 234</Telephone>
+				<Fax>01742 876 235</Fax>
+				<Mobile/>
+				<Email/>
+			</CustomerDeliveryAddress>
+		</Customer>
+		<Customer>
+			<Id>3</Id>
+			<CompanyName>Bobs Building Supplies</CompanyName>
+			<AccountReference>BBS001</AccountReference>
+			<VatNumber>GB454 3459 48</VatNumber>
+			<CustomerInvoiceAddress>
+				<Title/>
+				<Forename>Susan</Forename>
+				<Surname>Livingstone</Surname>
+				<Company>Bobs Building Supplies</Company>
+				<Address1>Timber Yard</Address1>
+				<Address2>123 Prescot Way</Address2>
+				<Address3/>
+				<Town>Alnwick</Town>
+				<Postcode>AL12 6GH</Postcode>
+				<County>Northumberland</County>
+				<Country>GB</Country>
+				<Telephone>01983 567 123</Telephone>
+				<Fax>01983 234 567</Fax>
+				<Mobile>01983 567 124</Mobile>
+				<Email/>
+			</CustomerInvoiceAddress>
+			<CustomerDeliveryAddress>
+				<Title/>
+				<Forename>Bob</Forename>
+				<Surname>Livingstone</Surname>
+				<Company>Bobs Building Supplies</Company>
+				<Address1>Timber Yard</Address1>
+				<Address2>123 Prescot Way</Address2>
+				<Address3/>
+				<Town>Alnwick</Town>
+				<Postcode>AL12 6GH</Postcode>
+				<County>Northumberland</County>
+				<Country>GB</Country>
+				<Telephone>01983 567 123</Telephone>
+				<Fax>01983 234 567</Fax>
+				<Mobile/>
+				<Email/>
+			</CustomerDeliveryAddress>
+		</Customer>
+		<Customer>
+			<Id>15</Id>
+			<CompanyName>Kinghorn &amp; French</CompanyName>
+			<AccountReference>KIN001</AccountReference>
+			<VatNumber>GB958 5455 12</VatNumber>
+			<CustomerInvoiceAddress>
+				<Title/>
+				<Forename>John</Forename>
+				<Surname>Bell</Surname>
+				<Company>Kinghorn &amp; French</Company>
+				<Address1>98 Cathedral Gardens</Address1>
+				<Address2>Benfield Rd</Address2>
+				<Address3/>
+				<Town>Newcastle upon Tyne</Town>
+				<Postcode>NE19 1GH</Postcode>
+				<County>Tyne &amp; Wear</County>
+				<Country>GB</Country>
+				<Telephone>0191 676 5656</Telephone>
+				<Fax>0191 676 5657</Fax>
+				<Mobile>0191 676 5658</Mobile>
+				<Email/>
+			</CustomerInvoiceAddress>
+			<CustomerDeliveryAddress>
+				<Title/>
+				<Forename>John</Forename>
+				<Surname>Bell</Surname>
+				<Company>Kinghorn &amp; French</Company>
+				<Address1>98 Cathedral Gardens</Address1>
+				<Address2>Benfied Rd</Address2>
+				<Address3/>
+				<Town>Newcastle upon Tyne</Town>
+				<Postcode>NE19 1GH</Postcode>
+				<County>Tyne &amp; Wear</County>
+				<Country>GB</Country>
+				<Telephone>0191 676 5656</Telephone>
+				<Fax>0191 676 5657</Fax>
+				<Mobile/>
+				<Email/>
+			</CustomerDeliveryAddress>
+		</Customer>
+		<Customer>
+			<Id>16</Id>
+			<CompanyName>Macolm Hall Associates</CompanyName>
+			<AccountReference>MAC001</AccountReference>
+			<VatNumber>GB484 4403 43</VatNumber>
+			<CustomerInvoiceAddress>
+				<Title/>
+				<Forename>Siobhan</Forename>
+				<Surname>Winter</Surname>
+				<Company>Macolm Hall Associates</Company>
+				<Address1>172 Edison Street</Address1>
+				<Address2/>
+				<Address3/>
+				<Town>Chester</Town>
+				<Postcode>CH1 4PL</Postcode>
+				<County>Cheshire</County>
+				<Country>GB</Country>
+				<Telephone>01244 343433</Telephone>
+				<Fax>01244 343435</Fax>
+				<Mobile>01244 343434</Mobile>
+				<Email/>
+			</CustomerInvoiceAddress>
+			<CustomerDeliveryAddress>
+				<Title/>
+				<Forename>Siobhan</Forename>
+				<Surname>Winter</Surname>
+				<Company>Malcolm Hall Associates</Company>
+				<Address1>172 Edison Street</Address1>
+				<Address2/>
+				<Address3/>
+				<Town>Chester</Town>
+				<Postcode>CH1 4PL</Postcode>
+				<County>Cheshire</County>
+				<Country>GB</Country>
+				<Telephone>01244 343433</Telephone>
+				<Fax>01244 343435</Fax>
+				<Mobile/>
+				<Email/>
+			</CustomerDeliveryAddress>
+		</Customer>
+	</Customers>
+	<SalesOrders>
+		<SalesOrder>
+			<Id>1</Id>
+			<CustomerId>15</CustomerId>
+			<CustomerOrderNumber/>
+			<Notes1>Please notify our head office</Notes1>
+			<AccountReference>KIN001</AccountReference>
+			<SalesOrderDate>2004-01-02T00:00:00.0000000-00:00</SalesOrderDate>
+			<SalesOrderAddress>
+				<Title/>
+				<Forename>John</Forename>
+				<Surname>Bell</Surname>
+				<Company>Kinghorn &amp; French</Company>
+				<Address1>98 Cathedral Gardens</Address1>
+				<Address2>Benfield Rd</Address2>
+				<Address3/>
+				<Town>Newcastle upon Tyne</Town>
+				<Postcode>NE19 1GH</Postcode>
+				<County>Tyne &amp; Wear</County>
+				<Country/>
+				<Telephone/>
+				<Fax/>
+				<Mobile/>
+				<Email/>
+			</SalesOrderAddress>
+			<SalesOrderDeliveryAddress>
+				<Company>Kinghorn &amp; French</Company>
+				<Address1>98 Cathedral Gardens</Address1>
+				<Address2>Benfied Rd</Address2>
+				<Address3/>
+				<Town>Newcastle upon Tyne</Town>
+				<Postcode>NE19 1GH</Postcode>
+				<County>Tyne &amp; Wear</County>
+				<Country/>
+				<Telephone/>
+				<Fax/>
+				<Mobile/>
+				<Email/>
+			</SalesOrderDeliveryAddress>
+			<SalesOrderItems>
+				<Item>
+					<Sku>PAPER003</Sku>
+					<Name>Copy Paper - Premium Grade</Name>
+					<Description/>
+					<Comments/>
+					<UnitOfSale>1 Ream</UnitOfSale>
+					<QtyOrdered>100</QtyOrdered>
+					<UnitPrice>3.06</UnitPrice>
+					<UnitDiscountAmount>20</UnitDiscountAmount>
+					<TotalNet>244.8</TotalNet>
+					<TotalTax>41.77</TotalTax>
+				</Item>
+			</SalesOrderItems>
+			<Carriage>
+					<Sku></Sku>
+					<Name></Name>
+					<Description/>
+					<Comments/>
+					<UnitOfSale>0</UnitOfSale>
+					<QtyOrdered>0</QtyOrdered>
+					<UnitPrice>0</UnitPrice>
+					<UnitDiscountAmount>0</UnitDiscountAmount>
+					<UnitDiscountPercentage>0</UnitDiscountPercentage>
+					<TotalNet>0</TotalNet>
+					<TotalTax>0</TotalTax>
+					<TaxCode>9</TaxCode>
+			</Carriage>
+		</SalesOrder>
+		<SalesOrder>
+			<Id>2</Id>
+			<CustomerId>16</CustomerId>
+			<CustomerOrderNumber/>
+			<AccountReference>MAC001</AccountReference>
+			<SalesOrderDate>2004-01-05T00:00:00.0000000-00:00</SalesOrderDate>
+			<SalesOrderAddress>
+				<Title/>
+				<Forename>Siobhan</Forename>
+				<Surname>Winter</Surname>
+				<Company>Macolm Hall Associates</Company>
+				<Address1>172 Edison Street</Address1>
+				<Address2/>
+				<Address3/>
+				<Town>Chester</Town>
+				<Postcode>CH1 4PL</Postcode>
+				<County>Cheshire</County>
+				<Country/>
+				<Telephone/>
+				<Fax/>
+				<Mobile/>
+				<Email/>
+			</SalesOrderAddress>
+			<SalesOrderDeliveryAddress>
+				<Company>Macolm Hall Associates</Company>
+				<Address1>172 Edison Street</Address1>
+				<Address2/>
+				<Address3/>
+				<Town>Chester</Town>
+				<Postcode>CH1 4PL</Postcode>
+				<County>Cheshire</County>
+				<Country/>
+				<Telephone/>
+				<Fax/>
+				<Mobile/>
+				<Email/>
+			</SalesOrderDeliveryAddress>
+			<SalesOrderItems>
+				<Item>
+					<Sku>PC001</Sku>
+					<Name>PC Combo Pack 1</Name>
+					<Description/>
+					<Comments/>
+					<UnitOfSale>Each</UnitOfSale>
+					<QtyOrdered>6</QtyOrdered>
+					<UnitPrice>522.5</UnitPrice>
+					<UnitDiscountAmount>2</UnitDiscountAmount>
+					<TotalNet>3072.3</TotalNet>
+					<TotalTax>524.21</TotalTax>
+				</Item>
+			</SalesOrderItems>
+			<Carriage>
+					<Sku></Sku>
+					<Name></Name>
+					<Description/>
+					<Comments/>
+					<UnitOfSale>0</UnitOfSale>
+					<QtyOrdered>0</QtyOrdered>
+					<UnitPrice>0</UnitPrice>
+					<TotalNet>0</TotalNet>
+					<TotalTax>0</TotalTax>
+					<TaxCode>9</TaxCode>
+			</Carriage>
+		</SalesOrder>
+	</SalesOrders>
+	<Invoices>
+		<Invoice>
+			<Id>1</Id>
+			<CustomerId>1</CustomerId>
+			<CustomerOrderNumber>7667</CustomerOrderNumber>
+			<AccountReference>A1D001</AccountReference>
+			<Notes1>Please notify our head office</Notes1>
+			<Notes2>as soon as possible with any</Notes2>
+			<Notes3>delivery descrepencies.</Notes3>
+			<InvoiceDate>2004-01-02T00:00:00.0000000-00:00</InvoiceDate>
+			<InvoiceAddress>
+				<Title/>
+				<Forename>Jim</Forename>
+				<Surname>Thomas</Surname>
+				<Company>A1 Design Services</Company>
+				<Address1>67a Station Road</Address1>
+				<Address2/>
+				<Address3/>
+				<Town>Blackpool</Town>
+				<Postcode>BP12 7HT</Postcode>
+				<County>Lancashire</County>
+				<Country/>
+				<Telephone/>
+				<Fax/>
+				<Mobile/>
+				<Email/>
+			</InvoiceAddress>
+			<InvoiceDeliveryAddress>
+				<Company>A1 Design Services</Company>
+				<Address1>67a Station Road</Address1>
+				<Address2/>
+				<Address3/>
+				<Town>Blackpool</Town>
+				<Postcode>BP12 7HT</Postcode>
+				<County>Lancashire</County>
+				<Country/>
+				<Telephone/>
+				<Fax/>
+				<Mobile/>
+				<Email/>
+			</InvoiceDeliveryAddress>
+			<InvoiceItems>
+				<Item>
+					<Sku>TRAY002</Sku>
+					<Name>Letter Trays - 3 pack (Red)</Name>
+					<Description/>
+					<Comments/>
+					<UnitOfSale>Pack</UnitOfSale>
+					<QtyOrdered>2</QtyOrdered>
+					<UnitPrice>6.65</UnitPrice>
+					<TotalNet>13.3</TotalNet>
+					<TotalTax>2.27</TotalTax>
+				</Item>
+			</InvoiceItems>
+			<Carriage>
+					<Sku></Sku>
+					<Name></Name>
+					<Description/>
+					<Comments/>
+					<UnitOfSale>0</UnitOfSale>
+					<QtyOrdered>0</QtyOrdered>
+					<UnitPrice>0</UnitPrice>
+					<Reference/>
+					<TaxRate>0</TaxRate>
+					<TotalNet>0</TotalNet>
+					<TotalTax>0</TotalTax>
+					<TaxCode>9</TaxCode>
+					<NominalCode>0</NominalCode>
+			</Carriage>
+		</Invoice>
+		<Invoice>
+			<Id>2</Id>
+			<CustomerId>2</CustomerId>
+			<CustomerOrderNumber>1253</CustomerOrderNumber>
+			<AccountReference>BBS001</AccountReference>
+			<Notes1>Please notify our head office</Notes1>
+			<Notes2>as soon as possible with any</Notes2>
+			<Notes3>delivery descrepencies.</Notes3>
+			<InvoiceDate>2004-01-07T00:00:00.0000000-00:00</InvoiceDate>
+			<InvoiceAddress>
+				<Title/>
+				<Forename>Susan</Forename>
+				<Surname>Livingstone</Surname>
+				<Company>Bobs Building Supplies</Company>
+				<Address1>Timber Yard</Address1>
+				<Address2>123 Prescot Way</Address2>
+				<Address3/>
+				<Town>Alnwick</Town>
+				<Postcode>AL12 6GH</Postcode>
+				<County>Northumberland</County>
+				<Country/>
+				<Telephone/>
+				<Fax/>
+				<Mobile/>
+				<Email/>
+			</InvoiceAddress>
+			<InvoiceDeliveryAddress>
+				<Company>Bobs Building Supplies</Company>
+				<Address1>Timber Yard</Address1>
+				<Address2>123 Prescot Way</Address2>
+				<Address3/>
+				<Town>Alnwick</Town>
+				<Postcode>AL12 6GH</Postcode>
+				<County>Northumberland</County>
+				<Country/>
+				<Telephone/>
+				<Fax/>
+				<Mobile/>
+				<Email/>
+			</InvoiceDeliveryAddress>
+			<InvoiceItems>
+				<Item>
+					<Sku>TR002</Sku>
+					<Name>LP200 Laser Printer Toner</Name>
+					<Description/>
+					<Comments/>
+					<UnitOfSale>Each</UnitOfSale>
+					<QtyOrdered>7</QtyOrdered>
+					<UnitPrice>5.7</UnitPrice>
+					<TotalNet>39.9</TotalNet>
+					<TotalTax>6.81</TotalTax>
+				</Item>
+			</InvoiceItems>
+			<Carriage>
+					<Sku></Sku>
+					<Name></Name>
+					<Description/>
+					<Comments/>
+					<UnitOfSale>0</UnitOfSale>
+					<QtyOrdered>0</QtyOrdered>
+					<UnitPrice>0</UnitPrice>
+					<Reference/>
+					<TaxRate>0</TaxRate>
+					<TotalNet>0</TotalNet>
+					<TotalTax>0</TotalTax>
+					<TaxCode>9</TaxCode>
+					<NominalCode>0</NominalCode>
+			</Carriage>
+		</Invoice>
+	</Invoices>
+	<ProductGroups/>
+	<Transactions/>
+</Company>
