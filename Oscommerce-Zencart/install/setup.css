@@ -1,0 +1,8 @@
+body                      {margin:0; padding:0; text-align:center; font-family:Arial,Verdana,helvetica,arial; font-size:8pt; color:#111;}
+#header                   {width:750px; margin:10px auto 0 auto; border-right:1px solid #111; border-bottom:1px solid #111; border-top:1px solid #c0c0c0; border-left:1px solid #c0c0c0;}
+#pageBody                 {width:700px; margin:0 auto; clear:left; border-right:1px dotted #111; border-left:1px dotted #111; text-align:left; padding:30px 10px;}
+#footer                   {width:750px; margin:0px auto; color:#aaa; border-right:1px solid #111; border-bottom:1px solid #111; border-top:1px solid #c0c0c0; border-left:1px solid #c0c0c0; padding:3px;}
+ul li                     {padding:5px 0;}
+ul li.correct             {list-style-image: url('pix/correct.png');}
+ul li.error               {list-style-image: url('pix/error.png');}
+p                         {font-weight:bold;}
