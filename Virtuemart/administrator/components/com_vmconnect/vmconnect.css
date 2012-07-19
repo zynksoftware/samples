@@ -1,0 +1,49 @@
+div#security {
+	float: right;
+}
+
+table.vmc_config {
+	width: 100% ;
+}
+
+table.vmc_config tr td {
+	padding: 2px;
+}
+
+div#upload {
+	float: left;
+}
+
+div#download {
+	float: right;
+}
+
+div#reportdiv {
+	margin-left: 20px;
+	margin-right: 240px;
+	border: 1px solid #CCCCCC;
+	padding: 10px;
+	background: white;
+	text-align: left;
+	background: #F1F3F5;
+}
+
+div#reportdates {
+	margin-left: auto;
+	margin-right: 20px;
+	width: 180px;
+	border: 1px solid #CCCCCC;
+	float: right;
+	background: #F1F3F5;
+	max-height: 350px;
+	overflow: scroll;
+	text-align: left;
+	padding: 10px;
+}
+
+div.vmc_config {
+	width: 48%;
+	border: 1px solid #CCCCCC;
+	margin: 5px;
+	background: #F1F3F5;
+}
