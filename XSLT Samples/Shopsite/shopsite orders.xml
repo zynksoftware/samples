@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE 
+ShopSiteOrders PUBLIC "-//shopsite.com//ShopSiteOrder DTD//EN"
+"http://www.shopsite.com/XML/2.1/shopsiteorders.dtd">
+<ShopSiteOrders>
+  <Response>
+    <ResponseCode>1</ResponseCode>
+    <ResponseDescription>success</ResponseDescription>
+  </Response>
+  <Order>
+    <OrderNumber>1235</OrderNumber>
+    <ShopSiteTransactionID>10000-1315997698</ShopSiteTransactionID>
+    <OrderDate>2011-09-14 04:54:58</OrderDate>
+    <Billing>
+      <FullName>Adam Wardle</FullName>
+      <NameParts>
+        <Title>Mr</Title>
+        <FirstName>Adam</FirstName>
+        <MiddleName>middleName</MiddleName>
+        <LastName>Wardle</LastName>
+        <Suffix>suffix</Suffix>
+      </NameParts>
+      <Email>adam.wardle@internetware.co.uk</Email>
+      <Company>internetware</Company>
+      <Phone>01911234567</Phone>
+      <Address>
+        <Street1>i6</Street1>
+        <Street2>6-8 Charlotte Square</Street2>
+        <City>Newcastle</City>
+        <State>TX</State>
+        <Code>NE1 4XF</Code>
+        <Country>United Kingdom</Country>
+      </Address>
+    </Billing>
+    <Shipping>
+      <FullName>Adam Wardle</FullName>
+      <NameParts>
+        <Title>Mr</Title>
+        <FirstName>Adam</FirstName>
+        <MiddleName>middleName</MiddleName>
+        <LastName>Wardle</LastName>
+        <Suffix>suffix</Suffix>
+      </NameParts>
+      <Company>internetware</Company>
+      <Phone>01911234567</Phone>
+      <Address>
+        <Street1>i6</Street1>
+        <Street2>6-8 Charlotte Square</Street2>
+        <City>Newcastle</City>
+        <State>TX</State>
+        <Code>NE1 4XF</Code>
+        <Country>United Kingdom</Country>
+      </Address>
+      <Products>
+        <Product>
+          <ProdType>Tangible</ProdType>
+          <Name>iPhone 4</Name>
+          <SKU>i_phone_4</SKU>
+          <Taxable>Yes</Taxable>
+          <Quantity>1</Quantity>
+          <ItemPrice>299.99</ItemPrice>
+          <Total>299.99</Total>
+          <Weight>0.50</Weight>
+          <Dimension />
+          <OrderOptions />
+          <CustomerText />
+          <QBImport />
+          <DobaItemID />
+        </Product>
+      </Products>
+    </Shipping>
+    <Payment>
+      <COD />
+    </Payment>
+    <Totals>
+      <ProductTotal>299.99</ProductTotal>
+      <Discount />
+      <Subtotal>299.99</Subtotal>
+      <Tax>
+        <TaxName />
+        <TaxRate>0.00</TaxRate>
+        <TaxAmount>0.00</TaxAmount>
+        <TaxShipping>No</TaxShipping>
+      </Tax>
+      <GrandTotal>309.99</GrandTotal>
+      <ShippingTotal>
+        <Total>10.00</Total>
+        <Description>2nd Day Air</Description>
+      </ShippingTotal>
+      <Surcharge />
+    </Totals>
+    <Coupon />
+    <Other>
+      <CustomerID />
+      <Associate />
+      <OrderInstructions />
+      <Comments />
+      <Notes />
+      <OrderUTC>1315997698</OrderUTC>
+      <IpHostname>IP Address:217.23.234.89, Host
+      Name:miami.internetware.co.uk</IpHostname>
+      <TotalOrderWeight>0.500000</TotalOrderWeight>
+      <EmailList />
+      <BuySafeAmount />
+      <BuySafeText />
+      <BuySafeCartID />
+      <DobaShipping />
+      <DobaOrderInfo />
+      <VATID />
+      <CustomCheckoutField />
+    </Other>
+  </Order>
+  <Order>
+    <OrderNumber>1236</OrderNumber>
+    <ShopSiteTransactionID>10001-1315997977</ShopSiteTransactionID>
+    <OrderDate>2011-09-14 04:59:37</OrderDate>
+    <Billing>
+      <FullName>Adam Wardle</FullName>
+      <NameParts>
+        <Title>Mr</Title>
+        <FirstName>Adam</FirstName>
+        <MiddleName>middleName</MiddleName>
+        <LastName>Wardle</LastName>
+        <Suffix>suffix</Suffix>
+      </NameParts>
+      <Email>adam.wardle@internetware.co.uk</Email>
+      <Company>internetware</Company>
+      <Phone>01911234567</Phone>
+      <Address>
+        <Street1>i6</Street1>
+        <Street2>6-8 Charlotte Square</Street2>
+        <City>Newcastle</City>
+        <State>TX</State>
+        <Code>NE1 4XF</Code>
+        <Country>United Kingdom</Country>
+      </Address>
+    </Billing>
+    <Shipping>
+      <FullName>Adam Wardle</FullName>
+      <NameParts>
+        <Title>Mr</Title>
+        <FirstName>Adam</FirstName>
+        <MiddleName>middleName</MiddleName>
+        <LastName>Wardle</LastName>
+        <Suffix>suffix</Suffix>
+      </NameParts>
+      <Company>internetware</Company>
+      <Phone>01911234567</Phone>
+      <Address>
+        <Street1>i6</Street1>
+        <Street2>6-8 Charlotte Square</Street2>
+        <City>Newcastle</City>
+        <State>TX</State>
+        <Code>NE1 4XF</Code>
+        <Country>United Kingdom</Country>
+      </Address>
+      <Products>
+        <Product>
+          <ProdType>Tangible</ProdType>
+          <Name>iPhone 4</Name>
+          <SKU>i_phone_4</SKU>
+          <Taxable>Yes</Taxable>
+          <Quantity>1</Quantity>
+          <ItemPrice>299.99</ItemPrice>
+          <Total>299.99</Total>
+          <Weight>0.50</Weight>
+          <Dimension />
+          <OrderOptions />
+          <CustomerText />
+          <QBImport />
+          <DobaItemID />
+        </Product>
+      </Products>
+    </Shipping>
+    <Payment>
+      <COD />
+    </Payment>
+    <Totals>
+      <ProductTotal>299.99</ProductTotal>
+      <Discount />
+      <Subtotal>299.99</Subtotal>
+      <Tax>
+        <TaxName />
+        <TaxRate>20.00</TaxRate>
+        <TaxAmount>60.00</TaxAmount>
+        <TaxShipping>No</TaxShipping>
+      </Tax>
+      <GrandTotal>369.99</GrandTotal>
+      <ShippingTotal>
+        <Total>10.00</Total>
+        <Description>2nd Day Air</Description>
+      </ShippingTotal>
+      <Surcharge />
+    </Totals>
+    <Coupon />
+    <Other>
+      <CustomerID />
+      <Associate />
+      <OrderInstructions />
+      <Comments />
+      <Notes />
+      <OrderUTC>1315997977</OrderUTC>
+      <IpHostname>IP Address:217.23.234.89, Host
+      Name:miami.internetware.co.uk</IpHostname>
+      <TotalOrderWeight>0.500000</TotalOrderWeight>
+      <EmailList />
+      <BuySafeAmount />
+      <BuySafeText />
+      <BuySafeCartID />
+      <DobaShipping />
+      <DobaOrderInfo />
+      <VATID />
+      <CustomCheckoutField />
+    </Other>
+  </Order>
+  <Order>
+    <OrderNumber>1237</OrderNumber>
+    <ShopSiteTransactionID>10002-1316001402</ShopSiteTransactionID>
+    <OrderDate>2011-09-14 05:56:42</OrderDate>
+    <Billing>
+      <FullName>Adam Wardle</FullName>
+      <NameParts>
+        <Title>Mr</Title>
+        <FirstName>Adam</FirstName>
+        <MiddleName>middleName</MiddleName>
+        <LastName>Wardle</LastName>
+        <Suffix>suffix</Suffix>
+      </NameParts>
+      <Email>adam.wardle@internetware.co.uk</Email>
+      <Company>internetware</Company>
+      <Phone>01911234567</Phone>
+      <Address>
+        <Street1>i6</Street1>
+        <Street2>6-8 Charlotte Square</Street2>
+        <City>Newcastle</City>
+        <State>AL</State>
+        <Code>NE1 4XF</Code>
+        <Country>United Kingdom</Country>
+      </Address>
+    </Billing>
+    <Shipping>
+      <FullName>Adam Wardle</FullName>
+      <NameParts>
+        <Title>Mr</Title>
+        <FirstName>Adam</FirstName>
+        <MiddleName>middleName</MiddleName>
+        <LastName>Wardle</LastName>
+        <Suffix>suffix</Suffix>
+      </NameParts>
+      <Company>internetware</Company>
+      <Phone>01911234567</Phone>
+      <Address>
+        <Street1>i6</Street1>
+        <Street2>6-8 Charlotte Square</Street2>
+        <City>Newcastle</City>
+        <State>AL</State>
+        <Code>NE1 4XF</Code>
+        <Country>United Kingdom</Country>
+      </Address>
+      <Products>
+        <Product>
+          <ProdType>Tangible</ProdType>
+          <Name>iPhone 4</Name>
+          <SKU>i_phone_4</SKU>
+          <Taxable>Yes</Taxable>
+          <Quantity>2</Quantity>
+          <ItemPrice>299.99</ItemPrice>
+          <Total>599.98</Total>
+          <Weight>0.50</Weight>
+          <Dimension />
+          <OrderOptions />
+          <CustomerText />
+          <QBImport />
+          <DobaItemID />
+        </Product>
+      </Products>
+    </Shipping>
+    <Payment>
+      <COD />
+    </Payment>
+    <Totals>
+      <ProductTotal>599.98</ProductTotal>
+      <Discount />
+      <Subtotal>579.98</Subtotal>
+      <Tax>
+        <TaxName />
+        <TaxRate>20.00</TaxRate>
+        <TaxAmount>116.00</TaxAmount>
+        <TaxShipping>No</TaxShipping>
+      </Tax>
+      <GrandTotal>695.98</GrandTotal>
+      <ShippingTotal>
+        <Total>0.00</Total>
+        <Description>Ground</Description>
+      </ShippingTotal>
+      <Surcharge />
+    </Totals>
+    <Coupon>
+      <Name>20 off</Name>
+      <Status>Coupon Applied</Status>
+      <Total>-20.00</Total>
+      <ApplyCoupon>Pre</ApplyCoupon>
+    </Coupon>
+    <Other>
+      <CustomerID />
+      <Associate />
+      <OrderInstructions />
+      <Comments />
+      <Notes />
+      <OrderUTC>1316001402</OrderUTC>
+      <IpHostname>IP Address:217.23.234.89, Host
+      Name:miami.internetware.co.uk</IpHostname>
+      <TotalOrderWeight>1.000000</TotalOrderWeight>
+      <EmailList />
+      <BuySafeAmount />
+      <BuySafeText />
+      <BuySafeCartID />
+      <DobaShipping />
+      <DobaOrderInfo />
+      <VATID />
+      <CustomCheckoutField />
+    </Other>
+  </Order>
+  <Order>
+    <OrderNumber>1238</OrderNumber>
+    <ShopSiteTransactionID>10003-1316006429</ShopSiteTransactionID>
+    <OrderDate>2011-09-14 07:20:29</OrderDate>
+    <Billing>
+      <FullName>Adam Wardle</FullName>
+      <NameParts>
+        <Title>Mr</Title>
+        <FirstName>Adam</FirstName>
+        <MiddleName>middleName</MiddleName>
+        <LastName>Wardle</LastName>
+        <Suffix>suffix</Suffix>
+      </NameParts>
+      <Email>adam.wardle@internetware.co.uk</Email>
+      <Company>internetware</Company>
+      <Phone>01911234567</Phone>
+      <Address>
+        <Street1>i6</Street1>
+        <Street2>6-8 Charlotte Square</Street2>
+        <City>Newcastle</City>
+        <State>HI</State>
+        <Code>NE1 4XF</Code>
+        <Country>United Kingdom</Country>
+      </Address>
+    </Billing>
+    <Shipping>
+      <FullName>Adam Wardle</FullName>
+      <NameParts>
+        <Title>Mr</Title>
+        <FirstName>Adam</FirstName>
+        <MiddleName>middleName</MiddleName>
+        <LastName>Wardle</LastName>
+        <Suffix>suffix</Suffix>
+      </NameParts>
+      <Company>internetware</Company>
+      <Phone>01911234567</Phone>
+      <Address>
+        <Street1>i6</Street1>
+        <Street2>6-8 Charlotte Square</Street2>
+        <City>Newcastle</City>
+        <State>HI</State>
+        <Code>NE1 4XF</Code>
+        <Country>United States</Country>
+      </Address>
+      <Products>
+        <Product>
+          <ProdType>Tangible</ProdType>
+          <Name>iPhone 4</Name>
+          <SKU>i_phone_4</SKU>
+          <Taxable>Yes</Taxable>
+          <Quantity>1</Quantity>
+          <ItemPrice>299.99</ItemPrice>
+          <Total>299.99</Total>
+          <Weight>0.50</Weight>
+          <Dimension />
+          <OrderOptions />
+          <CustomerText />
+          <QBImport />
+          <DobaItemID />
+        </Product>
+      </Products>
+    </Shipping>
+    <Payment>
+      <COD />
+    </Payment>
+    <Totals>
+      <ProductTotal>299.99</ProductTotal>
+      <Discount />
+      <Subtotal>299.99</Subtotal>
+      <Tax>
+        <TaxName />
+        <TaxRate>20.00</TaxRate>
+        <TaxAmount>60.00</TaxAmount>
+        <TaxShipping>No</TaxShipping>
+      </Tax>
+      <GrandTotal>359.99</GrandTotal>
+      <ShippingTotal>
+        <Total>0.00</Total>
+        <Description>Ground</Description>
+      </ShippingTotal>
+      <Surcharge />
+    </Totals>
+    <Coupon />
+    <Other>
+      <CustomerID>1</CustomerID>
+      <Associate />
+      <OrderInstructions />
+      <Comments />
+      <Notes />
+      <OrderUTC>1316006429</OrderUTC>
+      <IpHostname>IP Address:217.23.234.89, Host
+      Name:miami.internetware.co.uk</IpHostname>
+      <TotalOrderWeight>0.500000</TotalOrderWeight>
+      <EmailList />
+      <BuySafeAmount />
+      <BuySafeText />
+      <BuySafeCartID />
+      <DobaShipping />
+      <DobaOrderInfo />
+      <VATID />
+      <CustomCheckoutField />
+    </Other>
+  </Order>
+</ShopSiteOrders>

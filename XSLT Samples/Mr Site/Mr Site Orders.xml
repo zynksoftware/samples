@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Orders Version="1">
+  <Order>
+    <OrderId>325</OrderId>
+    <OrderGuid>98005ac9-e555-409c-8ce6-7a775c95fcb2</OrderGuid>
+    <CustomerId>1045</CustomerId>
+    <CustomerLanguageId>7</CustomerLanguageId>
+    <CustomerTaxDisplayTypeId>1</CustomerTaxDisplayTypeId>
+    <CustomerIP>78.86.222.163</CustomerIP>
+    <OrderSubtotalInclTax>100.0000</OrderSubtotalInclTax>
+    <OrderSubtotalExclTax>100.0000</OrderSubtotalExclTax>
+    <OrderShippingInclTax>0.0000</OrderShippingInclTax>
+    <OrderShippingExclTax>0.0000</OrderShippingExclTax>
+    <PaymentMethodAdditionalFeeInclTax>0.0000</PaymentMethodAdditionalFeeInclTax>
+    <PaymentMethodAdditionalFeeExclTax>0.0000</PaymentMethodAdditionalFeeExclTax>
+    <OrderTax>0.0000</OrderTax>
+    <OrderTotal>100.0000</OrderTotal>
+    <OrderDiscount>0.0000</OrderDiscount>
+    <OrderSubtotalInclTaxInCustomerCurrency>100.0000</OrderSubtotalInclTaxInCustomerCurrency>
+    <OrderSubtotalExclTaxInCustomerCurrency>100.0000</OrderSubtotalExclTaxInCustomerCurrency>
+    <OrderShippingInclTaxInCustomerCurrency>0.0000</OrderShippingInclTaxInCustomerCurrency>
+    <OrderShippingExclTaxInCustomerCurrency>0.0000</OrderShippingExclTaxInCustomerCurrency>
+    <PaymentMethodAdditionalFeeInclTaxInCustomerCurrency>0.0000</PaymentMethodAdditionalFeeInclTaxInCustomerCurrency>
+    <PaymentMethodAdditionalFeeExclTaxInCustomerCurrency>0.0000</PaymentMethodAdditionalFeeExclTaxInCustomerCurrency>
+    <OrderTaxInCustomerCurrency>0.0000</OrderTaxInCustomerCurrency>
+    <OrderTotalInCustomerCurrency>100.0000</OrderTotalInCustomerCurrency>
+    <OrderDiscountInCustomerCurrency>0.0000</OrderDiscountInCustomerCurrency>
+    <CustomerCurrencyCode>GBP</CustomerCurrencyCode>
+    <OrderWeight>9</OrderWeight>
+    <AffiliateId>0</AffiliateId>
+    <OrderStatusId>10</OrderStatusId>
+    <AllowStoringCreditCardNumber>False</AllowStoringCreditCardNumber>
+    <CardType />
+    <CardName />
+    <CardNumber />
+    <MaskedCreditCardNumber />
+    <CardCvv2 />
+    <CardExpirationMonth />
+    <CardExpirationYear />
+    <PaymentMethodId>15</PaymentMethodId>
+    <PaymentMethodName>Cash On Delivery</PaymentMethodName>
+    <AuthorizationTransactionId />
+    <AuthorizationTransactionCode />
+    <AuthorizationTransactionResult />
+    <CaptureTransactionId />
+    <CaptureTransactionResult />
+    <SubscriptionTransactionId />
+    <PurchaseOrderNumber />
+    <PaymentStatusId>10</PaymentStatusId>
+    <PaidDate />
+    <BillingFirstName>Adam</BillingFirstName>
+    <BillingLastName>McCrory</BillingLastName>
+    <BillingPhoneNumber>10101010</BillingPhoneNumber>
+    <BillingEmail>adam@example.com</BillingEmail>
+    <BillingFaxNumber>101010101</BillingFaxNumber>
+    <BillingCompany>Internetware</BillingCompany>
+    <BillingAddress1>6 Charlotte Sqaure</BillingAddress1>
+    <BillingAddress2 />
+    <BillingCity>Newcastle</BillingCity>
+    <BillingStateProvince>Alderney</BillingStateProvince>
+    <BillingStateProvinceId>81</BillingStateProvinceId>
+    <BillingCountry>United Kingdom</BillingCountry>
+    <BillingCountryId>80</BillingCountryId>
+    <BillingZipPostalCode>NE1 4XF</BillingZipPostalCode>
+    <ShippingStatusId>20</ShippingStatusId>
+    <ShippingFirstName>Adam</ShippingFirstName>
+    <ShippingLastName>McCrory</ShippingLastName>
+    <ShippingPhoneNumber>10101010</ShippingPhoneNumber>
+    <ShippingEmail>adam@example.com</ShippingEmail>
+    <ShippingFaxNumber>101010101</ShippingFaxNumber>
+    <ShippingCompany>Internetware</ShippingCompany>
+    <ShippingAddress1>6 Charlotte Sqaure</ShippingAddress1>
+    <ShippingAddress2 />
+    <ShippingCity>Newcastle</ShippingCity>
+    <ShippingStateProvince>Alderney</ShippingStateProvince>
+    <ShippingStateProvinceId>81</ShippingStateProvinceId>
+    <ShippingCountry>United Kingdom</ShippingCountry>
+    <ShippingCountryId>80</ShippingCountryId>
+    <ShippingZipPostalCode>NE1 4XF</ShippingZipPostalCode>
+    <ShippingMethod>By Air</ShippingMethod>
+    <ShippingRateComputationMethodId>4442</ShippingRateComputationMethodId>
+    <ShippedDate />
+    <TrackingNumber />
+    <Deleted>False</Deleted>
+    <CreatedOn>15/08/2011 10:50:44</CreatedOn>
+    <OrderProductVariants>
+      <OrderProductVariant>
+        <OrderProductVariantId>472</OrderProductVariantId>
+        <ProductVariantId>7085</ProductVariantId>
+        <ProductVariantName>iPhone 4</ProductVariantName>
+        <UnitPriceInclTax>100.0000</UnitPriceInclTax>
+        <UnitPriceExclTax>100.0000</UnitPriceExclTax>
+        <PriceInclTax>100.0000</PriceInclTax>
+        <PriceExclTax>100.0000</PriceExclTax>
+        <UnitPriceInclTaxInCustomerCurrency>100.0000</UnitPriceInclTaxInCustomerCurrency>
+        <UnitPriceExclTaxInCustomerCurrency>100.0000</UnitPriceExclTaxInCustomerCurrency>
+        <PriceInclTaxInCustomerCurrency>100.0000</PriceInclTaxInCustomerCurrency>
+        <PriceExclTaxInCustomerCurrency>100.0000</PriceExclTaxInCustomerCurrency>
+        <AttributeDescription />
+        <AttributesXml />
+        <Quantity>1</Quantity>
+        <DiscountAmountInclTax>0.0000</DiscountAmountInclTax>
+        <DiscountAmountExclTax>0.0000</DiscountAmountExclTax>
+        <DownloadCount>0</DownloadCount>
+        <IsDownloadActivated>False</IsDownloadActivated>
+        <LicenseDownloadId>0</LicenseDownloadId>
+      </OrderProductVariant>
+    </OrderProductVariants>
+  </Order>
+  <Order>
+    <OrderId>323</OrderId>
+    <OrderGuid>26e31615-4c03-4873-a7b1-d68dbe07df27</OrderGuid>
+    <CustomerId>1045</CustomerId>
+    <CustomerLanguageId>7</CustomerLanguageId>
+    <CustomerTaxDisplayTypeId>1</CustomerTaxDisplayTypeId>
+    <CustomerIP>78.86.222.163</CustomerIP>
+    <OrderSubtotalInclTax>300.0000</OrderSubtotalInclTax>
+    <OrderSubtotalExclTax>300.0000</OrderSubtotalExclTax>
+    <OrderShippingInclTax>0.0000</OrderShippingInclTax>
+    <OrderShippingExclTax>0.0000</OrderShippingExclTax>
+    <PaymentMethodAdditionalFeeInclTax>0.0000</PaymentMethodAdditionalFeeInclTax>
+    <PaymentMethodAdditionalFeeExclTax>0.0000</PaymentMethodAdditionalFeeExclTax>
+    <OrderTax>0.0000</OrderTax>
+    <OrderTotal>300.0000</OrderTotal>
+    <OrderDiscount>0.0000</OrderDiscount>
+    <OrderSubtotalInclTaxInCustomerCurrency>300.0000</OrderSubtotalInclTaxInCustomerCurrency>
+    <OrderSubtotalExclTaxInCustomerCurrency>300.0000</OrderSubtotalExclTaxInCustomerCurrency>
+    <OrderShippingInclTaxInCustomerCurrency>0.0000</OrderShippingInclTaxInCustomerCurrency>
+    <OrderShippingExclTaxInCustomerCurrency>0.0000</OrderShippingExclTaxInCustomerCurrency>
+    <PaymentMethodAdditionalFeeInclTaxInCustomerCurrency>0.0000</PaymentMethodAdditionalFeeInclTaxInCustomerCurrency>
+    <PaymentMethodAdditionalFeeExclTaxInCustomerCurrency>0.0000</PaymentMethodAdditionalFeeExclTaxInCustomerCurrency>
+    <OrderTaxInCustomerCurrency>0.0000</OrderTaxInCustomerCurrency>
+    <OrderTotalInCustomerCurrency>300.0000</OrderTotalInCustomerCurrency>
+    <OrderDiscountInCustomerCurrency>0.0000</OrderDiscountInCustomerCurrency>
+    <CustomerCurrencyCode>GBP</CustomerCurrencyCode>
+    <OrderWeight>27</OrderWeight>
+    <AffiliateId>0</AffiliateId>
+    <OrderStatusId>10</OrderStatusId>
+    <AllowStoringCreditCardNumber>False</AllowStoringCreditCardNumber>
+    <CardType />
+    <CardName />
+    <CardNumber />
+    <MaskedCreditCardNumber />
+    <CardCvv2 />
+    <CardExpirationMonth />
+    <CardExpirationYear />
+    <PaymentMethodId>15</PaymentMethodId>
+    <PaymentMethodName>Cash On Delivery</PaymentMethodName>
+    <AuthorizationTransactionId />
+    <AuthorizationTransactionCode />
+    <AuthorizationTransactionResult />
+    <CaptureTransactionId />
+    <CaptureTransactionResult />
+    <SubscriptionTransactionId />
+    <PurchaseOrderNumber />
+    <PaymentStatusId>10</PaymentStatusId>
+    <PaidDate />
+    <BillingFirstName>Adam</BillingFirstName>
+    <BillingLastName>McCrory</BillingLastName>
+    <BillingPhoneNumber>10101010</BillingPhoneNumber>
+    <BillingEmail>adam@example.com</BillingEmail>
+    <BillingFaxNumber>101010101</BillingFaxNumber>
+    <BillingCompany>Internetware</BillingCompany>
+    <BillingAddress1>6 Charlotte Sqaure</BillingAddress1>
+    <BillingAddress2 />
+    <BillingCity>Newcastle</BillingCity>
+    <BillingStateProvince>Alderney</BillingStateProvince>
+    <BillingStateProvinceId>81</BillingStateProvinceId>
+    <BillingCountry>United Kingdom</BillingCountry>
+    <BillingCountryId>80</BillingCountryId>
+    <BillingZipPostalCode>NE1 4XF</BillingZipPostalCode>
+    <ShippingStatusId>20</ShippingStatusId>
+    <ShippingFirstName>Adam</ShippingFirstName>
+    <ShippingLastName>McCrory</ShippingLastName>
+    <ShippingPhoneNumber>10101010</ShippingPhoneNumber>
+    <ShippingEmail>adam@example.com</ShippingEmail>
+    <ShippingFaxNumber>101010101</ShippingFaxNumber>
+    <ShippingCompany>Internetware</ShippingCompany>
+    <ShippingAddress1>6 Charlotte Sqaure</ShippingAddress1>
+    <ShippingAddress2 />
+    <ShippingCity>Newcastle</ShippingCity>
+    <ShippingStateProvince>Alderney</ShippingStateProvince>
+    <ShippingStateProvinceId>81</ShippingStateProvinceId>
+    <ShippingCountry>United Kingdom</ShippingCountry>
+    <ShippingCountryId>80</ShippingCountryId>
+    <ShippingZipPostalCode>NE1 4XF</ShippingZipPostalCode>
+    <ShippingMethod>In-Store Pickup</ShippingMethod>
+    <ShippingRateComputationMethodId>4442</ShippingRateComputationMethodId>
+    <ShippedDate />
+    <TrackingNumber />
+    <Deleted>False</Deleted>
+    <CreatedOn>15/08/2011 10:28:08</CreatedOn>
+    <OrderProductVariants>
+      <OrderProductVariant>
+        <OrderProductVariantId>470</OrderProductVariantId>
+        <ProductVariantId>7085</ProductVariantId>
+        <ProductVariantName>iPhone 4</ProductVariantName>
+        <UnitPriceInclTax>100.0000</UnitPriceInclTax>
+        <UnitPriceExclTax>100.0000</UnitPriceExclTax>
+        <PriceInclTax>300.0000</PriceInclTax>
+        <PriceExclTax>300.0000</PriceExclTax>
+        <UnitPriceInclTaxInCustomerCurrency>100.0000</UnitPriceInclTaxInCustomerCurrency>
+        <UnitPriceExclTaxInCustomerCurrency>100.0000</UnitPriceExclTaxInCustomerCurrency>
+        <PriceInclTaxInCustomerCurrency>300.0000</PriceInclTaxInCustomerCurrency>
+        <PriceExclTaxInCustomerCurrency>300.0000</PriceExclTaxInCustomerCurrency>
+        <AttributeDescription />
+        <AttributesXml />
+        <Quantity>3</Quantity>
+        <DiscountAmountInclTax>0.0000</DiscountAmountInclTax>
+        <DiscountAmountExclTax>0.0000</DiscountAmountExclTax>
+        <DownloadCount>0</DownloadCount>
+        <IsDownloadActivated>False</IsDownloadActivated>
+        <LicenseDownloadId>0</LicenseDownloadId>
+      </OrderProductVariant></OrderProductVariants>
+  </Order>
+</Orders>

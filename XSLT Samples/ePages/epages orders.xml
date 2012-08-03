@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Orders>
+  <Order>
+    <OrderNumber>1042</OrderNumber>
+    <CustomerNumber>1019</CustomerNumber>
+    <Currency>GBP</Currency>
+    <Language>en</Language>
+    <Locale>en_GB</Locale>
+    <TaxArea>EU</TaxArea>
+    <TaxModel>gross</TaxModel>
+    <GrandTotal>33.44</GrandTotal>
+    <TotalBeforeTax>28.46</TotalBeforeTax>
+    <TotalTax>4.98</TotalTax>
+    <Addresses>
+      <BillingAddress>
+        <Company>internetware</Company>
+        <FirstName>Adam</FirstName>
+        <LastName>Wardle</LastName>
+        <Title>mr</Title>
+        <AddressExtension>addExt</AddressExtension>
+        <Street>i6 Charlotte Square</Street>
+        <Street2>some place</Street2>
+        <Zipcode>ne1 4xf</Zipcode>
+        <State>Tyne and wear</State>
+        <City>Newcastle</City>
+        <EMail>adam.wardle@internetware.co.uk</EMail>
+        <Country>GB</Country>
+      </BillingAddress>
+    </Addresses>
+    <LineItems>
+      <LineItem>
+        <Id>B-TETLEY-24</Id>
+        <Name>Tetley Bitter 24 x 500ml</Name>
+        <Quantity>1</Quantity>
+        <OrderUnit>piece</OrderUnit>
+        <UnitPrice>23.49</UnitPrice>
+        <Discount>0.00</Discount>
+        <TotalPrice>23.49</TotalPrice>
+        <TaxRate>0.174999997019768</TaxRate>
+      </LineItem>
+      <LineItem>
+        <Id>B-WORTHY-24</Id>
+        <Name>Worthington Bitter 24x500ml</Name>
+        <Quantity>1</Quantity>
+        <OrderUnit>piece</OrderUnit>
+        <UnitPrice>24.66</UnitPrice>
+        <Discount>0.00</Discount>
+        <TotalPrice>24.66</TotalPrice>
+        <TaxRate>0.174999997019768</TaxRate>
+      </LineItem>
+      <LineItemShipping>
+        <Id>Post</Id>
+        <TotalPrice>6.91</TotalPrice>
+        <Name>Postal service</Name>
+        <TaxRate>0.174999997019768</TaxRate>
+      </LineItemShipping>
+      <LineItemPayment>
+        <Id>CashInAdvance</Id>
+        <TotalPrice>0.00</TotalPrice>
+        <Name>Payment in advance</Name>
+      </LineItemPayment>
+      <LineItemPaymentDiscount>
+        <TotalPrice>5.51</TotalPrice>
+      </LineItemPaymentDiscount>
+    </LineItems>
+    <CreationDate>2011-09-01T18:23:11</CreationDate>
+    <ViewedOn>2011-09-02T10:21:14</ViewedOn>
+  </Order>
+  <Order>
+    <OrderNumber>1041</OrderNumber>
+    <CustomerNumber>1019</CustomerNumber>
+    <Currency>GBP</Currency>
+    <Language>en</Language>
+    <Locale>en_GB</Locale>
+    <TaxArea>EU</TaxArea>
+    <TaxModel>gross</TaxModel>
+    <GrandTotal>18.49</GrandTotal>
+    <TotalBeforeTax>15.74</TotalBeforeTax>
+    <TotalTax>2.75</TotalTax>
+    <Addresses>
+      <BillingAddress>
+        <Company>internetware</Company>
+        <FirstName>Adam</FirstName>
+        <LastName>Wardle</LastName>
+        <Title>mr</Title>
+        <AddressExtension>addExt</AddressExtension>
+        <Street>i6 Charlotte Square</Street>
+        <Street2>some place</Street2>
+        <Zipcode>ne1 4xf</Zipcode>
+        <State>Tyne and wear</State>
+        <City>Newcastle</City>
+        <EMail>adam.wardle@internetware.co.uk</EMail>
+        <Country>GB</Country>
+      </BillingAddress>
+    </Addresses>
+    <LineItems>
+      <LineItem>
+        <Id>B-TETLEY-24</Id>
+        <Name>Tetley Bitter 24 x 500ml</Name>
+        <Quantity>1</Quantity>
+        <OrderUnit>piece</OrderUnit>
+        <UnitPrice>23.49</UnitPrice>
+        <Discount>5.00</Discount>
+        <TotalPrice>18.49</TotalPrice>
+        <TaxRate>0.174999997019768</TaxRate>
+      </LineItem>
+      <LineItemShipping>
+        <Id>PickupByCustomer</Id>
+        <TotalPrice>0.00</TotalPrice>
+        <Name>Customer pickup</Name>
+      </LineItemShipping>
+      <LineItemPayment>
+        <Id>DirectCreditCard</Id>
+        <Name>Credit card</Name>
+        <CreditCardType>MasterCard</CreditCardType>
+        <ValidThruMonth>1</ValidThruMonth>
+        <ValidThruYear>2011</ValidThruYear>
+      </LineItemPayment>
+    </LineItems>
+    <CreationDate>2011-09-01T18:19:04</CreationDate>
+    <ViewedOn>2011-09-01T18:19:04</ViewedOn>
+  </Order>
+  <Order>
+    <OrderNumber>1040</OrderNumber>
+    <CustomerNumber>1019</CustomerNumber>
+    <Currency>GBP</Currency>
+    <Language>en</Language>
+    <Locale>en_GB</Locale>
+    <TaxArea>EU</TaxArea>
+    <TaxModel>gross</TaxModel>
+    <GrandTotal>33.44</GrandTotal>
+    <TotalBeforeTax>28.46</TotalBeforeTax>
+    <TotalTax>4.98</TotalTax>
+    <Addresses>
+      <BillingAddress>
+        <Company>internetware</Company>
+        <FirstName>Adam</FirstName>
+        <LastName>Wardle</LastName>
+        <Title>mr</Title>
+        <AddressExtension>addExt</AddressExtension>
+        <Street>i6 Charlotte Square</Street>
+        <Street2>some place</Street2>
+        <Zipcode>ne1 4xf</Zipcode>
+        <State>Tyne and wear</State>
+        <City>Newcastle</City>
+        <EMail>adam.wardle@internetware.co.uk</EMail>
+        <Country>GB</Country>
+      </BillingAddress>
+      <ShippingAddress>
+        <Company>test</Company>
+        <FirstName>test</FirstName>
+        <LastName>test</LastName>
+        <AddressExtension>test</AddressExtension>
+        <Street>test</Street>
+        <Zipcode>test</Zipcode>
+        <State>test</State>
+        <City>test</City>
+        <Country>IN</Country>
+      </ShippingAddress>
+    </Addresses>
+    <LineItems>
+      <LineItem>
+        <Id>B-TETLEY-24</Id>
+        <Name>Tetley Bitter 24 x 500ml</Name>
+        <Quantity>1</Quantity>
+        <OrderUnit>piece</OrderUnit>
+        <UnitPrice>23.49</UnitPrice>
+        <TotalPrice>23.49</TotalPrice>
+        <TaxRate>0.174999997019768</TaxRate>
+      </LineItem>
+      <LineItemShipping>
+        <Id>Post</Id>
+        <TotalPrice>6.91</TotalPrice>
+        <Name>Postal service</Name>
+        <TaxRate>0.174999997019768</TaxRate>
+      </LineItemShipping>
+      <LineItemPayment>
+        <Id>CashInAdvance</Id>
+        <TotalPrice>0.00</TotalPrice>
+        <Name>Payment in advance</Name>
+      </LineItemPayment>
+      <LineItemPaymentDiscount>
+        <TotalPrice>3.04</TotalPrice>
+      </LineItemPaymentDiscount>
+    </LineItems>
+    <CreationDate>2011-09-01T17:19:44</CreationDate>
+    <ViewedOn>2011-09-01T17:19:44</ViewedOn>
+  </Order>
+  <Order>
+    <OrderNumber>1038</OrderNumber>
+    <CustomerNumber>1017</CustomerNumber>
+    <Currency>GBP</Currency>
+    <Language>en</Language>
+    <Locale>en_GB</Locale>
+    <TaxArea>EU</TaxArea>
+    <TaxModel>gross</TaxModel>
+    <GrandTotal>10.75</GrandTotal>
+    <TotalBeforeTax>9.15</TotalBeforeTax>
+    <TotalTax>1.60</TotalTax>
+    <Addresses>
+      <BillingAddress>
+        <Company>Internetware</Company>
+        <FirstName>A</FirstName>
+        <LastName>Snape</LastName>
+        <AddressExtension>i6, 6 - 8 Charlotte Square</AddressExtension>
+        <Street>45 Sideling Tails</Street>
+        <Zipcode>TS15 9HT</Zipcode>
+        <City>Yarm</City>
+        <EMail>andrew.snape@internetware.co.uk</EMail>
+        <Country>GB</Country>
+      </BillingAddress>
+    </Addresses>
+    <LineItems>
+      <LineItem>
+        <Id>DAVESPRODUCT</Id>
+        <Name>Daves Product</Name>
+        <Quantity>1</Quantity>
+        <OrderUnit>piece</OrderUnit>
+        <UnitPrice>11.75</UnitPrice>
+        <Discount>0.00</Discount>
+        <TotalPrice>11.75</TotalPrice>
+        <TaxRate>0.174999997019768</TaxRate>
+      </LineItem>
+      <LineItemDiscount>
+        <TotalPrice>-1.00</TotalPrice>
+      </LineItemDiscount>
+      <LineItemShipping>
+        <Id>PickupByCustomer</Id>
+        <TotalPrice>0.00</TotalPrice>
+        <Name>Customer pickup</Name>
+      </LineItemShipping>
+      <LineItemPayment>
+        <Id>Cash</Id>
+        <TotalPrice>0.00</TotalPrice>
+        <Name>Cash</Name>
+      </LineItemPayment>
+    </LineItems>
+    <CreationDate>2010-08-11T13:03:59</CreationDate>
+    <ViewedOn>2010-08-11T14:02:31</ViewedOn>
+    <InProcessOn>2011-09-01T17:08:56</InProcessOn>
+    <ArchivedOn>2010-08-11T14:02:37</ArchivedOn>
+  </Order>
+  <Order>
+    <OrderNumber>1037</OrderNumber>
+    <CustomerNumber>1018</CustomerNumber>
+    <Currency>GBP</Currency>
+    <Language>en</Language>
+    <Locale>en_GB</Locale>
+    <TaxArea>EU</TaxArea>
+    <TaxModel>gross</TaxModel>
+    <GrandTotal>46.74</GrandTotal>
+    <TotalBeforeTax>39.78</TotalBeforeTax>
+    <TotalTax>6.96</TotalTax>
+    <Addresses>
+      <BillingAddress>
+        <Company>internetware</Company>
+        <FirstName>david</FirstName>
+        <LastName>silbutn</LastName>
+        <Title>mr</Title>
+        <Street>i6 charlotte sq</Street>
+        <Zipcode>ne1 4xf</Zipcode>
+        <City>newcastle</City>
+        <EMail>david.silburn@internetware.co.uk</EMail>
+        <Country>GB</Country>
+      </BillingAddress>
+      <ShippingAddress>
+        <Company>daves house</Company>
+        <FirstName>ds</FirstName>
+        <LastName>aedsf</LastName>
+        <AddressExtension>dfdas</AddressExtension>
+        <Street>gkjh</Street>
+        <Zipcode>fn</Zipcode>
+        <City>kjbfds</City>
+        <Country>GB</Country>
+      </ShippingAddress>
+    </Addresses>
+    <LineItems>
+      <LineItem>
+        <Id>BOOKS003</Id>
+        <Name>Shorthand Notebook - 80 Sheets</Name>
+        <Quantity>2</Quantity>
+        <OrderUnit>piece</OrderUnit>
+        <UnitPrice>5.29</UnitPrice>
+        <Discount>0.00</Discount>
+        <TotalPrice>10.58</TotalPrice>
+        <TaxRate>0.174999997019768</TaxRate>
+      </LineItem>
+      <LineItem>
+        <Id>TEST001</Id>
+        <Name>updatedtest</Name>
+        <Quantity>1</Quantity>
+        <OrderUnit>piece</OrderUnit>
+        <UnitPrice>129.25</UnitPrice>
+        <Discount>0.00</Discount>
+        <TotalPrice>129.25</TotalPrice>
+        <TaxRate>0.174999997019768</TaxRate>
+      </LineItem>
+      <LineItemSalesDiscount>
+        <Id>D0WT3BV0SXZD9P5CAR5TUHCA</Id>
+        <TotalPrice>-100.00</TotalPrice>
+      </LineItemSalesDiscount>
+      <LineItemShipping>
+        <Id>Post</Id>
+        <TotalPrice>6.91</TotalPrice>
+        <Name>Postal service</Name>
+        <TaxRate>0.174999997019768</TaxRate>
+      </LineItemShipping>
+      <LineItemPayment>
+        <Id>CashOnDelivery</Id>
+        <TotalPrice>0.00</TotalPrice>
+        <Name>Cash on Delivery</Name>
+      </LineItemPayment>
+    </LineItems>
+    <CreationDate>2010-08-10T17:17:20</CreationDate>
+    <ViewedOn>2011-09-01T16:16:13</ViewedOn>
+    <InProcessOn>2011-09-01T17:08:56</InProcessOn>
+    <DispatchedOn>2010-08-10T17:18:18</DispatchedOn>
+    <ShippedOn>2010-08-10T17:18:06</ShippedOn>
+    <ArchivedOn>2010-08-10T17:51:16</ArchivedOn>
+  </Order>
+</Orders>
