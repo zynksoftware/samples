@@ -4,7 +4,7 @@
 		<GoodsNote>
 			<Id>123456</Id>
 			<AccountReference>MCN001</AccountReference>
-			<Type>GoodsReceivedNote</Type> <!-- {GoodsReceivedNote | GoodsDespatchedNote} -->
+			<Type>GoodsReceivedNote</Type>
 			<OrderNumber>38</OrderNumber>
 			<Reference>PROJ006</Reference>
 			<Date>2012-10-03T10:00:00</Date>
