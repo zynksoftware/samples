@@ -29,7 +29,7 @@ define('C_QUERYLIMIT',                          '100');                 // Limit
                                                                         // NOTE: 0 will return all results
 
 define('C_DOWNLOAD_ORDER_DATE_FILTER',          'true');                // Only orders placed after the date below will be downloaded
-define('C_DOWNLOAD_ORDER_DATE',                 '2011-01-01 00:00:00'); // Only orders placed after the following date will be downloaded, (YYYY-MM-DD HH:MM:SS)
+define('C_DOWNLOAD_ORDER_DATE',                 '2012-01-01 00:00:00'); // Only orders placed after the following date will be downloaded, (YYYY-MM-DD HH:MM:SS)
 define('C_DOWNLOAD_ORDER_STATUS_FILTER',        'true');                // Only orders with the statuses below will be downloaded
 define('C_DOWNLOAD_ORDER_STATUS',               'Pending');             // Only orders with these statuses will be downloaded, Seperate using ',' (comma)
 define('C_DOWNLOAD_ORDER_NOTIFY_STATUS_FILTER', 'true');                // Change the order status when successfully saved into Sage
