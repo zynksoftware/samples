@@ -1,0 +1,532 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2015-02-24T11:23:00.1514707+00:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>Download Opportunities from Sugar</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-24T11:14:44.5882687+00:00</LastRan>
+        <Id>1f5893f7-a23c-42fd-b28d-ccd424fd614e</Id>
+        <Tasks>
+          <Task type="Zynk.SaaS.SugarCRM.SugarCRMQuery, Zynk.SaaS.SugarCRM, Version=1.6.19.27978, Culture=neutral, PublicKeyToken=null">
+            <SugarCRMQuery>
+              <LastResult>Success</LastResult>
+              <Name>Sugar CRM Opportunities Query</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2015-02-24T10:53:12.8696484+00:00</LastRan>
+              <Id>0425fd06-f582-42a4-842d-8b076a52cb86</Id>
+              <URL>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </URL>
+              <Username>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Username>
+              <Password>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Password>
+              <Query>
+                <FieldList>
+                  <ModuleName>Opportunities</ModuleName>
+                  <Fields>
+                    <string>id</string>
+                    <string>name</string>
+                    <string>description</string>
+                    <string>assigned_user_name</string>
+                    <string>opportunity_type</string>
+                    <string>amount</string>
+                    <string>amount_usdollar</string>
+                    <string>date_closed</string>
+                    <string>sales_stage</string>
+                  </Fields>
+                  <LinkFieldName />
+                </FieldList>
+                <Criteria>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>opportunities.sales_stage = 'Closed Won' and sales_order_no_c = ''</string>
+                  </Value>
+                </Criteria>
+                <IncludeDeleted>false</IncludeDeleted>
+                <SubQueries>
+                  <SubQuery>
+                    <FieldList>
+                      <ModuleName>Accounts</ModuleName>
+                      <Fields>
+                        <string>id</string>
+                        <string>name</string>
+                        <string>phone_fax</string>
+                        <string>billing_address_street</string>
+                        <string>billing_address_street_2</string>
+                        <string>billing_address_street_3</string>
+                        <string>billing_address_street_4</string>
+                        <string>billing_address_city</string>
+                        <string>billing_address_state</string>
+                        <string>billing_address_postalcode</string>
+                        <string>billing_address_country</string>
+                        <string>phone_office</string>
+                        <string>phone_alternate</string>
+                        <string>website</string>
+                        <string>shipping_address_street</string>
+                        <string>shipping_address_street_2</string>
+                        <string>shipping_address_street_3</string>
+                        <string>shipping_address_street_4</string>
+                        <string>shipping_address_city</string>
+                        <string>shipping_address_state</string>
+                        <string>shipping_address_postalcode</string>
+                        <string>shipping_address_country</string>
+                        <string>email1</string>
+                        <string>sage_account_ref_c</string>
+                      </Fields>
+                      <LinkFieldName>accounts</LinkFieldName>
+                    </FieldList>
+                    <Criteria>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </Criteria>
+                    <IncludeDeleted>false</IncludeDeleted>
+                    <SubQueries />
+                    <XmlRootName>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>Accounts</string>
+                      </Value>
+                    </XmlRootName>
+                    <XmlRowName>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>Account</string>
+                      </Value>
+                    </XmlRowName>
+                    <IdField>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>id</string>
+                      </Value>
+                    </IdField>
+                  </SubQuery>
+                </SubQueries>
+                <XmlRootName>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>Opportunities</string>
+                  </Value>
+                </XmlRootName>
+                <XmlRowName>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>Opportunity</string>
+                  </Value>
+                </XmlRowName>
+                <Order>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string />
+                  </Value>
+                </Order>
+              </Query>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>sugar_opportunities.xml</string>
+                </Value>
+              </OutputFile>
+              <MaximumRecords>0</MaximumRecords>
+              <Offset>0</Offset>
+              <ModuleName>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Accounts</string>
+                </Value>
+              </ModuleName>
+              <Fields>
+                <Type>ListValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Fields>
+              <Criteria>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Criteria>
+              <Order>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Order>
+              <IncludeDeleted>false</IncludeDeleted>
+              <XmlRootName>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Rows</string>
+                </Value>
+              </XmlRootName>
+              <XmlRowName>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Row</string>
+                </Value>
+              </XmlRowName>
+            </SugarCRMQuery>
+          </Task>
+          <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+            <XsltTransform>
+              <LastResult>Success</LastResult>
+              <Name>Transform to Zynk Sales Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2015-02-24T11:14:44.3949992+00:00</LastRan>
+              <Id>9ff28c18-adba-4781-9c85-fa02d52fd1ea</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>sugar_opportunities.xml</string>
+                </Value>
+              </InputFile>
+              <XsltFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>XSLT\Sugar Opportunities to Zynk Sales Orders.xslt</string>
+                </Value>
+              </XsltFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders.xml</string>
+                </Value>
+              </OutputFile>
+              <Parameters />
+            </XsltTransform>
+          </Task>
+          <Task type="Zynk.Connect.Sage50.ImportSalesOrders, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ImportSalesOrders>
+              <LastResult>Unknown</LastResult>
+              <Name>Import Sales Orders into Sage</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>4382cac2-fa4d-4a5c-86ab-1d1071a42562</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders.xml</string>
+                </Value>
+              </InputFile>
+              <SuccessFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders_success.xml</string>
+                </Value>
+              </SuccessFile>
+              <FailFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders_fail.xml</string>
+                </Value>
+              </FailFile>
+              <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+              <MatchFields />
+              <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+              <AlphabeticLength>0</AlphabeticLength>
+              <NumericLength>0</NumericLength>
+              <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+              <AutoGenerateAccountReferences>
+                <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+                <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                <AlphabeticLength>4</AlphabeticLength>
+                <NumericLength>4</NumericLength>
+                <Mask />
+                <RegularExpression />
+              </AutoGenerateAccountReferences>
+              <UseManualDocumentNumber>false</UseManualDocumentNumber>
+              <VatSettings>
+                <Base>
+                  <Enabled>false</Enabled>
+                  <Sales>1</Sales>
+                  <Carriage>1</Carriage>
+                </Base>
+                <Eu>
+                  <Enabled>false</Enabled>
+                  <Sales>1</Sales>
+                  <Carriage>1</Carriage>
+                </Eu>
+                <EuVatReg>
+                  <Enabled>false</Enabled>
+                  <Sales>4</Sales>
+                  <Carriage>4</Carriage>
+                </EuVatReg>
+                <Row>
+                  <Enabled>false</Enabled>
+                  <Sales>0</Sales>
+                  <Carriage>0</Carriage>
+                </Row>
+              </VatSettings>
+              <AutoCreateProducts>false</AutoCreateProducts>
+              <DefaultProductCode />
+              <AutoCreateCustomer>false</AutoCreateCustomer>
+              <ReadSalesLedgerData>false</ReadSalesLedgerData>
+              <PricesIncludeTax>false</PricesIncludeTax>
+              <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+              <PreventDuplicates>true</PreventDuplicates>
+              <UseManualSalesOrderNumber>false</UseManualSalesOrderNumber>
+              <AutoAllocateStock>false</AutoAllocateStock>
+              <DefaultBankAccount>1200</DefaultBankAccount>
+            </ImportSalesOrders>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>Upload Sales Order Numbers to Sugar</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-24T11:22:59.9837344+00:00</LastRan>
+        <Id>97fc4506-0982-469f-8f5a-55eb13bb17cc</Id>
+        <Tasks>
+          <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+            <XsltTransform>
+              <LastResult>Success</LastResult>
+              <Name>Transform to Sugar Opportunity Updates</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2015-02-24T11:22:59.7668147+00:00</LastRan>
+              <Id>30d88b58-db40-46f7-b0d9-364b22a06a86</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders_success.xml</string>
+                </Value>
+              </InputFile>
+              <XsltFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>XSLT\Zynk Sales Orders to Sugar Opportunity Updates.xslt</string>
+                </Value>
+              </XsltFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>sugar_opportunity_updates.xml</string>
+                </Value>
+              </OutputFile>
+              <Parameters />
+            </XsltTransform>
+          </Task>
+          <Task type="Zynk.SaaS.SugarCRM.SugarCRMUpsert, Zynk.SaaS.SugarCRM, Version=1.6.19.27978, Culture=neutral, PublicKeyToken=null">
+            <SugarCRMUpsert>
+              <LastResult>Unknown</LastResult>
+              <Name>Upload Opportunity Updates to Sugar</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>fdfc13e6-7a45-4f13-8406-0c7f11dfc525</Id>
+              <URL>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </URL>
+              <Username>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Username>
+              <Password>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Password>
+              <Input>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>sugar_opportunity_updates.xml</string>
+                </Value>
+              </Input>
+              <SuccessFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>sugar_opportunity_updates_success.xml</string>
+                </Value>
+              </SuccessFile>
+              <FailFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>sugar_opportunity_updates_fail.xml</string>
+                </Value>
+              </FailFile>
+              <ModuleName>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Opportunities</string>
+                </Value>
+              </ModuleName>
+              <XPath>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Opportunities/Opportunity</string>
+                </Value>
+              </XPath>
+              <KeyField>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>id</string>
+                </Value>
+              </KeyField>
+            </SugarCRMUpsert>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.6.19.27972, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Unknown</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>9c22e4c4-0b6f-41da-bbd8-6e1c72dfeeb2</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+        <HouseKeepingSettings>
+          <Enabled>false</Enabled>
+          <Type>NumberOfDays</Type>
+          <Number>30</Number>
+        </HouseKeepingSettings>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>0eab7d08-2750-46d9-b42e-d3be520be3d7</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>Sugar CRM to Sage 50 Integration</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.6.19</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+</Workflow>
