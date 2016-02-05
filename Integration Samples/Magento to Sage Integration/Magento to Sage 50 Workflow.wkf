@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2013-05-10T15:02:50.7269381+01:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>Download Sales Orders</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-05-10T14:54:04.5066166+01:00</LastRan>
+        <Id>bf7ac342-16f7-4986-8055-6c45d27aa344</Id>
+        <Tasks>
+          <Task type="Zynk.Ecommerce.Magento.DownloadOrders, Zynk.Ecommerce.Magento, Version=1.5.39.16921, Culture=neutral, PublicKeyToken=null">
+            <DownloadOrders>
+              <LastResult>Success</LastResult>
+              <Name>Download Pending Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-05-10T14:44:09.1525162+01:00</LastRan>
+              <Id>511bcfe8-82fa-4675-b17a-102180020dc9</Id>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>magento_orders.xml</string>
+                </Value>
+              </OutputFile>
+              <FilterType>gt</FilterType>
+              <FilterProperty>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>created_at</string>
+                </Value>
+              </FilterProperty>
+              <FilterValue>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>2012-05-10T00:00:00</string>
+                </Value>
+              </FilterValue>
+              <DownloadAll>false</DownloadAll>
+              <DownloadStage>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>pending</string>
+                </Value>
+              </DownloadStage>
+            </DownloadOrders>
+          </Task>
+          <Task type="Zynk.Tasks.AutoMapperTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+            <AutoMapperTask>
+              <LastResult>Success</LastResult>
+              <Name>Magento Sales Orders to Zynk Sales Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-05-10T14:44:36.4194787+01:00</LastRan>
+              <Id>531b1300-a584-4bf4-9bf1-e61beef97f70</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>magento_orders.xml</string>
+                </Value>
+              </InputFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_orders.xml</string>
+                </Value>
+              </OutputFile>
+              <Mapping>
+                <TaskId>531b1300-a584-4bf4-9bf1-e61beef97f70</TaskId>
+                <InputFormat>Magento</InputFormat>
+                <InputType>Orders</InputType>
+                <OutputFormat>Zynk XML</OutputFormat>
+                <OutputType>Sales Orders</OutputType>
+                <IntermediateConnectType />
+                <Parameters>
+                  <VariableWithDescription Description="" Key="AccountReference" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>WEBSALES</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="" Key="BankAccount" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>1200</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="" Key="TaxCode" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>1</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                </Parameters>
+              </Mapping>
+            </AutoMapperTask>
+          </Task>
+          <Task type="Zynk.Connect.Sage50.ImportSalesOrders, Zynk.Connect.Sage50, Version=1.5.39.16908, Culture=neutral, PublicKeyToken=null">
+            <ImportSalesOrders>
+              <LastResult>Success</LastResult>
+              <Name>Import Sales Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-05-10T14:45:37.7587678+01:00</LastRan>
+              <Id>db4057a4-d241-4847-8c4a-51af256854d9</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_orders.xml</string>
+                </Value>
+              </InputFile>
+              <SuccessFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_orders_success.xml</string>
+                </Value>
+              </SuccessFile>
+              <FailFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_orders_fail.xml</string>
+                </Value>
+              </FailFile>
+              <AutoGenerateAccountReference>true</AutoGenerateAccountReference>
+              <AlphabeticLength>3</AlphabeticLength>
+              <NumericLength>3</NumericLength>
+              <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+              <MatchFields />
+              <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+              <Mask>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Mask>
+              <VatSettings>
+                <Base>
+                  <Enabled>false</Enabled>
+                  <Sales>1</Sales>
+                  <Carriage>1</Carriage>
+                </Base>
+                <Eu>
+                  <Enabled>false</Enabled>
+                  <Sales>1</Sales>
+                  <Carriage>1</Carriage>
+                </Eu>
+                <EuVatReg>
+                  <Enabled>false</Enabled>
+                  <Sales>4</Sales>
+                  <Carriage>4</Carriage>
+                </EuVatReg>
+                <Row>
+                  <Enabled>false</Enabled>
+                  <Sales>0</Sales>
+                  <Carriage>0</Carriage>
+                </Row>
+              </VatSettings>
+              <AutoCreateProducts>true</AutoCreateProducts>
+              <DefaultProductCode>S1</DefaultProductCode>
+              <AutoCreateCustomer>true</AutoCreateCustomer>
+              <ReadSalesLedgerData>false</ReadSalesLedgerData>
+              <PricesIncludeTax>false</PricesIncludeTax>
+              <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+              <PreventDuplicates>true</PreventDuplicates>
+              <UseManualSalesOrderNumber>false</UseManualSalesOrderNumber>
+              <AutoAllocateStock>false</AutoAllocateStock>
+              <DefaultBankAccount>1200</DefaultBankAccount>
+            </ImportSalesOrders>
+          </Task>
+          <Task type="Zynk.Tasks.AutoMapperTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+            <AutoMapperTask>
+              <LastResult>Success</LastResult>
+              <Name>Zynk Sales Orders to Update Magento Sales Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-05-10T14:45:48.3046069+01:00</LastRan>
+              <Id>4167677d-5ee2-45a5-b964-130f82097627</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_orders_success.xml</string>
+                </Value>
+              </InputFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>magento_orders_update.xml</string>
+                </Value>
+              </OutputFile>
+              <Mapping>
+                <TaskId>4167677d-5ee2-45a5-b964-130f82097627</TaskId>
+                <InputFormat>Zynk XML</InputFormat>
+                <InputType>Sales Orders</InputType>
+                <OutputFormat>Magento</OutputFormat>
+                <OutputType>Orders</OutputType>
+                <IntermediateConnectType />
+                <Parameters />
+              </Mapping>
+            </AutoMapperTask>
+          </Task>
+          <Task type="Zynk.Ecommerce.Magento.UpdateOrders, Zynk.Ecommerce.Magento, Version=1.5.39.16921, Culture=neutral, PublicKeyToken=null">
+            <UpdateOrders>
+              <LastResult>Success</LastResult>
+              <Name>Update Orders to Complete</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-05-10T14:54:04.2415829+01:00</LastRan>
+              <Id>3db2be23-32bf-451a-8e67-1f48e41714dc</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>magento_orders_update.xml</string>
+                </Value>
+              </InputFile>
+              <NotifyStage>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>complete</string>
+                </Value>
+              </NotifyStage>
+              <NotifyCustomer>false</NotifyCustomer>
+            </UpdateOrders>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>Upload Stock Records</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-05-10T15:02:50.4669051+01:00</LastRan>
+        <Id>b6efa804-fb5f-43f4-a59e-b4134c86805a</Id>
+        <Tasks>
+          <Task type="Zynk.Connect.Sage50.ExportStockRecords, Zynk.Connect.Sage50, Version=1.5.39.16908, Culture=neutral, PublicKeyToken=null">
+            <ExportStockRecords>
+              <LastResult>Success</LastResult>
+              <Name>Export Modified Stock Records</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-05-10T14:55:39.4436721+01:00</LastRan>
+              <Id>909280b6-c215-4309-94ea-155a29377afe</Id>
+              <Filter>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Filter>
+              <Sort>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Sort>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_stock_records.xml</string>
+                </Value>
+              </OutputFile>
+              <ExportAll>false</ExportAll>
+              <ExportPublished>false</ExportPublished>
+              <ExportAttachments>false</ExportAttachments>
+              <AttachmentSearchPattern>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </AttachmentSearchPattern>
+            </ExportStockRecords>
+          </Task>
+          <Task type="Zynk.Tasks.AutoMapperTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+            <AutoMapperTask>
+              <LastResult>Success</LastResult>
+              <Name>Zynk Stock Records to Magento Inventory</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-05-10T15:02:18.1693038+01:00</LastRan>
+              <Id>afd5af20-8b0d-4590-8214-efc7e0515898</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_stock_records.xml</string>
+                </Value>
+              </InputFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>magento_inventory.xml</string>
+                </Value>
+              </OutputFile>
+              <Mapping>
+                <TaskId>afd5af20-8b0d-4590-8214-efc7e0515898</TaskId>
+                <InputFormat>Zynk XML</InputFormat>
+                <InputType>Products</InputType>
+                <OutputFormat>Magento</OutputFormat>
+                <OutputType>Inventory</OutputType>
+                <IntermediateConnectType />
+                <Parameters />
+              </Mapping>
+            </AutoMapperTask>
+          </Task>
+          <Task type="Zynk.Ecommerce.Magento.UploadInventory, Zynk.Ecommerce.Magento, Version=1.5.39.16921, Culture=neutral, PublicKeyToken=null">
+            <UploadInventory>
+              <LastResult>Success</LastResult>
+              <Name>Upload Magento Inventory</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-05-10T15:02:50.198371+01:00</LastRan>
+              <Id>1e9a3395-8e4e-4046-8156-ba5217ca18a9</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>magento_inventory.xml</string>
+                </Value>
+              </InputFile>
+            </UploadInventory>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.5.39.16908, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Unknown</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>63dbaf3a-c270-42dc-8e9f-299b3d66fe0a</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>1c78c589-da8d-4acd-8e59-a2c4529a85d1</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>Sage 50 Workflow</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.5.39</Version>
+</Workflow>

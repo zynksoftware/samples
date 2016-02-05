@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfInventory>
+  <Inventory>
+    <sku>BOARD001</sku>
+    <qty>5</qty>
+    <is_in_stock>1</is_in_stock>
+  </Inventory>
+</ArrayOfInventory>
