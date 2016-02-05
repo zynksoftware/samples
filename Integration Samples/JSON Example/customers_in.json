@@ -1,0 +1,26 @@
+{
+  "Customer": [
+    {
+      "firstName": "John",
+      "lastName": "Smith",
+      "age": 25,
+      "address": {
+        "streetAddress": "21 2nd Street",
+        "city": "New York",
+        "state": "NY",
+        "postalCode": "10021"
+      }
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Bloggs",
+      "age": 32,
+      "address": {
+        "streetAddress": "Nelson House",
+        "city": "Jesmond",
+        "state": "Tyne & Wear",
+        "postalCode": "NE2 3AE"
+      }
+    }
+  ]
+}
