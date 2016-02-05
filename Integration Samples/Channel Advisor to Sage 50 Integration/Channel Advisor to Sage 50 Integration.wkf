@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>1753-01-01T00:00:00</LastRan>
+  <LastResult>Unknown</LastResult>
+  <Tasks>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Unknown</LastResult>
+        <Name>Download Channel Advisor Orders to Sage</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>4293eb20-93a0-4c41-ae81-50aec3673c37</Id>
+        <Tasks>
+          <Task type="Zynk.Ecommerce.ChannelAdvisor.DownloadOrders, Zynk.Ecommerce.ChannelAdvisor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <DownloadOrders>
+              <LastResult>Unknown</LastResult>
+              <Name>Download Orders from Channel Advisor</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>21195115-9480-4d9a-bc04-f9a6137bbcb3</Id>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>channel_advisor_orders.xml</string>
+                </Value>
+              </OutputFile>
+              <StartDate>2015-02-25T14:33:48.7759071+00:00</StartDate>
+              <DateFrom>2015-02-25T14:33:48.7759071+00:00</DateFrom>
+              <DetailLevel>Complete</DetailLevel>
+              <ExportState>NotExported</ExportState>
+              <OrderState>Active</OrderState>
+              <PaymentStatus>Cleared</PaymentStatus>
+              <CheckoutStatus>Completed</CheckoutStatus>
+              <ShippingStatus>Shipped</ShippingStatus>
+              <RefundStatus>NoRefunds</RefundStatus>
+              <DistributionCenterCode>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </DistributionCenterCode>
+              <FulfillmentType>All</FulfillmentType>
+            </DownloadOrders>
+          </Task>
+          <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+            <XsltTransform>
+              <LastResult>Unknown</LastResult>
+              <Name>Transform to Zynk XML Sales Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>0cbf4ab5-0e26-4928-a0f7-fb024c6612b0</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>channel_advisor_orders.xml</string>
+                </Value>
+              </InputFile>
+              <XsltFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>XSLT\Channel Advisor Orders to Zynk Sales Orders.xslt</string>
+                </Value>
+              </XsltFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders.xml</string>
+                </Value>
+              </OutputFile>
+              <Parameters />
+            </XsltTransform>
+          </Task>
+          <Task type="Zynk.Connect.Sage50.ImportSalesOrders, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ImportSalesOrders>
+              <LastResult>Unknown</LastResult>
+              <Name>Import Sales Orders into Sage</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>11721495-8c92-47b1-8e91-ae034f286c41</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders.xml</string>
+                </Value>
+              </InputFile>
+              <SuccessFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders_success.xml</string>
+                </Value>
+              </SuccessFile>
+              <FailFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders_fail.xml</string>
+                </Value>
+              </FailFile>
+              <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+              <MatchFields />
+              <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+              <AlphabeticLength>0</AlphabeticLength>
+              <NumericLength>0</NumericLength>
+              <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+              <AutoGenerateAccountReferences>
+                <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+                <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                <AlphabeticLength>4</AlphabeticLength>
+                <NumericLength>4</NumericLength>
+                <Mask />
+                <RegularExpression />
+              </AutoGenerateAccountReferences>
+              <UseManualDocumentNumber>false</UseManualDocumentNumber>
+              <VatSettings>
+                <Base>
+                  <Enabled>false</Enabled>
+                  <Sales>1</Sales>
+                  <Carriage>1</Carriage>
+                </Base>
+                <Eu>
+                  <Enabled>false</Enabled>
+                  <Sales>1</Sales>
+                  <Carriage>1</Carriage>
+                </Eu>
+                <EuVatReg>
+                  <Enabled>false</Enabled>
+                  <Sales>4</Sales>
+                  <Carriage>4</Carriage>
+                </EuVatReg>
+                <Row>
+                  <Enabled>false</Enabled>
+                  <Sales>0</Sales>
+                  <Carriage>0</Carriage>
+                </Row>
+              </VatSettings>
+              <AutoCreateProducts>true</AutoCreateProducts>
+              <DefaultProductCode>S1</DefaultProductCode>
+              <AutoCreateCustomer>false</AutoCreateCustomer>
+              <ReadSalesLedgerData>false</ReadSalesLedgerData>
+              <PricesIncludeTax>false</PricesIncludeTax>
+              <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+              <PreventDuplicates>true</PreventDuplicates>
+              <UseManualSalesOrderNumber>false</UseManualSalesOrderNumber>
+              <AutoAllocateStock>false</AutoAllocateStock>
+              <DefaultBankAccount>1200</DefaultBankAccount>
+            </ImportSalesOrders>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.6.19.27972, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Unknown</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>5f948f4c-1f41-4ca2-b0c7-84a33c5ecf43</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+        <HouseKeepingSettings>
+          <Enabled>false</Enabled>
+          <Type>NumberOfDays</Type>
+          <Number>30</Number>
+        </HouseKeepingSettings>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>83b84375-87bc-42af-b77e-f8d142659e66</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>Channel Advisor to Sage 50 Integration</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.6.19</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+</Workflow>
