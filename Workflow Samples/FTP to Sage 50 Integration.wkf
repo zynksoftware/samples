@@ -1,0 +1,521 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>1753-01-01T00:00:00</LastRan>
+  <LastResult>Unknown</LastResult>
+  <Tasks>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Unknown</LastResult>
+        <Name>Download Orders From FTP</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>24f986ad-87c4-48ad-ba88-f83f2287818a</Id>
+        <Tasks>
+          <Task type="Zynk.Internet.Ftp.FtpRepeater, Zynk.Internet.Ftp, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+            <FtpRepeater>
+              <LastResult>Unknown</LastResult>
+              <Name>For each file on the FTP</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>978bf4bb-8b59-4302-8c49-d44542ecd40d</Id>
+              <ConnectionGroupName />
+              <Server>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>FtpServer</string>
+                </Value>
+              </Server>
+              <Username>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>FtpUsername</string>
+                </Value>
+              </Username>
+              <Password>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>FtpPassword</string>
+                </Value>
+              </Password>
+              <Directory>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>/download</string>
+                </Value>
+              </Directory>
+              <UsePassive>true</UsePassive>
+              <UseSSL>false</UseSSL>
+              <UseBinary>true</UseBinary>
+              <ListRecursively>false</ListRecursively>
+              <SearchPattern>*.xml</SearchPattern>
+              <Tasks>
+                <Task type="Zynk.Internet.Ftp.FtpDownload, Zynk.Internet.Ftp, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+                  <FtpDownload>
+                    <LastResult>Unknown</LastResult>
+                    <Name>Download File From FTP</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>1753-01-01T00:00:00</LastRan>
+                    <Id>1b3fa39c-3dcd-4d69-8782-2aa95e2097a0</Id>
+                    <ConnectionGroupName />
+                    <Server>
+                      <Type>VariableValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>FtpServer</string>
+                      </Value>
+                    </Server>
+                    <Username>
+                      <Type>VariableValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>FtpUsername</string>
+                      </Value>
+                    </Username>
+                    <Password>
+                      <Type>VariableValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>FtpPassword</string>
+                      </Value>
+                    </Password>
+                    <Directory>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>/download</string>
+                      </Value>
+                    </Directory>
+                    <UsePassive>true</UsePassive>
+                    <UseSSL>false</UseSSL>
+                    <UseBinary>true</UseBinary>
+                    <Filename>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>True</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>@Context.Current["Name"]</string>
+                      </Value>
+                    </Filename>
+                    <OutputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>True</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>@Context.Current["Name"]</string>
+                      </Value>
+                    </OutputFile>
+                    <CheckExistsOnly>false</CheckExistsOnly>
+                  </FtpDownload>
+                </Task>
+                <Task type="Zynk.Connect.Sage50.ImportSalesOrders, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+                  <ImportSalesOrders>
+                    <LastResult>Unknown</LastResult>
+                    <Name>Import Sales Orders into Sage 50</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>1753-01-01T00:00:00</LastRan>
+                    <Id>d27cb591-17d1-451b-8b6f-b0b1c98199e4</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>True</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>@Context.Current["Name"]</string>
+                      </Value>
+                    </InputFile>
+                    <SuccessFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>True</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>@(Context.Current["NameWithoutExtension"])_success.xml</string>
+                      </Value>
+                    </SuccessFile>
+                    <FailFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>True</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>@(Context.Current["NameWithoutExtension"])_fail.xml</string>
+                      </Value>
+                    </FailFile>
+                    <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+                    <MatchFields />
+                    <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+                    <AlphabeticLength>0</AlphabeticLength>
+                    <NumericLength>0</NumericLength>
+                    <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                    <AutoGenerateAccountReferences>
+                      <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+                      <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                      <AlphabeticLength>4</AlphabeticLength>
+                      <NumericLength>4</NumericLength>
+                      <Mask />
+                      <RegularExpression />
+                    </AutoGenerateAccountReferences>
+                    <UseManualDocumentNumber>false</UseManualDocumentNumber>
+                    <VatSettings>
+                      <Base>
+                        <Enabled>false</Enabled>
+                        <Sales>1</Sales>
+                        <Carriage>1</Carriage>
+                      </Base>
+                      <Eu>
+                        <Enabled>false</Enabled>
+                        <Sales>1</Sales>
+                        <Carriage>1</Carriage>
+                      </Eu>
+                      <EuVatReg>
+                        <Enabled>false</Enabled>
+                        <Sales>4</Sales>
+                        <Carriage>4</Carriage>
+                      </EuVatReg>
+                      <Row>
+                        <Enabled>false</Enabled>
+                        <Sales>0</Sales>
+                        <Carriage>0</Carriage>
+                      </Row>
+                    </VatSettings>
+                    <AutoCreateProducts>true</AutoCreateProducts>
+                    <DefaultProductCode>S1</DefaultProductCode>
+                    <AutoCreateCustomer>false</AutoCreateCustomer>
+                    <ReadSalesLedgerData>false</ReadSalesLedgerData>
+                    <PricesIncludeTax>false</PricesIncludeTax>
+                    <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+                    <PreventDuplicates>true</PreventDuplicates>
+                    <UseManualSalesOrderNumber>false</UseManualSalesOrderNumber>
+                    <AutoAllocateStock>false</AutoAllocateStock>
+                    <DefaultBankAccount>1200</DefaultBankAccount>
+                  </ImportSalesOrders>
+                </Task>
+                <Task type="Zynk.Filesystem.FileExists, Zynk.Filesystem, Version=1.6.19.27972, Culture=neutral, PublicKeyToken=null">
+                  <FileExists>
+                    <LastResult>Unknown</LastResult>
+                    <Name>If Order Imported Successfully</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>1753-01-01T00:00:00</LastRan>
+                    <Id>8b810bba-514d-4ea9-aef6-49cc8d236b90</Id>
+                    <Equal>true</Equal>
+                    <Tasks>
+                      <Task type="Zynk.Internet.Ftp.FtpRename, Zynk.Internet.Ftp, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+                        <FtpRename>
+                          <LastResult>Unknown</LastResult>
+                          <Name>Move File on FTP</Name>
+                          <Enabled>true</Enabled>
+                          <BreakOnFailure>true</BreakOnFailure>
+                          <LastRan>1753-01-01T00:00:00</LastRan>
+                          <Id>3f7ee5bb-9a2c-451e-8a26-f163dbfe17b7</Id>
+                          <ConnectionGroupName />
+                          <Server>
+                            <Type>VariableValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>FtpServer</string>
+                            </Value>
+                          </Server>
+                          <Username>
+                            <Type>VariableValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>FtpUsername</string>
+                            </Value>
+                          </Username>
+                          <Password>
+                            <Type>VariableValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>FtpPassword</string>
+                            </Value>
+                          </Password>
+                          <Directory>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>/download</string>
+                            </Value>
+                          </Directory>
+                          <UsePassive>true</UsePassive>
+                          <UseSSL>false</UseSSL>
+                          <UseBinary>true</UseBinary>
+                          <Filename>
+                            <Type>FileValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>@Context.Current["Name"]</string>
+                            </Value>
+                          </Filename>
+                          <OutputFile>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>/download/processed/@(Context.Current["Name"])</string>
+                            </Value>
+                          </OutputFile>
+                          <PrependTimestamp>false</PrependTimestamp>
+                          <TimestampFormat>yyyyMMddHHmmssffff</TimestampFormat>
+                        </FtpRename>
+                      </Task>
+                    </Tasks>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>True</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>@(Context.Current["NameWithoutExtension"])_success.xml</string>
+                      </Value>
+                    </InputFile>
+                    <MinimumLength>600</MinimumLength>
+                  </FileExists>
+                </Task>
+              </Tasks>
+            </FtpRepeater>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Unknown</LastResult>
+        <Name>Upload Products To FTP</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>9a7f292c-428d-4993-8948-ad4da5328c4b</Id>
+        <Tasks>
+          <Task type="Zynk.Connect.Sage50.ExportStockRecords, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ExportStockRecords>
+              <LastResult>Unknown</LastResult>
+              <Name>Export Stock Records from Sage 50</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>f296b17f-5723-4bb7-9600-81ea34410476</Id>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>products.xml</string>
+                </Value>
+              </OutputFile>
+              <QuerySettings>
+                <Columns />
+                <Joins />
+                <Where />
+              </QuerySettings>
+              <QueryTimeout xsi:nil="true" />
+              <ExportAll>false</ExportAll>
+              <ExportSettings>
+                <DateTimeModified>1753-01-01T00:00:00</DateTimeModified>
+                <ExportType>Modified</ExportType>
+              </ExportSettings>
+              <ExportPublished>false</ExportPublished>
+              <ExportAttachments>false</ExportAttachments>
+              <AttachmentSearchPattern>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </AttachmentSearchPattern>
+            </ExportStockRecords>
+          </Task>
+          <Task type="Zynk.Internet.Ftp.FtpUpload, Zynk.Internet.Ftp, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+            <FtpUpload>
+              <LastResult>Unknown</LastResult>
+              <Name>Upload to the FTP</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>aacc5b98-0d9f-4718-b4ba-bbc9ad87ee36</Id>
+              <ConnectionGroupName />
+              <Server>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>FtpServer</string>
+                </Value>
+              </Server>
+              <Username>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>FtpUsername</string>
+                </Value>
+              </Username>
+              <Password>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>FtpPassword</string>
+                </Value>
+              </Password>
+              <Directory>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>/upload</string>
+                </Value>
+              </Directory>
+              <UsePassive>true</UsePassive>
+              <UseSSL>false</UseSSL>
+              <UseBinary>true</UseBinary>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>products.xml</string>
+                </Value>
+              </InputFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>True</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>products_@(DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss")).xml</string>
+                </Value>
+              </OutputFile>
+              <OverwriteFile>true</OverwriteFile>
+              <Retries>2</Retries>
+              <TemporaryUploadSetting>
+                <Option>NotEnabled</Option>
+                <TemporaryFileExtension>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>tmp</string>
+                  </Value>
+                </TemporaryFileExtension>
+                <TemporaryDirectory>
+                  <Type>StaticValue</Type>
+                  <UseRazorEngine>False</UseRazorEngine>
+                  <ReadContentsOfFile>False</ReadContentsOfFile>
+                  <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                    <string>Temp</string>
+                  </Value>
+                </TemporaryDirectory>
+              </TemporaryUploadSetting>
+            </FtpUpload>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.6.19.27972, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Unknown</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>f389e4e3-78e9-4c10-8dcd-d34e78a719b3</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+        <HouseKeepingSettings>
+          <Enabled>false</Enabled>
+          <Type>NumberOfDays</Type>
+          <Number>30</Number>
+        </HouseKeepingSettings>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>ef61e609-84fd-4d17-9e80-5a24358657d6</Id>
+  <Variables>
+    <Variable Key="FtpServer" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>UriValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>ftp://</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="FtpUsername" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string />
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="FtpPassword" Encrypt="True" Encrypted="True">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>qJF6veIko+fkEHmk1JEEag==</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+  </Variables>
+  <ContextVariables />
+  <Name>Sampe FTP Integration</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.6.19</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+</Workflow>
