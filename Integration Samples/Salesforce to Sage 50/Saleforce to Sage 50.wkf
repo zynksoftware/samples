@@ -1,0 +1,745 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2014-02-11T16:53:05.8026574+00:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>Download Opportunities</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2014-02-11T16:53:05.6605625+00:00</LastRan>
+        <Id>b4663ef6-77bd-4b2c-9982-5d0632bef885</Id>
+        <Tasks>
+          <Task type="Zynk.SAAS.SalesForce.SalesforceQuery, Zynk.SAAS.Salesforce, Version=1.6.19.27977, Culture=neutral, PublicKeyToken=null">
+            <SalesforceQuery>
+              <LastResult>Success</LastResult>
+              <Name>Salesforce Opportunity Query</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2011-08-02T12:31:03.064504+01:00</LastRan>
+              <Id>f0ba9c89-0dea-45ec-8ccb-14e18f4a1fb8</Id>
+              <Query>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>SELECT Account.Id, Account.SageAccountReference__c, Account.Name, Account.Website,
+  Account.Phone, Account.Fax, Account.Description, Account.BillingStreet,
+  Account.BillingCity, Account.BillingState, Account.BillingCountry, Account.BillingPostalCode,
+  Opportunity.Id, Opportunity.Name, Opportunity.Description, Opportunity.Owner.Name,
+  Opportunity.CloseDate, Opportunity.HasOpportunityLineItem, Opportunity.Amount,
+  (SELECT Quantity, ListPrice, UnitPrice, Description, PriceBookEntry.Product2.Name,
+  PriceBookEntry.Product2.Description, PriceBookEntry.Product2.ProductCode FROM OpportunityLineItems)
+FROM Opportunity
+WHERE StageName = 'Closed Won' AND Opportunity.Account.Id != null</string>
+                </Value>
+              </Query>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>salesforce_opportunities.xml</string>
+                </Value>
+              </OutputFile>
+            </SalesforceQuery>
+          </Task>
+          <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+            <XsltTransform>
+              <LastResult>Success</LastResult>
+              <Name>Transform to Zynk Customer + Sales Order XML</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2011-08-02T10:54:20.9014032+01:00</LastRan>
+              <Id>3ebb6ec2-3242-452e-b4dc-0609afcd5717</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>salesforce_opportunities.xml</string>
+                </Value>
+              </InputFile>
+              <XsltFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>XSLT\Salesforce Opportunities to Zynk Customers and Sales Orders.xslt</string>
+                </Value>
+              </XsltFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_customers_and_orders.xml</string>
+                </Value>
+              </OutputFile>
+              <Parameters />
+            </XsltTransform>
+          </Task>
+          <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ContainerTask>
+              <LastResult>Success</LastResult>
+              <Name>Customer Import</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2011-08-02T10:55:11.1136048+01:00</LastRan>
+              <Id>24939b76-8abc-4bf6-ab48-dc5c1afb8663</Id>
+              <Tasks>
+                <Task type="Zynk.Connect.Sage50.ImportCustomers, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+                  <ImportCustomers>
+                    <LastResult>Success</LastResult>
+                    <Name>Import Customers into Sage</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>2011-08-02T10:54:24.6968608+01:00</LastRan>
+                    <Id>f733b7bc-bdcd-4039-a44f-c7393d33e88a</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>zynk_customers_and_orders.xml</string>
+                      </Value>
+                    </InputFile>
+                    <SuccessFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>zynk_customers_success.xml</string>
+                      </Value>
+                    </SuccessFile>
+                    <FailFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>zynk_customers_fail.xml</string>
+                      </Value>
+                    </FailFile>
+                    <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+                    <MatchFields />
+                    <AutoGenerateAccountReference>true</AutoGenerateAccountReference>
+                    <AlphabeticLength>2</AlphabeticLength>
+                    <NumericLength>3</NumericLength>
+                    <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                    <Mask>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </Mask>
+                    <AutoGenerateAccountReferences>
+                      <AutoGenerateAccountReference>true</AutoGenerateAccountReference>
+                      <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                      <AlphabeticLength>2</AlphabeticLength>
+                      <NumericLength>3</NumericLength>
+                      <Mask />
+                      <RegularExpression />
+                    </AutoGenerateAccountReferences>
+                  </ImportCustomers>
+                </Task>
+                <Task type="Zynk.Documents.XML.XmlRepeaterTask, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+                  <XmlRepeaterTask>
+                    <LastResult>Success</LastResult>
+                    <Name>For Each Successfully Imported Customer</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>2011-08-02T10:55:11.1136048+01:00</LastRan>
+                    <Id>7b3198a7-2ec9-4bb1-a345-6f6105373e2c</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>zynk_customers_success.xml</string>
+                      </Value>
+                    </InputFile>
+                    <XPathQuery>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>Company/Customers/Customer</string>
+                      </Value>
+                    </XPathQuery>
+                    <Tasks>
+                      <Task type="Zynk.Tasks.RazorTemplateTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+                        <RazorTemplateTask>
+                          <LastResult>Success</LastResult>
+                          <Name>Transform to Salesforce XML</Name>
+                          <Enabled>true</Enabled>
+                          <BreakOnFailure>true</BreakOnFailure>
+                          <LastRan>2011-08-02T10:55:10.2623808+01:00</LastRan>
+                          <Id>8142f13e-10be-4e5d-8911-4fbd3752283a</Id>
+                          <TemplateFile>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>@{
+	Response.Write("&lt;root&gt;\n");
+	Response.Write("&lt;SageAccountReference__c&gt;" + Context.Current["AccountReference"] + "&lt;/SageAccountReference__c&gt;\n");
+	Response.Write("&lt;/root&gt;");
+}</string>
+                            </Value>
+                          </TemplateFile>
+                          <OutputFile>
+                            <Type>FileValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>customer_@(Context.Current["Id"])_account_ref_salesforce.xml</string>
+                            </Value>
+                          </OutputFile>
+                          <ReferencedAssemblies>
+                            <Type>ListValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string />
+                            </Value>
+                          </ReferencedAssemblies>
+                          <Variables />
+                          <PrependTimestamp>false</PrependTimestamp>
+                          <TimestampFormat>yyyyMMddHHmmssffff</TimestampFormat>
+                        </RazorTemplateTask>
+                      </Task>
+                      <Task type="Zynk.SAAS.SalesForce.SalesforceUpdate, Zynk.SAAS.Salesforce, Version=1.6.19.27977, Culture=neutral, PublicKeyToken=null">
+                        <SalesforceUpdate>
+                          <LastResult>Success</LastResult>
+                          <Name>Update Salesforce Account</Name>
+                          <Enabled>true</Enabled>
+                          <BreakOnFailure>true</BreakOnFailure>
+                          <LastRan>2011-08-02T10:55:11.1136048+01:00</LastRan>
+                          <Id>feed1966-577f-46d0-904b-6fb74d752b9f</Id>
+                          <Input>
+                            <Type>FileValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>customer_@(Context.Current["Id"])_account_ref_salesforce.xml</string>
+                            </Value>
+                          </Input>
+                          <OutputFile>
+                            <Type>FileValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>customer_@(Context.Current["Id"])_account_ref_salesforce_response.xml</string>
+                            </Value>
+                          </OutputFile>
+                          <ObjectType>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>Account</string>
+                            </Value>
+                          </ObjectType>
+                          <ObjectId>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>@Context.Current["Id"]</string>
+                            </Value>
+                          </ObjectId>
+                        </SalesforceUpdate>
+                      </Task>
+                    </Tasks>
+                  </XmlRepeaterTask>
+                </Task>
+              </Tasks>
+            </ContainerTask>
+          </Task>
+          <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ContainerTask>
+              <LastResult>Success</LastResult>
+              <Name>Sales Order Import</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2014-02-11T16:53:05.5024568+00:00</LastRan>
+              <Id>846a3095-dac9-40e6-af85-e9590df95a71</Id>
+              <Tasks>
+                <Task type="Zynk.Connect.Sage50.ImportSalesOrders, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+                  <ImportSalesOrders>
+                    <LastResult>Success</LastResult>
+                    <Name>Import Sales Orders into Sage</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>2011-08-02T10:55:16.801784+01:00</LastRan>
+                    <Id>bae42e8a-1859-48d4-8f74-a8b7cb4a109a</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>zynk_customers_and_orders.xml</string>
+                      </Value>
+                    </InputFile>
+                    <SuccessFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>zynk_orders_success.xml</string>
+                      </Value>
+                    </SuccessFile>
+                    <FailFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>zynk_orders_fail.xml</string>
+                      </Value>
+                    </FailFile>
+                    <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+                    <MatchFields />
+                    <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+                    <AlphabeticLength>2</AlphabeticLength>
+                    <NumericLength>3</NumericLength>
+                    <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                    <Mask>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </Mask>
+                    <AutoGenerateAccountReferences>
+                      <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+                      <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                      <AlphabeticLength>4</AlphabeticLength>
+                      <NumericLength>4</NumericLength>
+                      <Mask />
+                      <RegularExpression />
+                    </AutoGenerateAccountReferences>
+                    <UseManualDocumentNumber>false</UseManualDocumentNumber>
+                    <VatSettings>
+                      <Base>
+                        <Enabled>false</Enabled>
+                        <Sales>1</Sales>
+                        <Carriage>1</Carriage>
+                      </Base>
+                      <Eu>
+                        <Enabled>false</Enabled>
+                        <Sales>1</Sales>
+                        <Carriage>1</Carriage>
+                      </Eu>
+                      <EuVatReg>
+                        <Enabled>false</Enabled>
+                        <Sales>4</Sales>
+                        <Carriage>4</Carriage>
+                      </EuVatReg>
+                      <Row>
+                        <Enabled>false</Enabled>
+                        <Sales>0</Sales>
+                        <Carriage>0</Carriage>
+                      </Row>
+                    </VatSettings>
+                    <AutoCreateProducts>true</AutoCreateProducts>
+                    <DefaultProductCode>S1</DefaultProductCode>
+                    <AutoCreateCustomer>false</AutoCreateCustomer>
+                    <ReadSalesLedgerData>false</ReadSalesLedgerData>
+                    <PricesIncludeTax>false</PricesIncludeTax>
+                    <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+                    <PreventDuplicates>true</PreventDuplicates>
+                    <UseManualSalesOrderNumber>false</UseManualSalesOrderNumber>
+                    <AutoAllocateStock>false</AutoAllocateStock>
+                    <DefaultBankAccount>1200</DefaultBankAccount>
+                  </ImportSalesOrders>
+                </Task>
+                <Task type="Zynk.Documents.XML.XmlRepeaterTask, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+                  <XmlRepeaterTask>
+                    <LastResult>Success</LastResult>
+                    <Name>For Each Successfully Imported Order</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>2014-02-11T16:53:05.3623629+00:00</LastRan>
+                    <Id>a2c671d1-d2c5-4e0d-8690-eb43495ab7c0</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>zynk_orders_success.xml</string>
+                      </Value>
+                    </InputFile>
+                    <XPathQuery>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>Company/SalesOrders/SalesOrder</string>
+                      </Value>
+                    </XPathQuery>
+                    <Tasks>
+                      <Task type="Zynk.Tasks.RazorTemplateTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+                        <RazorTemplateTask>
+                          <LastResult>Success</LastResult>
+                          <Name>Transform to Salesforce XML</Name>
+                          <Enabled>true</Enabled>
+                          <BreakOnFailure>true</BreakOnFailure>
+                          <LastRan>2014-02-11T16:52:41.2692648+00:00</LastRan>
+                          <Id>f8e530e0-50c0-477a-a206-692d76d529fd</Id>
+                          <TemplateFile>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>@{
+	Response.Write("&lt;root&gt;\n");
+	Response.Write("&lt;StageName&gt;Order Confirmed&lt;/StageName&gt;\n");
+	Response.Write("&lt;/root&gt;");
+}</string>
+                            </Value>
+                          </TemplateFile>
+                          <OutputFile>
+                            <Type>FileValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>opportunity_@(Context.Current["Id"])_update.xml</string>
+                            </Value>
+                          </OutputFile>
+                          <ReferencedAssemblies>
+                            <Type>ListValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string />
+                            </Value>
+                          </ReferencedAssemblies>
+                          <Variables />
+                          <PrependTimestamp>false</PrependTimestamp>
+                          <TimestampFormat>yyyyMMddHHmmssffff</TimestampFormat>
+                        </RazorTemplateTask>
+                      </Task>
+                      <Task type="Zynk.SAAS.SalesForce.SalesforceUpdate, Zynk.SAAS.Salesforce, Version=1.6.19.27977, Culture=neutral, PublicKeyToken=null">
+                        <SalesforceUpdate>
+                          <LastResult>Success</LastResult>
+                          <Name>Update Salesforce Opportunity</Name>
+                          <Enabled>true</Enabled>
+                          <BreakOnFailure>true</BreakOnFailure>
+                          <LastRan>2014-02-11T16:53:05.1982536+00:00</LastRan>
+                          <Id>720de1f0-3321-46c5-8655-63682f4cb6e9</Id>
+                          <Input>
+                            <Type>FileValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>opportunity_@(Context.Current["Id"])_update.xml</string>
+                            </Value>
+                          </Input>
+                          <OutputFile>
+                            <Type>FileValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>opportunity_@(Context.Current["Id"])_update_response.xml</string>
+                            </Value>
+                          </OutputFile>
+                          <ObjectType>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>Opportunity</string>
+                            </Value>
+                          </ObjectType>
+                          <ObjectId>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>True</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>@Context.Current["Id"]</string>
+                            </Value>
+                          </ObjectId>
+                        </SalesforceUpdate>
+                      </Task>
+                    </Tasks>
+                  </XmlRepeaterTask>
+                </Task>
+              </Tasks>
+            </ContainerTask>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>Upload Customers to Salesforce</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2011-08-02T12:42:06.3082016+01:00</LastRan>
+        <Id>d26e677c-e5b0-4d1d-a211-dab81aa10a23</Id>
+        <Tasks>
+          <Task type="Zynk.Connect.Sage50.ExportCustomers, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ExportCustomers>
+              <LastResult>Success</LastResult>
+              <Name>Export Customers From Sage</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2011-08-02T12:40:45.4319072+01:00</LastRan>
+              <Id>498c76cb-f934-47bd-bfd7-3610bc1ad7ce</Id>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_customer_export.xml</string>
+                </Value>
+              </OutputFile>
+              <QuerySettings>
+                <Columns />
+                <Joins />
+                <Where />
+              </QuerySettings>
+              <QueryTimeout xsi:nil="true" />
+              <ExportAll>false</ExportAll>
+              <ExportSettings>
+                <DateTimeModified>2011-08-02T12:40:45.4319072+01:00</DateTimeModified>
+                <ExportType>Modified</ExportType>
+              </ExportSettings>
+              <ExportAttachments>false</ExportAttachments>
+              <AttachmentSearchPattern>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </AttachmentSearchPattern>
+            </ExportCustomers>
+          </Task>
+          <Task type="Zynk.SAAS.SalesForce.UploadRecords, Zynk.SAAS.Salesforce, Version=1.6.19.27977, Culture=neutral, PublicKeyToken=null">
+            <UploadRecords>
+              <LastResult>Success</LastResult>
+              <Name>Upload Records to Salesforce</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2011-08-02T12:42:06.268144+01:00</LastRan>
+              <Id>a579c608-3bd6-4ca6-94e0-c95eedc3c4db</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_customer_export.xml</string>
+                </Value>
+              </InputFile>
+              <XPathQuery>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Company/Customers/Customer</string>
+                </Value>
+              </XPathQuery>
+              <XmlKeyField>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>AccountReference</string>
+                </Value>
+              </XmlKeyField>
+              <XsltFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>XSLT\Zynk Customer to Salesforce Account.xslt</string>
+                </Value>
+              </XsltFile>
+              <SalesforceObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Account</string>
+                </Value>
+              </SalesforceObject>
+              <SalesforceKeyField>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>SageAccountReference__c</string>
+                </Value>
+              </SalesforceKeyField>
+            </UploadRecords>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>Upload Products to Salesforce</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2011-08-02T12:43:14.6865248+01:00</LastRan>
+        <Id>2160fba9-96db-4bce-ba05-90925c8e66d7</Id>
+        <Tasks>
+          <Task type="Zynk.Connect.Sage50.ExportStockRecords, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ExportStockRecords>
+              <LastResult>Success</LastResult>
+              <Name>Export Stock Records From Sage</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2011-08-02T12:42:10.824696+01:00</LastRan>
+              <Id>98f2309d-fb5d-4290-bd3e-397688ee9c30</Id>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_product_export.xml</string>
+                </Value>
+              </OutputFile>
+              <QuerySettings>
+                <Columns />
+                <Joins />
+                <Where />
+              </QuerySettings>
+              <QueryTimeout xsi:nil="true" />
+              <ExportAll>false</ExportAll>
+              <ExportSettings>
+                <DateTimeModified>2011-08-02T12:42:10.824696+01:00</DateTimeModified>
+                <ExportType>Modified</ExportType>
+              </ExportSettings>
+              <ExportPublished>false</ExportPublished>
+              <ExportAttachments>false</ExportAttachments>
+              <AttachmentSearchPattern>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </AttachmentSearchPattern>
+            </ExportStockRecords>
+          </Task>
+          <Task type="Zynk.SAAS.SalesForce.UploadProducts, Zynk.SAAS.Salesforce, Version=1.6.19.27977, Culture=neutral, PublicKeyToken=null">
+            <UploadProducts>
+              <LastResult>Success</LastResult>
+              <Name>Upload Products to Salesforce</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2011-08-02T12:43:14.616424+01:00</LastRan>
+              <Id>652be744-3709-4794-8bfb-7db8e34db059</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_product_export.xml</string>
+                </Value>
+              </InputFile>
+              <XPathQuery>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Company/Products/Product</string>
+                </Value>
+              </XPathQuery>
+              <XmlSkuField>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Sku</string>
+                </Value>
+              </XmlSkuField>
+              <XmlPriceField>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>SalePrice</string>
+                </Value>
+              </XmlPriceField>
+              <XsltFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>XSLT\Zynk Product to Salesforce Product.xslt</string>
+                </Value>
+              </XsltFile>
+            </UploadProducts>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.6.19.27972, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Unknown</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>7bcea6d7-1eeb-4ad4-bccd-b6173e6e0c38</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+        <HouseKeepingSettings>
+          <Enabled>false</Enabled>
+          <Type>NumberOfDays</Type>
+          <Number>30</Number>
+        </HouseKeepingSettings>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>42890d9e-4323-42a7-9e77-7fc3b7abe9ab</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>Saleforce to Sage 50</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.6.19</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+</Workflow>
