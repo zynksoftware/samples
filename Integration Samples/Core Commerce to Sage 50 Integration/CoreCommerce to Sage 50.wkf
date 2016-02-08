@@ -1,0 +1,743 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2015-03-04T09:38:47.3250576+00:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>Download Core Commerce Orders To Sage</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-03-04T09:38:47.1154683+00:00</LastRan>
+        <Id>4058b2f9-3de6-4119-9224-2526504aa53a</Id>
+        <Tasks>
+          <Task type="Zynk.Connect.Sage50.ExportQuery, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ExportQuery>
+              <LastResult>Success</LastResult>
+              <Name>Export County Codes From Sage</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2014-08-15T10:41:42.9783915+01:00</LastRan>
+              <Id>f657ef75-2c86-4b8c-b91c-21633842ad07</Id>
+              <Filter>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Filter>
+              <Sort>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Sort>
+              <Root>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Rows</string>
+                </Value>
+              </Root>
+              <Row>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Row</string>
+                </Value>
+              </Row>
+              <Query>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>SELECT CODE, NAME, EU_MEMBER FROM COUNTRY_CODE</string>
+                </Value>
+              </Query>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>country_codes.xml</string>
+                </Value>
+              </OutputFile>
+            </ExportQuery>
+          </Task>
+          <Task type="Zynk.Ecommerce.CoreCommerce.DownloadOrders, Zynk.Ecommerce.CoreCommerce, Version=1.6.19.27973, Culture=neutral, PublicKeyToken=null">
+            <DownloadOrders>
+              <LastResult>Success</LastResult>
+              <Name>Download Orders From CoreCommerce</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2014-09-17T16:59:01.4714258+01:00</LastRan>
+              <Id>8227a119-e14e-4068-aeb7-19f27c0c6a58</Id>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>orders_corecommerce.xml</string>
+                </Value>
+              </OutputFile>
+              <OrderStatuses>
+                <OrderStatusEnum>ORDER_STATUS_PENDING</OrderStatusEnum>
+              </OrderStatuses>
+              <DownloadAll>true</DownloadAll>
+              <DownloadFrom>2014-08-08T12:30:15.2922037+01:00</DownloadFrom>
+              <OrderNumbers>
+                <Type>ListValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.Collections.Generic.List`1[[Zynk.Core.Objects.ZynkObject, Zynk.Core, Version=1.6.19.27969, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <ArrayOfZynkObject />
+                </Value>
+              </OrderNumbers>
+            </DownloadOrders>
+          </Task>
+          <Task type="Zynk.Ecommerce.CoreCommerce.DownloadCustomers, Zynk.Ecommerce.CoreCommerce, Version=1.6.19.27973, Culture=neutral, PublicKeyToken=null">
+            <DownloadCustomers>
+              <LastResult>Success</LastResult>
+              <Name>Download Related Customers From CoreCommerce</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2014-09-17T17:12:57.4614909+01:00</LastRan>
+              <Id>7ac69fa0-aadd-4225-9380-b56402ae3ae8</Id>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>orders_related_customers_corecommerce.xml</string>
+                </Value>
+              </OutputFile>
+              <CustomerIds>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </CustomerIds>
+              <CustomerStrings>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>True</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>@{
+	string customerStrings = string.Empty;
+	
+	// Get the customer strings from the xml
+	XmlDocument xmlDoc = new XmlDocument();
+	xmlDoc.Load(Path.Combine(Context.Workflow["Directory.Working"], "orders_corecommerce.xml"));
+	XmlNodeList nodeList = xmlDoc.SelectNodes("Response/List/Order/CustomerId");
+	HashSet&lt;string&gt; ids = new HashSet&lt;string&gt;();
+	
+	// Build list of unique IDs
+	foreach (XmlNode node in nodeList)
+	{
+		if (node.InnerText != null)
+		{
+			string id = node.InnerText.ToString();
+			if (!string.IsNullOrEmpty(id))
+			{
+				ids.Add(id);
+			}
+		}
+	}
+	
+	if (ids.Count &gt; 0)
+	{
+		// Add the IDs to the where clause
+		bool first = true;
+		foreach (string id in ids)
+		{
+			if (!first) customerStrings += ",";
+			
+			customerStrings += id;
+			first = false;
+		}
+	}
+	else
+	{
+		// Ensure the query won't return all product templates, by always setting at least one ID to filter on
+		customerStrings = "0";
+	}
+	
+	Response.Write(customerStrings);
+}</string>
+                </Value>
+              </CustomerStrings>
+              <Emails>
+                <Type>ListValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Emails>
+            </DownloadCustomers>
+          </Task>
+          <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+            <XsltTransform>
+              <LastResult>Success</LastResult>
+              <Name>Transform to Zynk Customers and Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2015-03-04T09:38:46.8992779+00:00</LastRan>
+              <Id>26283aa5-2a13-4c49-afa3-6665e6b8f136</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>orders_corecommerce.xml</string>
+                </Value>
+              </InputFile>
+              <XsltFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>XSLT\CoreCommerce Orders to Zynk Customers and Sales Orders.xslt</string>
+                </Value>
+              </XsltFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>orders_and_customers_zynk.xml</string>
+                </Value>
+              </OutputFile>
+              <Parameters>
+                <Variable Key="CountryFile" Encrypt="False" Encrypted="False">
+                  <ZynkObject>
+                    <Type>FileValue</Type>
+                    <UseRazorEngine>False</UseRazorEngine>
+                    <ReadContentsOfFile>False</ReadContentsOfFile>
+                    <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                      <string>country_codes.xml</string>
+                    </Value>
+                  </ZynkObject>
+                </Variable>
+                <Variable Key="CustomerFile" Encrypt="False" Encrypted="False">
+                  <ZynkObject>
+                    <Type>FileValue</Type>
+                    <UseRazorEngine>False</UseRazorEngine>
+                    <ReadContentsOfFile>False</ReadContentsOfFile>
+                    <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                      <string>orders_related_customers_corecommerce.xml</string>
+                    </Value>
+                  </ZynkObject>
+                </Variable>
+              </Parameters>
+            </XsltTransform>
+          </Task>
+          <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ContainerTask>
+              <LastResult>Success</LastResult>
+              <Name>Process Customers</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2014-09-15T15:30:16.7560615+01:00</LastRan>
+              <Id>4c54e5ea-d2a5-4e3c-bbed-055fdf8b1e01</Id>
+              <Tasks>
+                <Task type="Zynk.Connect.Sage50.ImportCustomers, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+                  <ImportCustomers>
+                    <LastResult>Success</LastResult>
+                    <Name>Import Customers into Sage</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>2014-09-15T15:30:16.1093237+01:00</LastRan>
+                    <Id>c0b0f9dc-0332-42f5-bc43-ec7534456966</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>orders_and_customers_zynk.xml</string>
+                      </Value>
+                    </InputFile>
+                    <SuccessFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>customers_zynk_success.xml</string>
+                      </Value>
+                    </SuccessFile>
+                    <FailFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>customers_zynk_fail.xml</string>
+                      </Value>
+                    </FailFile>
+                    <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+                    <MatchFields />
+                    <AutoGenerateAccountReference>true</AutoGenerateAccountReference>
+                    <AlphabeticLength>0</AlphabeticLength>
+                    <NumericLength>3</NumericLength>
+                    <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                    <Mask>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>WEB???</string>
+                      </Value>
+                    </Mask>
+                    <AutoGenerateAccountReferences>
+                      <AutoGenerateAccountReference>true</AutoGenerateAccountReference>
+                      <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                      <AlphabeticLength>3</AlphabeticLength>
+                      <NumericLength>3</NumericLength>
+                      <Mask />
+                      <RegularExpression />
+                    </AutoGenerateAccountReferences>
+                  </ImportCustomers>
+                </Task>
+                <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+                  <XsltTransform>
+                    <LastResult>Success</LastResult>
+                    <Name>Transform to CoreCommerce Customers</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>2014-09-15T15:30:16.5923712+01:00</LastRan>
+                    <Id>303e5bfb-4f5e-44bf-9f17-d7d3b2dfcd9d</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>customers_zynk_success.xml</string>
+                      </Value>
+                    </InputFile>
+                    <XsltFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>XSLT\Zynk Customers to CoreCommerce Customers.xslt</string>
+                      </Value>
+                    </XsltFile>
+                    <OutputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>customer_updates.xml</string>
+                      </Value>
+                    </OutputFile>
+                    <Parameters />
+                  </XsltTransform>
+                </Task>
+                <Task type="Zynk.Ecommerce.CoreCommerce.UpsertCustomers, Zynk.Ecommerce.CoreCommerce, Version=1.6.19.27973, Culture=neutral, PublicKeyToken=null">
+                  <UpsertCustomers>
+                    <LastResult>Success</LastResult>
+                    <Name>Update Customers in CoreCommerce</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>2014-08-08T16:23:58.89939+01:00</LastRan>
+                    <Id>f7db7083-0711-4b1b-bb77-aca1c1d82a76</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>customer_updates.xml</string>
+                      </Value>
+                    </InputFile>
+                    <SuccessFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>customer_updates_success.xml</string>
+                      </Value>
+                    </SuccessFile>
+                    <FailFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>customer_updates_fail.xml</string>
+                      </Value>
+                    </FailFile>
+                  </UpsertCustomers>
+                </Task>
+              </Tasks>
+            </ContainerTask>
+          </Task>
+          <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ContainerTask>
+              <LastResult>Success</LastResult>
+              <Name>Process Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2014-09-15T15:32:32.8581232+01:00</LastRan>
+              <Id>88e6f117-d4c9-466f-8abd-690929d8ccf6</Id>
+              <Tasks>
+                <Task type="Zynk.Connect.Sage50.ImportSalesOrders, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+                  <ImportSalesOrders>
+                    <LastResult>Success</LastResult>
+                    <Name>Import Sales Orders into Sage</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>2014-09-15T15:32:32.1321492+01:00</LastRan>
+                    <Id>df81dcfb-de08-4198-838b-b1ea7180a6af</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>orders_and_customers_zynk.xml</string>
+                      </Value>
+                    </InputFile>
+                    <SuccessFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>orders_zynk_success.xml</string>
+                      </Value>
+                    </SuccessFile>
+                    <FailFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>orders_zynk_fail.xml</string>
+                      </Value>
+                    </FailFile>
+                    <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+                    <MatchFields />
+                    <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+                    <AlphabeticLength>0</AlphabeticLength>
+                    <NumericLength>3</NumericLength>
+                    <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                    <Mask>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>WEB???</string>
+                      </Value>
+                    </Mask>
+                    <AutoGenerateAccountReferences>
+                      <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+                      <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                      <AlphabeticLength>4</AlphabeticLength>
+                      <NumericLength>4</NumericLength>
+                      <Mask />
+                      <RegularExpression />
+                    </AutoGenerateAccountReferences>
+                    <UseManualDocumentNumber>false</UseManualDocumentNumber>
+                    <VatSettings>
+                      <Base>
+                        <Enabled>false</Enabled>
+                        <Sales>1</Sales>
+                        <Carriage>1</Carriage>
+                      </Base>
+                      <Eu>
+                        <Enabled>false</Enabled>
+                        <Sales>1</Sales>
+                        <Carriage>1</Carriage>
+                      </Eu>
+                      <EuVatReg>
+                        <Enabled>false</Enabled>
+                        <Sales>4</Sales>
+                        <Carriage>4</Carriage>
+                      </EuVatReg>
+                      <Row>
+                        <Enabled>false</Enabled>
+                        <Sales>0</Sales>
+                        <Carriage>0</Carriage>
+                      </Row>
+                    </VatSettings>
+                    <AutoCreateProducts>false</AutoCreateProducts>
+                    <DefaultProductCode />
+                    <AutoCreateCustomer>false</AutoCreateCustomer>
+                    <ReadSalesLedgerData>false</ReadSalesLedgerData>
+                    <PricesIncludeTax>false</PricesIncludeTax>
+                    <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+                    <PreventDuplicates>true</PreventDuplicates>
+                    <UseManualSalesOrderNumber>false</UseManualSalesOrderNumber>
+                    <AutoAllocateStock>false</AutoAllocateStock>
+                    <DefaultBankAccount>1200</DefaultBankAccount>
+                  </ImportSalesOrders>
+                </Task>
+                <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+                  <XsltTransform>
+                    <LastResult>Success</LastResult>
+                    <Name>Transform To CoreCommerce Order Updates</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>2014-09-15T15:32:32.6849959+01:00</LastRan>
+                    <Id>f26f7c98-4752-4822-8e38-5c3106ce19fa</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>orders_zynk_success.xml</string>
+                      </Value>
+                    </InputFile>
+                    <XsltFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>XSLT\Zynk Sales Orders to CoreCommerce Order Status Updates.xslt</string>
+                      </Value>
+                    </XsltFile>
+                    <OutputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>orders_notify.xml</string>
+                      </Value>
+                    </OutputFile>
+                    <Parameters />
+                  </XsltTransform>
+                </Task>
+                <Task type="Zynk.Ecommerce.CoreCommerce.UpdateOrderStatus, Zynk.Ecommerce.CoreCommerce, Version=1.6.19.27973, Culture=neutral, PublicKeyToken=null">
+                  <UpdateOrderStatus>
+                    <LastResult>Unknown</LastResult>
+                    <Name>Update Order Status in CoreCommerce</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>1753-01-01T00:00:00</LastRan>
+                    <Id>f6c01cc5-5d9e-4d82-8d26-dcc87d72576c</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>orders_notify.xml</string>
+                      </Value>
+                    </InputFile>
+                    <SuccessFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>orders_notify_success.xml</string>
+                      </Value>
+                    </SuccessFile>
+                    <FailFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>orders_notify_fail.xml</string>
+                      </Value>
+                    </FailFile>
+                    <OrderStatus>ORDER_STATUS_PROCESSING</OrderStatus>
+                  </UpdateOrderStatus>
+                </Task>
+              </Tasks>
+            </ContainerTask>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>Upload Prices and Stock Levels to Core Commerce</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2014-10-06T09:18:01.4884288+01:00</LastRan>
+        <Id>0000f931-0e91-45f0-91e3-19ed845e3c9b</Id>
+        <Tasks>
+          <Task type="Zynk.Connect.Sage50.ExportStockRecords, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ExportStockRecords>
+              <LastResult>Cancelled</LastResult>
+              <Name>Export Stock Records from Sage</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2014-08-15T15:34:10.9818185+01:00</LastRan>
+              <Id>83cd0a6b-16b9-4b7d-b43b-8f9639a4c762</Id>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>products_zynk.xml</string>
+                </Value>
+              </OutputFile>
+              <QuerySettings>
+                <Columns />
+                <Joins />
+                <Where />
+              </QuerySettings>
+              <QueryTimeout xsi:nil="true" />
+              <ExportAll>false</ExportAll>
+              <ExportSettings>
+                <DateTimeModified>2014-08-15T12:04:17</DateTimeModified>
+                <ExportType>Modified</ExportType>
+              </ExportSettings>
+              <ExportPublished>false</ExportPublished>
+              <ExportAttachments>false</ExportAttachments>
+              <AttachmentSearchPattern>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </AttachmentSearchPattern>
+            </ExportStockRecords>
+          </Task>
+          <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+            <XsltTransform>
+              <LastResult>Success</LastResult>
+              <Name>Transform to CoreCommerce Products</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2014-09-15T16:58:49.1293583+01:00</LastRan>
+              <Id>d1402f7f-6d1e-4bea-bc7a-339452aa0dba</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>products_zynk.xml</string>
+                </Value>
+              </InputFile>
+              <XsltFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>XSLT\Zynk Products to CoreCommerce Products.xslt</string>
+                </Value>
+              </XsltFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>products_corecommerce.xml</string>
+                </Value>
+              </OutputFile>
+              <Parameters />
+            </XsltTransform>
+          </Task>
+          <Task type="Zynk.Ecommerce.CoreCommerce.UpdateProducts, Zynk.Ecommerce.CoreCommerce, Version=1.6.19.27973, Culture=neutral, PublicKeyToken=null">
+            <UpdateProducts>
+              <LastResult>Success</LastResult>
+              <Name>Update Products in CoreCommerce</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2014-10-06T09:18:01.29013+01:00</LastRan>
+              <Id>ec9270d8-8959-407a-8fbc-830bde43823b</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>products_corecommerce_test.xml</string>
+                </Value>
+              </InputFile>
+              <SuccessFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>products_corecommerce_success.xml</string>
+                </Value>
+              </SuccessFile>
+              <FailFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>products_corecommerce_fail.xml</string>
+                </Value>
+              </FailFile>
+            </UpdateProducts>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.6.19.27972, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Unknown</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>01de3984-7ed2-4d85-9488-9f0045b03acb</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+        <HouseKeepingSettings>
+          <Enabled>false</Enabled>
+          <Type>NumberOfDays</Type>
+          <Number>30</Number>
+        </HouseKeepingSettings>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>488111fa-f720-4e90-91a6-d99401845816</Id>
+  <Variables>
+    <Variable Key="Directory.Working" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>UriValue</Type>
+        <UseRazorEngine>True</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string />
+        </Value>
+      </ZynkObject>
+    </Variable>
+  </Variables>
+  <ContextVariables />
+  <Name>CoreCommerce to Sage 50</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.6.19</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfJobs</Type>
+    <Number>100</Number>
+  </LogHouseKeeping>
+</Workflow>

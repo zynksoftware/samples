@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2013-03-13T15:37:49.9476209+00:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Documents.CSV.CsvToXml, Zynk.Documents.Csv, Version=1.5.34.26942, Culture=neutral, PublicKeyToken=null">
+      <CsvToXml>
+        <LastResult>Success</LastResult>
+        <Name>CSV To XML</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-03-13T14:56:41.7235159+00:00</LastRan>
+        <Id>34360a68-df0d-41a5-9230-ad465149e399</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sample.csv</string>
+          </Value>
+        </InputFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sample_Document.xml</string>
+          </Value>
+        </OutputFile>
+        <Separator>44</Separator>
+        <Root>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Company</string>
+          </Value>
+        </Root>
+        <Row>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Row</string>
+          </Value>
+        </Row>
+        <Column>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>F</string>
+          </Value>
+        </Column>
+        <Headers>true</Headers>
+        <ExportAsElements>true</ExportAsElements>
+      </CsvToXml>
+    </Task>
+    <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.5.34.26941, Culture=neutral, PublicKeyToken=null">
+      <XsltTransform>
+        <LastResult>Success</LastResult>
+        <Name>XSLT Transformation</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-03-13T15:37:24.4964369+00:00</LastRan>
+        <Id>5517a33b-948f-4e91-aaad-3312fd836875</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sample_Document.xml</string>
+          </Value>
+        </InputFile>
+        <XsltFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>XSLT/CSV_Integration.xslt</string>
+          </Value>
+        </XsltFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sample_Transformed_Document.xml</string>
+          </Value>
+        </OutputFile>
+        <Parameters />
+      </XsltTransform>
+    </Task>
+    <Task type="Zynk.Connect.Sage50.ImportInvoices, Zynk.Connect.Sage50, Version=1.5.34.26945, Culture=neutral, PublicKeyToken=null">
+      <ImportInvoices>
+        <LastResult>Success</LastResult>
+        <Name>Import Invoices</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-03-13T15:37:49.5864689+00:00</LastRan>
+        <Id>13bfa023-64fc-4d15-bd2c-8d9902cedc5c</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Sample_Transformed_Document.xml</string>
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Invoices_Success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Invoices_Fail.xml</string>
+          </Value>
+        </FailFile>
+        <AutoGenerateAccountReference>true</AutoGenerateAccountReference>
+        <AlphabeticLength>3</AlphabeticLength>
+        <NumericLength>3</NumericLength>
+        <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+        <MatchFields />
+        <AccountReferenceConvention>ForenameSurname</AccountReferenceConvention>
+        <VatSettings>
+          <Base>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Base>
+          <Eu>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Eu>
+          <EuVatReg>
+            <Enabled>false</Enabled>
+            <Sales>4</Sales>
+            <Carriage>4</Carriage>
+          </EuVatReg>
+          <Row>
+            <Enabled>false</Enabled>
+            <Sales>0</Sales>
+            <Carriage>0</Carriage>
+          </Row>
+        </VatSettings>
+        <AutoCreateProducts>true</AutoCreateProducts>
+        <DefaultProductCode>S1</DefaultProductCode>
+        <AutoCreateCustomer>true</AutoCreateCustomer>
+        <ReadSalesLedgerData>false</ReadSalesLedgerData>
+        <PricesIncludeTax>false</PricesIncludeTax>
+        <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+        <PreventDuplicates>true</PreventDuplicates>
+        <UseManualInvoiceNumber>false</UseManualInvoiceNumber>
+        <DefaultBankAccount>1200</DefaultBankAccount>
+      </ImportInvoices>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.5.34.26944, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Unknown</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>dded883f-5576-47cc-b9ad-9b1466598273</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>25ced8ec-571d-4d24-ae1e-0bb13a843e8c</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>Test CSV</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+</Workflow>
