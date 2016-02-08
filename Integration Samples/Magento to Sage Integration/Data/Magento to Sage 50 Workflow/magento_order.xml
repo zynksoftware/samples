@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<ArrayOfOrderInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <OrderInfo>
+    <Fields>
+      <Field Name="coupon_code" Value="" />
+      <Field Name="protect_code" Value="25ca26" />
+      <Field Name="base_total_invoiced_cost" Value="" />
+      <Field Name="can_ship_partially" Value="" />
+      <Field Name="can_ship_partially_item" Value="" />
+      <Field Name="edit_increment" Value="" />
+      <Field Name="forced_shipment_with_invoice" Value="" />
+      <Field Name="payment_auth_expiration" Value="" />
+      <Field Name="quote_address_id" Value="" />
+      <Field Name="adjustment_negative" Value="" />
+      <Field Name="adjustment_positive" Value="" />
+      <Field Name="base_adjustment_negative" Value="" />
+      <Field Name="base_adjustment_positive" Value="" />
+      <Field Name="base_shipping_discount_amount" Value="0.0000" />
+      <Field Name="base_subtotal_incl_tax" Value="67.7600" />
+      <Field Name="base_total_due" Value="" />
+      <Field Name="payment_authorization_amount" Value="" />
+      <Field Name="shipping_discount_amount" Value="0.0000" />
+      <Field Name="subtotal_incl_tax" Value="67.7600" />
+      <Field Name="total_due" Value="" />
+      <Field Name="customer_dob" Value="" />
+      <Field Name="customer_firstname" Value="Joe" />
+      <Field Name="customer_lastname" Value="Harrison" />
+      <Field Name="customer_middlename" Value="" />
+      <Field Name="customer_prefix" Value="" />
+      <Field Name="customer_suffix" Value="" />
+      <Field Name="customer_taxvat" Value="" />
+      <Field Name="discount_description" Value="" />
+      <Field Name="ext_customer_id" Value="" />
+      <Field Name="ext_order_id" Value="" />
+      <Field Name="hold_before_state" Value="" />
+      <Field Name="hold_before_status" Value="" />
+      <Field Name="original_increment_id" Value="" />
+      <Field Name="relation_child_id" Value="" />
+      <Field Name="relation_child_real_id" Value="" />
+      <Field Name="relation_parent_id" Value="" />
+      <Field Name="relation_parent_real_id" Value="" />
+      <Field Name="x_forwarded_for" Value="" />
+      <Field Name="customer_note" Value="This is a test order for reporting." />
+      <Field Name="total_item_count" Value="1" />
+      <Field Name="customer_gender" Value="" />
+      <Field Name="hidden_tax_amount" Value="0.0000" />
+      <Field Name="base_hidden_tax_amount" Value="0.0000" />
+      <Field Name="shipping_hidden_tax_amount" Value="0.0000" />
+      <Field Name="base_shipping_hidden_tax_amnt" Value="0.0000" />
+      <Field Name="hidden_tax_invoiced" Value="" />
+      <Field Name="base_hidden_tax_invoiced" Value="" />
+      <Field Name="hidden_tax_refunded" Value="" />
+      <Field Name="base_hidden_tax_refunded" Value="" />
+      <Field Name="shipping_incl_tax" Value="20.0000" />
+      <Field Name="base_shipping_incl_tax" Value="20.0000" />
+      <Field Name="paypal_ipn_customer_notified" Value="0" />
+      <Field Name="gift_message_id" Value="" />
+      <Field Name="coupon_rule_name" Value="" />
+      <Field Name="payment_authorization_expiration" Value="" />
+      <Field Name="forced_do_shipment_with_invoice" Value="" />
+      <Field Name="base_shipping_hidden_tax_amount" Value="0.0000" />
+    </Fields>
+    <increment_id>100000002</increment_id>
+    <store_id>1</store_id>
+    <created_at>2013-04-29 13:11:04</created_at>
+    <updated_at>2013-04-29 13:11:04</updated_at>
+    <customer_id>1181</customer_id>
+    <tax_amount>11.2900</tax_amount>
+    <shipping_amount>20.0000</shipping_amount>
+    <discount_amount>0.0000</discount_amount>
+    <subtotal>56.4700</subtotal>
+    <grand_total>87.7600</grand_total>
+    <total_qty_ordered>4.0000</total_qty_ordered>
+    <base_tax_amount>11.2900</base_tax_amount>
+    <base_shipping_amount>20.0000</base_shipping_amount>
+    <base_discount_amount>0.0000</base_discount_amount>
+    <base_subtotal>56.4700</base_subtotal>
+    <base_grand_total>87.7600</base_grand_total>
+    <shipping_tax_amount>0.0000</shipping_tax_amount>
+    <base_shipping_tax_amount>0.0000</base_shipping_tax_amount>
+    <weight>0.3360</weight>
+    <store_to_base_rate>1.0000</store_to_base_rate>
+    <store_to_order_rate>1.0000</store_to_order_rate>
+    <base_to_global_rate>1.0000</base_to_global_rate>
+    <base_to_order_rate>1.0000</base_to_order_rate>
+    <shipping_description>Flat Rate - Fixed</shipping_description>
+    <shipping_method>flatrate_flatrate</shipping_method>
+    <status>pending</status>
+    <base_currency_code>GBP</base_currency_code>
+    <store_currency_code>GBP</store_currency_code>
+    <order_currency_code>GBP</order_currency_code>
+    <customer_email>joe.harrison@internetware.co.uk</customer_email>
+    <state>new</state>
+    <store_name></store_name>
+    <global_currency_code>GBP</global_currency_code>
+    <quote_id>7</quote_id>
+    <shipping_address_id>4</shipping_address_id>
+    <billing_address_id>3</billing_address_id>
+    <is_virtual>0</is_virtual>
+    <customer_group_id>1</customer_group_id>
+    <customer_note_notify>0</customer_note_notify>
+    <customer_is_guest>0</customer_is_guest>
+    <order_id>2</order_id>
+    <shipping_address>
+      <Fields>
+        <Field Name="customer_address_id" Value="0" />
+        <Field Name="quote_address_id" Value="" />
+        <Field Name="customer_id" Value="" />
+        <Field Name="email" Value="" />
+        <Field Name="prefix" Value="" />
+        <Field Name="middlename" Value="" />
+        <Field Name="suffix" Value="" />
+        <Field Name="vat_id" Value="" />
+        <Field Name="vat_is_valid" Value="" />
+        <Field Name="vat_request_id" Value="" />
+        <Field Name="vat_request_date" Value="" />
+        <Field Name="vat_request_success" Value="" />
+      </Fields>
+      <parent_id>2</parent_id>
+      <address_type>shipping</address_type>
+      <firstname>Joe</firstname>
+      <lastname>Harrison</lastname>
+      <street>6-8 Charlotte Square</street>
+      <city>Newcastle upon-Tyne</city>
+      <postcode>NE1 4XF</postcode>
+      <country_id>GB</country_id>
+      <telephone>0845 123 2920</telephone>
+      <address_id>4</address_id>
+    </shipping_address>
+    <billing_address>
+      <Fields>
+        <Field Name="customer_address_id" Value="0" />
+        <Field Name="quote_address_id" Value="" />
+        <Field Name="customer_id" Value="" />
+        <Field Name="email" Value="" />
+        <Field Name="prefix" Value="" />
+        <Field Name="middlename" Value="" />
+        <Field Name="suffix" Value="" />
+        <Field Name="vat_id" Value="" />
+        <Field Name="vat_is_valid" Value="" />
+        <Field Name="vat_request_id" Value="" />
+        <Field Name="vat_request_date" Value="" />
+        <Field Name="vat_request_success" Value="" />
+      </Fields>
+      <parent_id>2</parent_id>
+      <address_type>billing</address_type>
+      <firstname>Joe</firstname>
+      <lastname>Harrison</lastname>
+      <street>6-8 Charlotte Square</street>
+      <city>Newcastle upon-Tyne</city>
+      <postcode>NE1 4XF</postcode>
+      <country_id>GB</country_id>
+      <telephone>0845 123 2920</telephone>
+      <address_id>3</address_id>
+    </billing_address>
+    <items>
+      <OrderProduct>
+        <Fields>
+          <Field Name="store_id" Value="1" />
+          <Field Name="base_cost" Value="" />
+          <Field Name="ext_order_item_id" Value="" />
+          <Field Name="locked_do_invoice" Value="" />
+          <Field Name="locked_do_ship" Value="" />
+          <Field Name="price_incl_tax" Value="16.9406" />
+          <Field Name="base_price_incl_tax" Value="16.9406" />
+          <Field Name="row_total_incl_tax" Value="67.7600" />
+          <Field Name="base_row_total_incl_tax" Value="67.7600" />
+          <Field Name="hidden_tax_amount" Value="" />
+          <Field Name="base_hidden_tax_amount" Value="" />
+          <Field Name="hidden_tax_invoiced" Value="" />
+          <Field Name="base_hidden_tax_invoiced" Value="" />
+          <Field Name="hidden_tax_refunded" Value="" />
+          <Field Name="base_hidden_tax_refunded" Value="" />
+          <Field Name="is_nominal" Value="0" />
+          <Field Name="tax_canceled" Value="" />
+          <Field Name="hidden_tax_canceled" Value="" />
+          <Field Name="tax_refunded" Value="" />
+          <Field Name="base_weee_tax_applied_row_amnt" Value="0.0000" />
+          <Field Name="base_tax_refunded" Value="" />
+          <Field Name="discount_refunded" Value="" />
+          <Field Name="base_discount_refunded" Value="" />
+        </Fields>
+        <created_at>2013-04-29 13:11:04</created_at>
+        <updated_at>2013-04-29 13:11:04</updated_at>
+        <product_id>1501</product_id>
+        <sku>76460</sku>
+        <name>Lung Beef Natural Glandular x 100 Capsules</name>
+        <weight>0.0840</weight>
+        <price>14.1200</price>
+        <item_id>6</item_id>
+        <order_id>2</order_id>
+        <quote_item_id>6</quote_item_id>
+        <product_type>simple</product_type>
+        <product_options>a:1:{s:15:"info_buyRequest";a:2:{s:3:"qty";i:4;s:7:"options";a:0:{}}}</product_options>
+        <is_virtual>0</is_virtual>
+        <free_shipping>0</free_shipping>
+        <is_qty_decimal>0</is_qty_decimal>
+        <no_discount>0</no_discount>
+        <qty_canceled>0.0000</qty_canceled>
+        <qty_invoiced>0.0000</qty_invoiced>
+        <qty_ordered>4.0000</qty_ordered>
+        <qty_refunded>0.0000</qty_refunded>
+        <qty_shipped>0.0000</qty_shipped>
+        <base_price>14.1200</base_price>
+        <original_price>16.9406</original_price>
+        <base_original_price>16.9406</base_original_price>
+        <tax_percent>20.0000</tax_percent>
+        <tax_amount>11.2900</tax_amount>
+        <base_tax_amount>11.2900</base_tax_amount>
+        <tax_invoiced>0.0000</tax_invoiced>
+        <base_tax_invoiced>0.0000</base_tax_invoiced>
+        <discount_percent>0.0000</discount_percent>
+        <discount_amount>0.0000</discount_amount>
+        <base_discount_amount>0.0000</base_discount_amount>
+        <discount_invoiced>0.0000</discount_invoiced>
+        <base_discount_invoiced>0.0000</base_discount_invoiced>
+        <amount_refunded>0.0000</amount_refunded>
+        <base_amount_refunded>0.0000</base_amount_refunded>
+        <row_total>56.4700</row_total>
+        <base_row_total>56.4700</base_row_total>
+        <row_invoiced>0.0000</row_invoiced>
+        <base_row_invoiced>0.0000</base_row_invoiced>
+        <row_weight>0.3360</row_weight>
+        <weee_tax_applied>a:0:{}</weee_tax_applied>
+        <weee_tax_applied_amount>0.0000</weee_tax_applied_amount>
+        <weee_tax_applied_row_amount>0.0000</weee_tax_applied_row_amount>
+        <base_weee_tax_applied_amount>0.0000</base_weee_tax_applied_amount>
+        <base_weee_tax_applied_row_amount>0.0000</base_weee_tax_applied_row_amount>
+        <weee_tax_disposition>0.0000</weee_tax_disposition>
+        <weee_tax_row_disposition>0.0000</weee_tax_row_disposition>
+        <base_weee_tax_disposition>0.0000</base_weee_tax_disposition>
+        <base_weee_tax_row_disposition>0.0000</base_weee_tax_row_disposition>
+        <has_children>false</has_children>
+      </OrderProduct>
+    </items>
+    <payment>
+      <Fields>
+        <Field Name="amount_refunded" Value="" />
+        <Field Name="amount_canceled" Value="" />
+        <Field Name="base_amount_authorized" Value="" />
+        <Field Name="base_amount_paid_online" Value="" />
+        <Field Name="base_amount_refunded_online" Value="" />
+        <Field Name="amount_authorized" Value="" />
+        <Field Name="base_shipping_refunded" Value="" />
+        <Field Name="shipping_refunded" Value="" />
+        <Field Name="base_amount_refunded" Value="" />
+        <Field Name="base_amount_canceled" Value="" />
+        <Field Name="quote_payment_id" Value="" />
+        <Field Name="additional_data" Value="" />
+        <Field Name="echeck_bank_name" Value="" />
+        <Field Name="cc_debug_request_body" Value="" />
+        <Field Name="cc_secure_verify" Value="" />
+        <Field Name="protection_eligibility" Value="" />
+        <Field Name="cc_approval" Value="" />
+        <Field Name="cc_status_description" Value="" />
+        <Field Name="echeck_type" Value="" />
+        <Field Name="cc_debug_response_serialized" Value="" />
+        <Field Name="echeck_account_type" Value="" />
+        <Field Name="last_trans_id" Value="" />
+        <Field Name="cc_cid_status" Value="" />
+        <Field Name="cc_status" Value="" />
+        <Field Name="echeck_routing_number" Value="" />
+        <Field Name="account_status" Value="" />
+        <Field Name="anet_trans_method" Value="" />
+        <Field Name="cc_debug_response_body" Value="" />
+        <Field Name="cc_ss_issue" Value="" />
+        <Field Name="echeck_account_name" Value="" />
+        <Field Name="cc_avs_status" Value="" />
+        <Field Name="cc_trans_id" Value="" />
+        <Field Name="paybox_request_number" Value="" />
+        <Field Name="address_status" Value="" />
+        <Field Name="additional_information" Value="" />
+      </Fields>
+      <parent_id>2</parent_id>
+      <amount_ordered>87.7600</amount_ordered>
+      <base_amount_ordered>87.7600</base_amount_ordered>
+      <shipping_amount>20.0000</shipping_amount>
+      <base_shipping_amount>20.0000</base_shipping_amount>
+      <cc_exp_month>0</cc_exp_month>
+      <cc_exp_year>0</cc_exp_year>
+      <method>checkmo</method>
+      <cc_ss_start_month>0</cc_ss_start_month>
+      <cc_ss_start_year>0</cc_ss_start_year>
+      <payment_id>2</payment_id>
+    </payment>
+    <status_history>
+      <OrderStatus>
+        <Fields>
+          <Field Name="is_visible_on_front" Value="0" />
+          <Field Name="entity_name" Value="order" />
+        </Fields>
+        <parent_id>2</parent_id>
+        <store_id>1</store_id>
+        <created_at>2013-04-29 13:11:04</created_at>
+        <comment>This is a test order for reporting.</comment>
+        <is_customer_notified>0</is_customer_notified>
+        <status>pending</status>
+      </OrderStatus>
+    </status_history>
+  </OrderInfo>
+</ArrayOfOrderInfo>
