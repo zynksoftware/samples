@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2013-07-09T14:34:52.813761+01:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.5.42.17059, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Success</LastResult>
+        <Name>Download Transactions</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-07-09T14:34:52.6257371+01:00</LastRan>
+        <Id>01831e90-d0fd-4ffa-a917-31f6b19f4c94</Id>
+        <Tasks>
+          <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=1.5.42.17059, Culture=neutral, PublicKeyToken=null">
+            <HttpTask>
+              <LastResult>Success</LastResult>
+              <Name>Download Transactions from Sohnar</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-07-09T14:34:51.9306489+01:00</LastRan>
+              <Id>e10bc021-c09d-499a-8689-1e2831325aac</Id>
+              <Url>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>URL</string>
+                </Value>
+              </Url>
+              <Username>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>USERNAME</string>
+                </Value>
+              </Username>
+              <Password>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>PASSWORD</string>
+                </Value>
+              </Password>
+              <Timeout>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>6000000</string>
+                </Value>
+              </Timeout>
+              <UserAgent>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Internetware/Zynk</string>
+                </Value>
+              </UserAgent>
+              <EncodingType>UTF8</EncodingType>
+              <HeaderValues />
+              <FormValues />
+              <ContentsField>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </ContentsField>
+              <Input>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Input>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>transactions.xml</string>
+                </Value>
+              </OutputFile>
+              <Method>GET</Method>
+              <Retries>1</Retries>
+            </HttpTask>
+          </Task>
+          <Task type="Zynk.Connect.Sage50.ImportTransactions, Zynk.Connect.Sage50, Version=1.5.42.17060, Culture=neutral, PublicKeyToken=null">
+            <ImportTransactions>
+              <LastResult>Success</LastResult>
+              <Name>Import Transactions</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-02-06T15:16:33.3078483+00:00</LastRan>
+              <Id>eb25aad3-9b3b-4aee-9047-2c14fe66fae4</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>transactions.xml</string>
+                </Value>
+              </InputFile>
+              <SuccessFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>success.xml</string>
+                </Value>
+              </SuccessFile>
+              <FailFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>fail.xml</string>
+                </Value>
+              </FailFile>
+              <AutoAllocateTransactions>false</AutoAllocateTransactions>
+              <PreventDuplicates>true</PreventDuplicates>
+            </ImportTransactions>
+          </Task>
+          <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=1.5.42.17059, Culture=neutral, PublicKeyToken=null">
+            <HttpTask>
+              <LastResult>Success</LastResult>
+              <Name>Notify Successful Transactions</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-02-06T15:18:12.2325065+00:00</LastRan>
+              <Id>4303d28b-08e9-4c7d-8604-d5d19f3711bd</Id>
+              <Url>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>True</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>SUCCESS</string>
+                </Value>
+              </Url>
+              <Username>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>USERNAME</string>
+                </Value>
+              </Username>
+              <Password>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>PASSWORD</string>
+                </Value>
+              </Password>
+              <Timeout>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>6000000</string>
+                </Value>
+              </Timeout>
+              <UserAgent>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Internetware/Zynk</string>
+                </Value>
+              </UserAgent>
+              <EncodingType>UTF8</EncodingType>
+              <HeaderValues>
+                <Variable Key="Content-Type" Encrypt="False" Encrypted="False">
+                  <ZynkObject>
+                    <Type>StaticValue</Type>
+                    <UseRazorEngine>False</UseRazorEngine>
+                    <ReadContentsOfFile>False</ReadContentsOfFile>
+                    <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                      <string>text/xml</string>
+                    </Value>
+                  </ZynkObject>
+                </Variable>
+              </HeaderValues>
+              <FormValues />
+              <ContentsField>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </ContentsField>
+              <Input>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>success.xml</string>
+                </Value>
+              </Input>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>trans_reponse.txt</string>
+                </Value>
+              </OutputFile>
+              <Method>POST</Method>
+              <Retries>1</Retries>
+            </HttpTask>
+          </Task>
+          <Task type="Zynk.Internet.Http.HttpTask, Zynk.Internet.Http, Version=1.5.42.17059, Culture=neutral, PublicKeyToken=null">
+            <HttpTask>
+              <LastResult>Success</LastResult>
+              <Name>Notify Failed Transactions</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2013-02-06T15:18:51.7347659+00:00</LastRan>
+              <Id>72ad7d82-9fcd-4d45-ac3f-16a7780df9d0</Id>
+              <Url>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>FAIL</string>
+                </Value>
+              </Url>
+              <Username>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>USERNAME</string>
+                </Value>
+              </Username>
+              <Password>
+                <Type>VariableValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>PASSWORD</string>
+                </Value>
+              </Password>
+              <Timeout>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>6000000</string>
+                </Value>
+              </Timeout>
+              <UserAgent>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>Internetware/Zynk</string>
+                </Value>
+              </UserAgent>
+              <EncodingType>UTF8</EncodingType>
+              <HeaderValues>
+                <Variable Key="Content-Type" Encrypt="False" Encrypted="False">
+                  <ZynkObject>
+                    <Type>StaticValue</Type>
+                    <UseRazorEngine>False</UseRazorEngine>
+                    <ReadContentsOfFile>False</ReadContentsOfFile>
+                    <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                      <string>text/xml</string>
+                    </Value>
+                  </ZynkObject>
+                </Variable>
+              </HeaderValues>
+              <FormValues />
+              <ContentsField>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </ContentsField>
+              <Input>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>fail.xml</string>
+                </Value>
+              </Input>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </OutputFile>
+              <Method>POST</Method>
+              <Retries>1</Retries>
+            </HttpTask>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.5.42.17059, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Success</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-02-06T15:19:36.1733076+00:00</LastRan>
+        <Id>1e1a312a-2016-472e-b956-b612e45e02c2</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>67e8c4af-23ea-4e34-a8c6-a17cc0d81d78</Id>
+  <Variables>
+    <Variable Key="URL" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>https://sohnar-prod.apigee.net/TrafficLiteServer/zynkapi/</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="SUCCESS" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>True</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>@(Context.Workflow["URL"])/success</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="FAIL" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>True</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>@(Context.Workflow["URL"])/fail</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="USERNAME" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string />
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="PASSWORD" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string />
+        </Value>
+      </ZynkObject>
+    </Variable>
+  </Variables>
+  <ContextVariables />
+  <Name>TrafficLive</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.5.42</Version>
+</Workflow>

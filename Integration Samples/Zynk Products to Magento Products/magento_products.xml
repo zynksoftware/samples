@@ -1,0 +1,1822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProduct>
+  <Product>
+    <sku>BOARD001</sku>
+    <name>Whiteboard - Drywipe (900 x 1200)</name>
+    <short_description>Whiteboard - Drywipe (900 x 1200)</short_description>
+    <description>Whiteboard - Drywipe (900 x 1200)</description>
+    <weight>0</weight>
+    <qty>5</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>20</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>BOARD002</sku>
+    <name>Whiteboard - Drywipe (1000 x 1500)</name>
+    <short_description>Whiteboard - Drywipe (1000 x 1500)</short_description>
+    <description>Whiteboard - Drywipe (1000 x 1500)</description>
+    <weight>0</weight>
+    <qty>-22</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>22</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>BOOKS001</sku>
+    <name>A4 Ledger Book - 5 Column</name>
+    <short_description>A4 Ledger Book - 5 Column</short_description>
+    <description>A4 Ledger Book - 5 Column</description>
+    <weight>0</weight>
+    <qty>73</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>7.99</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>BOOKS002</sku>
+    <name>A4 Carbon Copy Book - Triplicate</name>
+    <short_description>A4 Carbon Copy Book - Triplicate</short_description>
+    <description>A4 Carbon Copy Book - Triplicate</description>
+    <weight>0</weight>
+    <qty>-4</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2.99</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>BOOKS003</sku>
+    <name>Shorthand Notebook - 80 Sheets</name>
+    <short_description>Shorthand Notebook - 80 Sheets</short_description>
+    <description>Shorthand Notebook - 80 Sheets</description>
+    <weight>0</weight>
+    <qty>64</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>4.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>CALC001</sku>
+    <name>Calculator - Desktop</name>
+    <short_description>Calculator - Desktop</short_description>
+    <description>Calculator - Desktop</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>10</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>CALC002</sku>
+    <name>Calculator - Pocket</name>
+    <short_description>Calculator - Pocket</short_description>
+    <description>Calculator - Pocket</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>6</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>CALC003</sku>
+    <name>Calculator - Desktop (Printing)</name>
+    <short_description>Calculator - Desktop (Printing)</short_description>
+    <description>Calculator - Desktop (Printing)</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>17</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>CALC004</sku>
+    <name>Calculator - Printing Rolls</name>
+    <short_description>Calculator - Printing Rolls</short_description>
+    <description>Calculator - Printing Rolls</description>
+    <weight>0</weight>
+    <qty>152</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>6</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>CAS001</sku>
+    <name>AT Mini Tower Case</name>
+    <short_description>ATMini Tower Case</short_description>
+    <description>ATMini Tower Case</description>
+    <weight>0</weight>
+    <qty>9</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>15</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>CAS002</sku>
+    <name>ATX Mini Tower Case</name>
+    <short_description>ATX Mini Tower Case</short_description>
+    <description>ATX Mini Tower Case</description>
+    <weight>0</weight>
+    <qty>6</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>20</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>CAS003</sku>
+    <name>ATX Desktop Case</name>
+    <short_description>ATX Desktop Case</short_description>
+    <description>ATX Desktop Case</description>
+    <weight>0</weight>
+    <qty>1</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>30</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>CDR001</sku>
+    <name>CDR08432 Read/Write CD Drive</name>
+    <short_description>CDR08432 Read/Write CD Drive</short_description>
+    <description>CDR08432 Read/Write CD Drive</description>
+    <weight>0</weight>
+    <qty>-3</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>154</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>CDR002</sku>
+    <name>CDR10432 Read/Write CD Drive</name>
+    <short_description>CDR10432 Read/Write CD Drive</short_description>
+    <description>CDR10432 Read/Write CD Drive</description>
+    <weight>0</weight>
+    <qty>1</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>190</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>CDR003</sku>
+    <name>CDR12432 Read/Write CD Drive</name>
+    <short_description>CDR12432 Read/Write CD Drive</short_description>
+    <description>CDR12432 Read/Write CD Drive</description>
+    <weight>0</weight>
+    <qty>2</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>223</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>COR001</sku>
+    <name>Correction Fluid - White</name>
+    <short_description>Correction Fluid - White</short_description>
+    <description>Correction Fluid - White</description>
+    <weight>0</weight>
+    <qty>61</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>DISK001</sku>
+    <name>Diskettes - Formatted (1.44MB)</name>
+    <short_description>Diskettes - Formatted (1.44MB)</short_description>
+    <description>Diskettes - Formatted (1.44MB)</description>
+    <weight>0</weight>
+    <qty>36</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>3</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>DISK002</sku>
+    <name>Disk - CDR (640MB)</name>
+    <short_description>Disk - CDR (650MB)</short_description>
+    <description>Disk - CDR (650MB)</description>
+    <weight>0</weight>
+    <qty>6</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>8</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>ENV001</sku>
+    <name>Envelope - White (110 x 220) Plain</name>
+    <short_description>Envelope - White (110 x 220) Plain</short_description>
+    <description>Envelope - White (110 x 220) Plain</description>
+    <weight>0</weight>
+    <qty>-11</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>8.99</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>ENV002</sku>
+    <name>Envelope - White (110 x 220) Window</name>
+    <short_description>Envelope - White (110 x 220) Window</short_description>
+    <description>Envelope - White (110 x 220) Window</description>
+    <weight>0</weight>
+    <qty>49</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>9.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>ENV003</sku>
+    <name>Envelope - Brown (110 x 220) Plain</name>
+    <short_description>Envelope - Brown (110 x 220) Plain</short_description>
+    <description>Envelope - Brown (110 x 220) Plain</description>
+    <weight>0</weight>
+    <qty>52</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>7.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>ENV004</sku>
+    <name>Envelope - Brown (110 x 220) Window</name>
+    <short_description>Envelope - Brown (110 x 220) Window</short_description>
+    <description>Envelope - Brown (110 x 220) Window</description>
+    <weight>0</weight>
+    <qty>32</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>8.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>FAX001</sku>
+    <name>FX010 Plain Paper Fax</name>
+    <short_description>FX010 Plain Paper Fax</short_description>
+    <description>FX010 Plain Paper Fax</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>180</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>FAX002</sku>
+    <name>FX020 Multifunctional Fax</name>
+    <short_description>FX020 Multifunctional Fax</short_description>
+    <description>FX020 Multifunctional Fax</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>400</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>FAX003</sku>
+    <name>FX030 Multifunctional Fax</name>
+    <short_description>FX030 Multifunctional Fax</short_description>
+    <description>FX030 Multifunctional Fax</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>460</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>FIL001</sku>
+    <name>Filing Cabinet - 3 Drawer</name>
+    <short_description>Filing Cabinet - 3 Drawer</short_description>
+    <description>Filing Cabinet - 3 Drawer</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>45</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>FIL002</sku>
+    <name>Filing Cabinet - 5 Drawer</name>
+    <short_description>Filing Cabinet - 5 Drawer</short_description>
+    <description>Filing Cabinet - 5 Drawer</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>65</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>FLIP001</sku>
+    <name>Flip Chart - A1 Pad</name>
+    <short_description>Flip Chart - A1 Pad</short_description>
+    <description>Flip Chart - A1 Pad</description>
+    <weight>0</weight>
+    <qty>21</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>16</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>FLIP002</sku>
+    <name>Flip Chart - A1 Pad (Recycled)</name>
+    <short_description>Flip Chart - A1 Pad (Recycled)</short_description>
+    <description>Flip Chart - A1 Pad (Recycled)</description>
+    <weight>0</weight>
+    <qty>-4</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>16</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>HAR001</sku>
+    <name>10gb Hard Drive</name>
+    <short_description>10gb Hard Drive</short_description>
+    <description>10gb Hard Drive</description>
+    <weight>0</weight>
+    <qty>13</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>50</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>HAR002</sku>
+    <name>20gb Hard Drive</name>
+    <short_description>20gb Hard Drive</short_description>
+    <description>20gb Hard Drive</description>
+    <weight>0</weight>
+    <qty>9</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>75</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>HAR003</sku>
+    <name>30gb Hard Drive</name>
+    <short_description>30gb Hard Drive</short_description>
+    <description>30gb Hard Drive</description>
+    <weight>0</weight>
+    <qty>25</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>90</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>INST001</sku>
+    <name>Installation</name>
+    <short_description></short_description>
+    <description></description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>50</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>KEY001</sku>
+    <name>Standard Keyboard</name>
+    <short_description>Standard Keyboard</short_description>
+    <description>Standard Keyboard</description>
+    <weight>0</weight>
+    <qty>41</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>20</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>LABELS001</sku>
+    <name>A4 Labels (68x99) - Inkjet</name>
+    <short_description>A4 Labels (68x99) - Inkjet</short_description>
+    <description>A4 Labels (68x99) - Inkjet</description>
+    <weight>0</weight>
+    <qty>3</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>4.25</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>LABELS002</sku>
+    <name>A4 Labels (38x99) - Inkjet</name>
+    <short_description>A4 Labels (38x99) - Inkjet</short_description>
+    <description>A4 Labels (38x99) - Inkjet</description>
+    <weight>0</weight>
+    <qty>39</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>4.25</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>LAM001</sku>
+    <name>Laminator - A4</name>
+    <short_description>Laminator - A4</short_description>
+    <description>Laminator - A4</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>75</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>LAM002</sku>
+    <name>Laminator Pouches - A4</name>
+    <short_description>Laminator Pouches - A4</short_description>
+    <description>Laminator Pouches - A4</description>
+    <weight>0</weight>
+    <qty>17</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>12</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MAIL001</sku>
+    <name>Mailing Bag - Bubble Lined</name>
+    <short_description>Mailing Bag - Bubble Lined</short_description>
+    <description>Mailing Bag - Bubble Lined</description>
+    <weight>0</weight>
+    <qty>9</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>15</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MEM001</sku>
+    <name>DIMM 32mb 100Mhz</name>
+    <short_description>DIMM 32mb 100Mhz</short_description>
+    <description>DIMM 32mb 100Mhz</description>
+    <weight>0</weight>
+    <qty>13</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>30</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MEM002</sku>
+    <name>DIMM 64mb 100Mhz</name>
+    <short_description>DIMM 64mb 100Mhz</short_description>
+    <description>DIMM 64mb 100Mhz</description>
+    <weight>0</weight>
+    <qty>9</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>58</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MEM003</sku>
+    <name>DIMM 128mb 100Mhz</name>
+    <short_description>DIMM 128mb 100Mhz</short_description>
+    <description>DIMM 128mb 100Mhz</description>
+    <weight>0</weight>
+    <qty>9</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>100</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MEM004</sku>
+    <name>SIMM 16mb 100Mhz</name>
+    <short_description>SIMM 16mb 100Mhz</short_description>
+    <description>SIMM 16mb 100Mhz</description>
+    <weight>0</weight>
+    <qty>11</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>30</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MEM005</sku>
+    <name>SIMM 32mb 100Mhz</name>
+    <short_description>SIMM 32mb 100Mhz</short_description>
+    <description>SIMM 32mb 100Mhz</description>
+    <weight>0</weight>
+    <qty>11</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>50</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MEM006</sku>
+    <name>SIMM 64mb 100Mhz</name>
+    <short_description>SIMM 64mb 100Mhz</short_description>
+    <description>SIMM 64mb 100Mhz</description>
+    <weight>0</weight>
+    <qty>18</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>80</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MON001</sku>
+    <name>15" Monitor</name>
+    <short_description>15" Monitor</short_description>
+    <description>15" Monitor</description>
+    <weight>0</weight>
+    <qty>4</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>90</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MON002</sku>
+    <name>17" Monitor</name>
+    <short_description>17" Monitor</short_description>
+    <description>17" Monitor</description>
+    <weight>0</weight>
+    <qty>13</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>140</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MON003</sku>
+    <name>19" Monitor</name>
+    <short_description>19" Monitor</short_description>
+    <description>19" Monitor</description>
+    <weight>0</weight>
+    <qty>13</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>240</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MOTH001</sku>
+    <name>MTH1000 Motherboard</name>
+    <short_description>MTH1000 Motherboard</short_description>
+    <description>MTH1000 Motherboard</description>
+    <weight>0</weight>
+    <qty>10</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>50</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MOTH002</sku>
+    <name>MTH2000 Motherboard</name>
+    <short_description>MTH2000 Motherboard</short_description>
+    <description>MTH2000 Motherboard</description>
+    <weight>0</weight>
+    <qty>8</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>60</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MOTH003</sku>
+    <name>MTH3000 Motherboard</name>
+    <short_description>MTH3000 Motherboard</short_description>
+    <description>MTH3000 Motherboard</description>
+    <weight>0</weight>
+    <qty>13</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>70</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MOUSE001</sku>
+    <name>Mouse Mat - (241 x 203) Red</name>
+    <short_description>Mouse Mat - (241 x 203) Red</short_description>
+    <description>Mouse Mat - (241 x 203) Red</description>
+    <weight>0</weight>
+    <qty>25</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>1.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MOUSE002</sku>
+    <name>Mouse Mat - (241 x 203) Blue</name>
+    <short_description>Mouse Mat - (241 x 203) Blue</short_description>
+    <description>Mouse Mat - (241 x 203) Blue</description>
+    <weight>0</weight>
+    <qty>9</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>1.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MOUSE003</sku>
+    <name>Mouse Mat - (241 x 203) Black</name>
+    <short_description>Mouse Mat - (241 x 203) Black</short_description>
+    <description>Mouse Mat - (241 x 203) Black</description>
+    <weight>0</weight>
+    <qty>23</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>1.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>MOUSE004</sku>
+    <name>Dual Wheel Mouse</name>
+    <short_description>Dual Wheel Mouse</short_description>
+    <description>Dual Wheel Mouse</description>
+    <weight>0</weight>
+    <qty>-12</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>15</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PAPER001</sku>
+    <name>Copy Paper - Economy Grade</name>
+    <short_description>Copy Paper - Economy Grade</short_description>
+    <description>Copy Paper - Economy Grade</description>
+    <weight>80</weight>
+    <qty>220</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2.59</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PAPER002</sku>
+    <name>Copy Paper - Standard Grade</name>
+    <short_description>Copy Paper - Standard Grade</short_description>
+    <description>Copy Paper - Standard Grade</description>
+    <weight>0</weight>
+    <qty>127</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2.89</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PAPER003</sku>
+    <name>Copy Paper - Premium Grade</name>
+    <short_description>Copy Paper - Premium Grade</short_description>
+    <description>Copy Paper - Premium Grade</description>
+    <weight>0</weight>
+    <qty>190</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>3.4</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PAPER004</sku>
+    <name>Inkjet Paper - Premium Grade</name>
+    <short_description>Inkjet Paper - Premium Grade</short_description>
+    <description>Inkjet Paper - Premium Grade</description>
+    <weight>0</weight>
+    <qty>21</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>4.99</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PAPER005</sku>
+    <name>Lasercopy Paper - Standard Grade</name>
+    <short_description>Lasercopy Paper - Standard Grade</short_description>
+    <description>Lasercopy Paper - Standard Grade</description>
+    <weight>0</weight>
+    <qty>104</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2.45</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PAPER006</sku>
+    <name>Coloured Paper - Pastel Blue</name>
+    <short_description>Coloured Paper - Pastel Blue</short_description>
+    <description>Coloured Paper - Pastel Blue</description>
+    <weight>0</weight>
+    <qty>37</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>3.8</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PAPER007</sku>
+    <name>Coloured Paper - Pastel Green</name>
+    <short_description>Coloured Paper - Pastel Green</short_description>
+    <description>Coloured Paper - Pastel Green</description>
+    <weight>0</weight>
+    <qty>6</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>3.8</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PC001</sku>
+    <name>PC Combo Pack 1</name>
+    <short_description>PC Combo Pack 1</short_description>
+    <description>PC Combo Pack 1</description>
+    <weight>0</weight>
+    <qty>-4</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>550</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PC002</sku>
+    <name>PC Combo Pack 2</name>
+    <short_description>PC Combo Pack 2</short_description>
+    <description>PC Combo Pack 2</description>
+    <weight>0</weight>
+    <qty>-1</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>650</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PC003</sku>
+    <name>PC Combo Pack 3</name>
+    <short_description>PC Combo Pack 3</short_description>
+    <description>PC Combo Pack 3</description>
+    <weight>0</weight>
+    <qty>-7</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>750</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PC004</sku>
+    <name>PC Combo Pack 4</name>
+    <short_description>PC Combo Pack 4</short_description>
+    <description>PC Combo Pack 4</description>
+    <weight>0</weight>
+    <qty>2</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>850</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PC005</sku>
+    <name>PC Combo Pack 5</name>
+    <short_description>PC Combo Pack 5</short_description>
+    <description>PC Combo Pack 5</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>1200</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PC006</sku>
+    <name>PC Combo Pack 6</name>
+    <short_description>PC Combo Pack 6</short_description>
+    <description>PC Combo Pack 6</description>
+    <weight>0</weight>
+    <qty>5</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>1500</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PEN001</sku>
+    <name>Ball Point Pen - Black</name>
+    <short_description>Ball Point Pen - Black</short_description>
+    <description>Ball Point Pen - Black</description>
+    <weight>0</weight>
+    <qty>24</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PEN002</sku>
+    <name>Ball Point Pen - Blue</name>
+    <short_description>Ball Point Pen - Blue</short_description>
+    <description>Ball Point Pen - Blue</description>
+    <weight>0</weight>
+    <qty>20</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PEN003</sku>
+    <name>Ball Point Pen - Red</name>
+    <short_description>Ball Point Pen - Red</short_description>
+    <description>Ball Point Pen - Red</description>
+    <weight>0</weight>
+    <qty>29</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PEN004</sku>
+    <name>Pencil - HB</name>
+    <short_description>Pencil - HB</short_description>
+    <description>Pencil - HB</description>
+    <weight>0</weight>
+    <qty>10</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PEN005</sku>
+    <name>Pencil - H</name>
+    <short_description>Pencil - H</short_description>
+    <description>Pencil - H</description>
+    <weight>0</weight>
+    <qty>26</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PEN006</sku>
+    <name>Pencil - Chinagraph Black</name>
+    <short_description>Pencil - Chinagraph Black</short_description>
+    <description>Pencil - Chinagraph Black</description>
+    <weight>0</weight>
+    <qty>14</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>4.8</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PRC001</sku>
+    <name>PCR600 Processor</name>
+    <short_description>PCR600 Processor</short_description>
+    <description>PCR600 Processor</description>
+    <weight>0</weight>
+    <qty>1</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>80</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PRC002</sku>
+    <name>PCR650 Processor</name>
+    <short_description>PCR650 Processor</short_description>
+    <description>PCR650 Processor</description>
+    <weight>0</weight>
+    <qty>9</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>130</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PRC003</sku>
+    <name>PCR700 Processor</name>
+    <short_description>PCR700 Processor</short_description>
+    <description>PCR700 Processor</description>
+    <weight>0</weight>
+    <qty>-2</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>200</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PRC004</sku>
+    <name>PCR800 Processor</name>
+    <short_description>PCR800 Processor</short_description>
+    <description>PCR800 Processor</description>
+    <weight>0</weight>
+    <qty>-1</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>300</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PRC005</sku>
+    <name>PCR900 Processor</name>
+    <short_description>PCR900 Processor</short_description>
+    <description>PCR900 Processor</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>400</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PRN001</sku>
+    <name>LP100 Laser Printer</name>
+    <short_description>LP100 Laser Printer</short_description>
+    <description>LP100 Laser Printer</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>240</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PRN002</sku>
+    <name>LP200 Laser Printer</name>
+    <short_description>LP200 Laser Printer</short_description>
+    <description>LP200 Laser Printer</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>1200</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PRN003</sku>
+    <name>JP010 Jet Printer</name>
+    <short_description>JP010 Jet Printer</short_description>
+    <description>JP010 Jet Printer</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>70</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PRN004</sku>
+    <name>JP020 Jet Printer</name>
+    <short_description>JP020 Jet Printer</short_description>
+    <description>JP020 Jet Printer</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>180</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>PRN005</sku>
+    <name>JP030 Jet Printer</name>
+    <short_description>JP030 Jet Printer</short_description>
+    <description>JP030 Jet Printer</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>190</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>REMEMBER01</sku>
+    <name>Remember-Me Sticky Notes</name>
+    <short_description>Remember-Me Sticky Notes</short_description>
+    <description>Remember-Me Sticky Notes</description>
+    <weight>0</weight>
+    <qty>11</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>3</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>REMEMBER02</sku>
+    <name>Remember-Me Sticky Notes (Recycled)</name>
+    <short_description>Remember-Me Sticky Notes (Recycled)</short_description>
+    <description>Remember-Me Sticky Notes (Recycled)</description>
+    <weight>0</weight>
+    <qty>8</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>3.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>REMEMBER03</sku>
+    <name>Remember-Me Memo Pads</name>
+    <short_description>Remember-Me Memo Pads</short_description>
+    <description>Remember-Me Memo Pads</description>
+    <weight>0</weight>
+    <qty>16</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>7.99</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>RUB001</sku>
+    <name>Rubber Bands - Selection Pack (200)</name>
+    <short_description>Rubber Bands - Selection Pack (200)</short_description>
+    <description>Rubber Bands - Selection Pack (200)</description>
+    <weight>0</weight>
+    <qty>19</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>6</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>SCI001</sku>
+    <name>Scissors - Economy</name>
+    <short_description>Scissors - Economy</short_description>
+    <description>Scissors - Economy</description>
+    <weight>0</weight>
+    <qty>16</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>3</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>SCN001</sku>
+    <name>SCAN1000 Scanner</name>
+    <short_description>SCAN1000 Scanner</short_description>
+    <description>SCAN1000 Scanner</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>86</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>SCN002</sku>
+    <name>SCAN2000 Scanner</name>
+    <short_description>SCAN2000 Scanner</short_description>
+    <description>SCAN2000 Scanner</description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>189</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>SDFSDF</sku>
+    <name>sdfsdf</name>
+    <short_description></short_description>
+    <description></description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>0</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>SDFSDG</sku>
+    <name>sdfsdg</name>
+    <short_description></short_description>
+    <description></description>
+    <weight>0</weight>
+    <qty>0</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>0</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TAPE001</sku>
+    <name>Adhesive Tape - Brown (48mm x 60m)</name>
+    <short_description>Adhesive Tape - Brown (48mm x 60m)</short_description>
+    <description>Adhesive Tape - Brown (48mm x 60m)</description>
+    <weight>0</weight>
+    <qty>28</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2.5</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TAPE002</sku>
+    <name>Adhesive Tape - Brown (50mm x 66m)</name>
+    <short_description>Adhesive Tape - Brown (50mm x 66m)</short_description>
+    <description>Adhesive Tape - Brown (50mm x 66m)</description>
+    <weight>0</weight>
+    <qty>12</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>2.8</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TAPE003</sku>
+    <name>Adhesive Tape - Clear (19mm x 33m)</name>
+    <short_description>Adhesive Tape - Clear (19mm x 33m)</short_description>
+    <description>Adhesive Tape - Clear (19mm x 33m)</description>
+    <weight>0</weight>
+    <qty>10</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>0.65</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TR001</sku>
+    <name>LP100 Laser Printer Toner</name>
+    <short_description>LP100 Laser Printer Toner</short_description>
+    <description>LP100 Laser Printer Toner</description>
+    <weight>0</weight>
+    <qty>-3</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>10</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TR002</sku>
+    <name>LP200 Laser Printer Toner</name>
+    <short_description>LP200 Laser Printer Toner</short_description>
+    <description>LP200 Laser Printer Toner</description>
+    <weight>0</weight>
+    <qty>5</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>6</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TR003</sku>
+    <name>JP010 Jet Printer Cartridge</name>
+    <short_description>JP010 Jet Printer Cartridge</short_description>
+    <description>JP010 Jet Printer Cartridge</description>
+    <weight>0</weight>
+    <qty>14</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>18</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TR004</sku>
+    <name>JP020 Jet Printer Cartridge</name>
+    <short_description>JP020 Jet Printer Cartridge</short_description>
+    <description>JP020 Jet Printer Cartridge</description>
+    <weight>0</weight>
+    <qty>19</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>15</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TR005</sku>
+    <name>JP030 Jet Printer Cartridge</name>
+    <short_description>JP030 Jet Printer Cartridge</short_description>
+    <description>JP030 Jet Printer Cartridge</description>
+    <weight>0</weight>
+    <qty>-1</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>14</price>
+    <is_in_stock>0</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TRAY001</sku>
+    <name>Letter Trays - 3 pack (Black)</name>
+    <short_description>Letter Trays - 3 pack (Black)</short_description>
+    <description>Letter Trays - 3 pack (Black)</description>
+    <weight>0</weight>
+    <qty>7</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>7</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TRAY002</sku>
+    <name>Letter Trays - 3 pack (Pink/Brown)</name>
+    <short_description>Letter Trays - 3 pack (Pink/Brown)</short_description>
+    <description>Letter Trays - 3 pack (Pink/Brown)</description>
+    <weight>0</weight>
+    <qty>7</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>7</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>TRAY003</sku>
+    <name>Letter Trays - 3 pack (Grey)</name>
+    <short_description>Letter Trays - 3 pack (Grey)</short_description>
+    <description>Letter Trays - 3 pack (Grey)</description>
+    <weight>0</weight>
+    <qty>14</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>7</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>VID001</sku>
+    <name>8mb PCI Video Card</name>
+    <short_description>8mb PCI Video Card</short_description>
+    <description>8mb PCI Video Card</description>
+    <weight>0</weight>
+    <qty>14</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>34</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>VID002</sku>
+    <name>16mb PCI Video Card</name>
+    <short_description>16mb PCI Video Card</short_description>
+    <description>16mb PCI Video Card</description>
+    <weight>0</weight>
+    <qty>9</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>44</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+  <Product>
+    <sku>VID003</sku>
+    <name>32mb PCI Video Card</name>
+    <short_description>32mb PCI Video Card</short_description>
+    <description>32mb PCI Video Card</description>
+    <weight>0</weight>
+    <qty>13</qty>
+    <type>simple</type>
+    <set>4</set>
+    <websites>1</websites>
+    <price>55</price>
+    <is_in_stock>1</is_in_stock>
+    <tax_class_id>2</tax_class_id>
+    <Fields>
+      <Field Name="manufacturer" Value="" />
+    </Fields>
+  </Product>
+</ArrayOfProduct>

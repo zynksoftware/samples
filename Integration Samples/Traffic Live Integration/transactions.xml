@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Company>
+  <Transactions>
+    <Transaction>
+      <Id>123456</Id>
+      <CustomerId>654321</CustomerId>
+      <TransactionType>SalesInvoice</TransactionType>
+      <AccountReference>JOE001</AccountReference>
+      <TransactionDate>2013-05-13T00:00:00.000Z</TransactionDate>
+      <NominalCode>4000</NominalCode>
+      <Reference>IN9</Reference>
+      <Details>This is a sample Transaction file.</Details>
+      <NetAmount>200</NetAmount>
+      <TaxRate>20.0</TaxRate>
+	  <Department>5</Department>
+      <TaxCode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+      <TaxAmount>40.0</TaxAmount>
+    </Transaction>
+  </Transactions>
+</Company>
