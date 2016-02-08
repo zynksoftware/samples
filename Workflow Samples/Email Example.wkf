@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>1753-01-01T00:00:00</LastRan>
+  <LastResult>Unknown</LastResult>
+  <Tasks>
+    <Task type="Zynk.Connect.Sage50.ImportSalesOrders, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ImportSalesOrders>
+        <LastResult>Unknown</LastResult>
+        <Name>Import Sales Orders into Sage</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>de889435-d2d2-45f3-8f9b-8834d63fa6fe</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sales_orders.xml</string>
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sales_orders_success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sales_orders_fail.xml</string>
+          </Value>
+        </FailFile>
+        <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+        <MatchFields />
+        <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+        <AlphabeticLength>0</AlphabeticLength>
+        <NumericLength>0</NumericLength>
+        <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+        <AutoGenerateAccountReferences>
+          <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+          <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+          <AlphabeticLength>4</AlphabeticLength>
+          <NumericLength>4</NumericLength>
+          <Mask />
+          <RegularExpression />
+        </AutoGenerateAccountReferences>
+        <UseManualDocumentNumber>false</UseManualDocumentNumber>
+        <VatSettings>
+          <Base>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Base>
+          <Eu>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Eu>
+          <EuVatReg>
+            <Enabled>false</Enabled>
+            <Sales>4</Sales>
+            <Carriage>4</Carriage>
+          </EuVatReg>
+          <Row>
+            <Enabled>false</Enabled>
+            <Sales>0</Sales>
+            <Carriage>0</Carriage>
+          </Row>
+        </VatSettings>
+        <AutoCreateProducts>true</AutoCreateProducts>
+        <DefaultProductCode>S1</DefaultProductCode>
+        <AutoCreateCustomer>false</AutoCreateCustomer>
+        <ReadSalesLedgerData>false</ReadSalesLedgerData>
+        <PricesIncludeTax>false</PricesIncludeTax>
+        <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+        <PreventDuplicates>true</PreventDuplicates>
+        <UseManualSalesOrderNumber>false</UseManualSalesOrderNumber>
+        <AutoAllocateStock>false</AutoAllocateStock>
+        <DefaultBankAccount>1200</DefaultBankAccount>
+      </ImportSalesOrders>
+    </Task>
+    <Task type="Zynk.Documents.XML.XmlRepeaterTask, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+      <XmlRepeaterTask>
+        <LastResult>Unknown</LastResult>
+        <Name>XML Repeater</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>0418da0b-5fd2-4f28-8e5c-ef27d9e8af52</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sales_orders_success.xml</string>
+          </Value>
+        </InputFile>
+        <XPathQuery>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Company/SalesOrders/SalesOrder</string>
+          </Value>
+        </XPathQuery>
+        <Tasks>
+          <Task type="Zynk.Internet.Email.EmailExists, Zynk.Internet.Email, Version=1.6.19.27972, Culture=neutral, PublicKeyToken=null">
+            <EmailExists>
+              <LastResult>Unknown</LastResult>
+              <Name>If Email Exists</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>f60f4f83-9bdc-45c0-b48d-973493d69295</Id>
+              <Equal>true</Equal>
+              <Tasks>
+                <Task type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=1.6.19.27972, Culture=neutral, PublicKeyToken=null">
+                  <SendEmail>
+                    <LastResult>Unknown</LastResult>
+                    <Name>Send Email</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>1753-01-01T00:00:00</LastRan>
+                    <Id>f69e5740-ca76-450c-a951-9cdcc998eb00</Id>
+                    <From>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>accounts@zynk.com</string>
+                      </Value>
+                    </From>
+                    <To>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>True</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>@Context.Object.SelectSingleNode("CustomerInvoiceAddress/Email").InnerText</string>
+                      </Value>
+                    </To>
+                    <Cc>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </Cc>
+                    <Bcc>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </Bcc>
+                    <Subject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>Order Confirmation</string>
+                      </Value>
+                    </Subject>
+                    <Body>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>True</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>Hi @(Context.Object.SelectSingleNode("CustomerInvoiceAddress/Forename").InnerText),
+
+Thank you for your recent order. In most cases it will be dispatched within 24 hours.
+
+Kind regards,
+The Zynk Software Limited Team</string>
+                      </Value>
+                    </Body>
+                    <Attachments>
+                      <Type>ListValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </Attachments>
+                    <HTMLBody>false</HTMLBody>
+                    <SmtpServer>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>127.0.0.1</string>
+                      </Value>
+                    </SmtpServer>
+                    <SmtpUsername>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </SmtpUsername>
+                    <SmtpPassword>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </SmtpPassword>
+                    <Port>25</Port>
+                    <EnableSSL>false</EnableSSL>
+                    <Timeout>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>6000</string>
+                      </Value>
+                    </Timeout>
+                  </SendEmail>
+                </Task>
+              </Tasks>
+              <LoginEmail>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </LoginEmail>
+              <Email>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>True</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>@Context.Object.SelectSingleNode("CustomerInvoiceAddress/Email").InnerText</string>
+                </Value>
+              </Email>
+              <CheckSMTPServer>false</CheckSMTPServer>
+              <StrongValidation>false</StrongValidation>
+            </EmailExists>
+          </Task>
+        </Tasks>
+      </XmlRepeaterTask>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>bafc7ab0-ed1d-45fc-921b-1cb66650e6cd</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>Email Example</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.6.19</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+</Workflow>
