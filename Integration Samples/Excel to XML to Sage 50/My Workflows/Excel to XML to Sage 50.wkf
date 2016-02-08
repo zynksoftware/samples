@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2013-03-12T16:49:29.5841637+00:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Documents.Excel.ExcelToXmlTask, Zynk.Documents.Excel, Version=1.5.34.26947, Culture=neutral, PublicKeyToken=null">
+      <ExcelToXmlTask>
+        <LastResult>SuccessData</LastResult>
+        <Name>Excel To XML</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-03-12T16:48:17.8042005+00:00</LastRan>
+        <Id>da8129ae-14e7-40e2-8c1d-3a6f8699517c</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>XLS_Sample.xls</string>
+          </Value>
+        </InputFile>
+        <IncludeHeaders>true</IncludeHeaders>
+        <WorksheetName>Sheet1</WorksheetName>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>XLS_Transformed_Sample.xml</string>
+          </Value>
+        </OutputFile>
+      </ExcelToXmlTask>
+    </Task>
+    <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.5.34.26941, Culture=neutral, PublicKeyToken=null">
+      <XsltTransform>
+        <LastResult>Success</LastResult>
+        <Name>XSLT Transformation</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-03-12T16:48:23.6217573+00:00</LastRan>
+        <Id>ba289293-e9ea-406e-a253-c82a88b6efbd</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>XLS_Transformed_Sample.xml</string>
+          </Value>
+        </InputFile>
+        <XsltFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>XSLT/Excel_Integration.xslt</string>
+          </Value>
+        </XsltFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Invoice_Sample.xml</string>
+          </Value>
+        </OutputFile>
+        <Parameters />
+      </XsltTransform>
+    </Task>
+    <Task type="Zynk.Connect.Sage50.ImportInvoices, Zynk.Connect.Sage50, Version=1.5.34.26945, Culture=neutral, PublicKeyToken=null">
+      <ImportInvoices>
+        <LastResult>Success</LastResult>
+        <Name>Import Invoices</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-03-12T16:49:29.2801941+00:00</LastRan>
+        <Id>e6906834-3e25-4b16-8346-86a646afae7a</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Invoice_Sample.xml</string>
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Invoices_Success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Invoice_Fail.xml</string>
+          </Value>
+        </FailFile>
+        <AutoGenerateAccountReference>true</AutoGenerateAccountReference>
+        <AlphabeticLength>3</AlphabeticLength>
+        <NumericLength>3</NumericLength>
+        <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+        <MatchFields />
+        <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+        <VatSettings>
+          <Base>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Base>
+          <Eu>
+            <Enabled>false</Enabled>
+            <Sales>1</Sales>
+            <Carriage>1</Carriage>
+          </Eu>
+          <EuVatReg>
+            <Enabled>false</Enabled>
+            <Sales>4</Sales>
+            <Carriage>4</Carriage>
+          </EuVatReg>
+          <Row>
+            <Enabled>false</Enabled>
+            <Sales>0</Sales>
+            <Carriage>0</Carriage>
+          </Row>
+        </VatSettings>
+        <AutoCreateProducts>true</AutoCreateProducts>
+        <DefaultProductCode>S1</DefaultProductCode>
+        <AutoCreateCustomer>true</AutoCreateCustomer>
+        <ReadSalesLedgerData>false</ReadSalesLedgerData>
+        <PricesIncludeTax>false</PricesIncludeTax>
+        <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+        <PreventDuplicates>false</PreventDuplicates>
+        <UseManualInvoiceNumber>false</UseManualInvoiceNumber>
+        <DefaultBankAccount>1200</DefaultBankAccount>
+      </ImportInvoices>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.5.34.26944, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Success</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-02-20T16:02:46.3833672+00:00</LastRan>
+        <Id>d7e12a6f-1a8a-4dc4-b189-7b13851c34ab</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>0b79c90c-aa1d-4274-878f-348112417384</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>Excel to XML to Sage 50</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+</Workflow>

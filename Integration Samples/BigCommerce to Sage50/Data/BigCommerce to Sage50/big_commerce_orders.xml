@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<orders>
+  <order>
+    <id>105</id>
+    <customer_id>1</customer_id>
+    <date_created>Fri, 09 Aug 2013 13:18:20 +0000</date_created>
+    <date_modified>Fri, 25 Oct 2013 09:11:04 +0000</date_modified>
+    <date_shipped></date_shipped>
+    <status_id>11</status_id>
+    <status>Awaiting Fulfillment</status>
+    <subtotal_ex_tax>499.0000</subtotal_ex_tax>
+    <subtotal_inc_tax>598.8000</subtotal_inc_tax>
+    <subtotal_tax>99.8000</subtotal_tax>
+    <base_shipping_cost>0.0000</base_shipping_cost>
+    <shipping_cost_ex_tax>0.0000</shipping_cost_ex_tax>
+    <shipping_cost_inc_tax>0.0000</shipping_cost_inc_tax>
+    <shipping_cost_tax>0.0000</shipping_cost_tax>
+    <shipping_cost_tax_class_id>2</shipping_cost_tax_class_id>
+    <base_handling_cost>0.0000</base_handling_cost>
+    <handling_cost_ex_tax>0.0000</handling_cost_ex_tax>
+    <handling_cost_inc_tax>0.0000</handling_cost_inc_tax>
+    <handling_cost_tax>0.0000</handling_cost_tax>
+    <handling_cost_tax_class_id>2</handling_cost_tax_class_id>
+    <base_wrapping_cost>0.0000</base_wrapping_cost>
+    <wrapping_cost_ex_tax>0.0000</wrapping_cost_ex_tax>
+    <wrapping_cost_inc_tax>0.0000</wrapping_cost_inc_tax>
+    <wrapping_cost_tax>0.0000</wrapping_cost_tax>
+    <wrapping_cost_tax_class_id>3</wrapping_cost_tax_class_id>
+    <total_ex_tax>489.0000</total_ex_tax>
+    <total_inc_tax>586.8000</total_inc_tax>
+    <total_tax>97.8000</total_tax>
+    <items_total>1</items_total>
+    <items_shipped>0</items_shipped>
+    <payment_method>Cash on Delivery</payment_method>
+    <payment_provider_id>NULL</payment_provider_id>
+    <payment_status></payment_status>
+    <refunded_amount>0.0000</refunded_amount>
+    <order_is_digital>false</order_is_digital>
+    <store_credit_amount>0.0000</store_credit_amount>
+    <gift_certificate_amount>0.0000</gift_certificate_amount>
+    <ip_address>XXX.XXX.XXX.XXX</ip_address>
+    <geoip_country>United Kingdom</geoip_country>
+    <geoip_country_iso2>GB</geoip_country_iso2>
+    <currency_id>1</currency_id>
+    <currency_code>GBP</currency_code>
+    <currency_exchange_rate>1.0000000000</currency_exchange_rate>
+    <default_currency_id>1</default_currency_id>
+    <default_currency_code>GBP</default_currency_code>
+    <staff_notes>This is a test staff note comment.</staff_notes>
+    <customer_message>This is a test order comment.</customer_message>
+    <discount_amount>10.0000</discount_amount>
+    <coupon_discount>0.0000</coupon_discount>
+    <shipping_address_count>1</shipping_address_count>
+    <is_deleted>false</is_deleted>
+    <ebay_order_id>0</ebay_order_id>
+    <billing_address>
+      <first_name>Joe</first_name>
+      <last_name>Harrison</last_name>
+      <company>Zynk Software Limited</company>
+      <street_1>6-8 Charlotte Square</street_1>
+      <street_2>i6</street_2>
+      <city>Newcastle upon-Tyne</city>
+      <state>Tyne and Wear</state>
+      <zip>NE1 4XF</zip>
+      <country>United Kingdom</country>
+      <country_iso2>GB</country_iso2>
+      <phone>0845 123 2920</phone>
+      <email>joe.harrison@zynk.com</email>
+    </billing_address>
+    <order_source>manual</order_source>
+    <external_source>NULL</external_source>
+    <products>
+      <product>
+        <id>7</id>
+        <order_id>105</order_id>
+        <product_id>186</product_id>
+        <order_address_id>6</order_address_id>
+        <name>iPhone 4 16GB White</name>
+        <sku>IPHONE4</sku>
+        <type>physical</type>
+        <base_price>499.0000</base_price>
+        <price_ex_tax>499.0000</price_ex_tax>
+        <price_inc_tax>598.8000</price_inc_tax>
+        <price_tax>99.8000</price_tax>
+        <base_total>499.0000</base_total>
+        <total_ex_tax>499.0000</total_ex_tax>
+        <total_inc_tax>598.8000</total_inc_tax>
+        <total_tax>99.8000</total_tax>
+        <weight>0.0000</weight>
+        <quantity>1</quantity>
+        <base_cost_price>0.0000</base_cost_price>
+        <cost_price_inc_tax>0.0000</cost_price_inc_tax>
+        <cost_price_ex_tax>0.0000</cost_price_ex_tax>
+        <cost_price_tax>0.0000</cost_price_tax>
+        <is_refunded>false</is_refunded>
+        <refund_amount>0.0000</refund_amount>
+        <return_id>0</return_id>
+        <wrapping_name></wrapping_name>
+        <base_wrapping_cost>0.0000</base_wrapping_cost>
+        <wrapping_cost_ex_tax>0.0000</wrapping_cost_ex_tax>
+        <wrapping_cost_inc_tax>0.0000</wrapping_cost_inc_tax>
+        <wrapping_cost_tax>0.0000</wrapping_cost_tax>
+        <wrapping_message></wrapping_message>
+        <quantity_shipped>0</quantity_shipped>
+        <event_name>NULL</event_name>
+        <event_date></event_date>
+        <fixed_shipping_cost>0.0000</fixed_shipping_cost>
+        <ebay_item_id></ebay_item_id>
+        <ebay_transaction_id></ebay_transaction_id>
+        <option_set_id>NULL</option_set_id>
+        <parent_order_product_id>NULL</parent_order_product_id>
+        <is_bundled_product>false</is_bundled_product>
+        <bin_picking_number></bin_picking_number>
+        <applied_discounts>
+          <discount>
+            <id>manual-discount</id>
+            <amount>10.00</amount>
+          </discount>
+        </applied_discounts>
+        <product_options />
+        <configurable_fields />
+      </product>
+    </products>
+    <shipping_addresses>
+      <address>
+        <id>6</id>
+        <order_id>105</order_id>
+        <first_name>Joe</first_name>
+        <last_name>Harrison</last_name>
+        <company>Zynk Software Limited</company>
+        <street_1>6-8 Charlotte Square</street_1>
+        <street_2>i6</street_2>
+        <city>Newcastle upon-Tyne</city>
+        <zip>NE1 4XF</zip>
+        <country>United Kingdom</country>
+        <country_iso2>GB</country_iso2>
+        <state>Tyne and Wear</state>
+        <email></email>
+        <phone>0845 123 2920</phone>
+        <items_total>1</items_total>
+        <items_shipped>0</items_shipped>
+        <shipping_method>None</shipping_method>
+        <base_cost>0.0000</base_cost>
+        <cost_ex_tax>0.0000</cost_ex_tax>
+        <cost_inc_tax>0.0000</cost_inc_tax>
+        <cost_tax>0.0000</cost_tax>
+        <cost_tax_class_id>2</cost_tax_class_id>
+        <base_handling_cost>0.0000</base_handling_cost>
+        <handling_cost_ex_tax>0.0000</handling_cost_ex_tax>
+        <handling_cost_inc_tax>0.0000</handling_cost_inc_tax>
+        <handling_cost_tax>0.0000</handling_cost_tax>
+        <handling_cost_tax_class_id>2</handling_cost_tax_class_id>
+        <shipping_zone_id>1</shipping_zone_id>
+        <shipping_zone_name>Default Zone</shipping_zone_name>
+      </address>
+    </shipping_addresses>
+    <coupons></coupons>
+  </order>
+</orders>

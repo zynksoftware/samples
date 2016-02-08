@@ -1,0 +1,503 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>1753-01-01T00:00:00</LastRan>
+  <LastResult>Unknown</LastResult>
+  <Tasks>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Unknown</LastResult>
+        <Name>Download Orders to Sage</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>f74c85c6-1f9c-44ab-b99d-75ef06a9f15c</Id>
+        <Tasks>
+          <Task type="Zynk.Ecommerce.EasyWebstore.DownloadOrders, Zynk.Ecommerce.EasyWebstore, Version=1.6.19.27986, Culture=neutral, PublicKeyToken=null">
+            <DownloadOrders>
+              <LastResult>Unknown</LastResult>
+              <Name>Download Orders from Easy Webstore</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>2af9a1ae-5535-419f-9993-b406d3f86de5</Id>
+              <DownloadAll>false</DownloadAll>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>easy_webstore_orders.xml</string>
+                </Value>
+              </OutputFile>
+              <Status>Payment_Pending</Status>
+            </DownloadOrders>
+          </Task>
+          <Task type="Zynk.Tasks.AutoMapperTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <AutoMapperTask>
+              <LastResult>Unknown</LastResult>
+              <Name>Transform to Zynk Sales Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>984450ef-3dbd-4f81-bb36-6adc066469d9</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>easy_webstore_orders.xml</string>
+                </Value>
+              </InputFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders.xml</string>
+                </Value>
+              </OutputFile>
+              <Mapping>
+                <TaskId>984450ef-3dbd-4f81-bb36-6adc066469d9</TaskId>
+                <InputFormat>EasyWebstore</InputFormat>
+                <InputType>Orders</InputType>
+                <OutputFormat>Zynk XML</OutputFormat>
+                <OutputType>Sales Orders</OutputType>
+                <IntermediateConnectType />
+                <InputEditingEnabled>true</InputEditingEnabled>
+                <OutputEditingEnabled>true</OutputEditingEnabled>
+                <Parameters>
+                  <VariableWithDescription Description="The account to add the orders to. Leave blank if auto generating account refs" Key="AccountReference" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>WEBSALES</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="The SKU code to use for the carriage charge" Key="CarriageSku" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="The currency code" Key="Currency" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>GBP</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="The bank account to add payment to. Leave blank to not include payment" Key="BankAccount" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="The reference to use for paid orders" Key="PaymentRef" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="The tax code for taxable items" Key="TaxCode" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>1</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="The tax code for non taxable items" Key="NonTaxableTaxCode" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>2</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="The value for the 'Taken by' field" Key="TakenBy" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>Easy Webstore</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                </Parameters>
+              </Mapping>
+            </AutoMapperTask>
+          </Task>
+          <Task type="Zynk.Connect.Sage50.ImportSalesOrders, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ImportSalesOrders>
+              <LastResult>Unknown</LastResult>
+              <Name>Import Sales Orders into Sage</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>3a51355b-9e64-4b70-b647-85684c37feee</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders.xml</string>
+                </Value>
+              </InputFile>
+              <SuccessFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders_success.xml</string>
+                </Value>
+              </SuccessFile>
+              <FailFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders_fail.xml</string>
+                </Value>
+              </FailFile>
+              <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+              <MatchFields />
+              <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+              <AlphabeticLength>0</AlphabeticLength>
+              <NumericLength>0</NumericLength>
+              <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+              <AutoGenerateAccountReferences>
+                <AutoGenerateAccountReference>false</AutoGenerateAccountReference>
+                <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+                <AlphabeticLength>4</AlphabeticLength>
+                <NumericLength>4</NumericLength>
+                <Mask />
+                <RegularExpression />
+              </AutoGenerateAccountReferences>
+              <UseManualDocumentNumber>false</UseManualDocumentNumber>
+              <VatSettings>
+                <Base>
+                  <Enabled>false</Enabled>
+                  <Sales>1</Sales>
+                  <Carriage>1</Carriage>
+                </Base>
+                <Eu>
+                  <Enabled>false</Enabled>
+                  <Sales>1</Sales>
+                  <Carriage>1</Carriage>
+                </Eu>
+                <EuVatReg>
+                  <Enabled>false</Enabled>
+                  <Sales>4</Sales>
+                  <Carriage>4</Carriage>
+                </EuVatReg>
+                <Row>
+                  <Enabled>false</Enabled>
+                  <Sales>0</Sales>
+                  <Carriage>0</Carriage>
+                </Row>
+              </VatSettings>
+              <AutoCreateProducts>true</AutoCreateProducts>
+              <DefaultProductCode>S1</DefaultProductCode>
+              <AutoCreateCustomer>false</AutoCreateCustomer>
+              <ReadSalesLedgerData>false</ReadSalesLedgerData>
+              <PricesIncludeTax>false</PricesIncludeTax>
+              <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+              <PreventDuplicates>true</PreventDuplicates>
+              <UseManualSalesOrderNumber>false</UseManualSalesOrderNumber>
+              <AutoAllocateStock>false</AutoAllocateStock>
+              <DefaultBankAccount>1200</DefaultBankAccount>
+            </ImportSalesOrders>
+          </Task>
+          <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+            <XsltTransform>
+              <LastResult>Unknown</LastResult>
+              <Name>Transform to Easy Webstore Order Status Updates</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>c4b1009a-bcee-40b9-808f-7bc1b1994ebe</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_sales_orders_success.xml</string>
+                </Value>
+              </InputFile>
+              <XsltFile>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+	
+	&lt;xsl:output method="xml" indent="yes"/&gt;
+  
+	&lt;xsl:template match="Company"&gt;
+		&lt;ArrayOfOrder&gt;
+			&lt;xsl:for-each select="SalesOrders/SalesOrder"&gt;
+				&lt;Order&gt;
+					&lt;ID&gt;&lt;xsl:value-of select="Id"/&gt;&lt;/ID&gt;
+					&lt;Status&gt;Pending&lt;/Status&gt;
+				&lt;/Order&gt;
+			&lt;/xsl:for-each&gt;
+		&lt;/ArrayOfOrder&gt;
+	&lt;/xsl:template&gt;
+  
+&lt;/xsl:stylesheet&gt;</string>
+                </Value>
+              </XsltFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>easy_webstore_order_updates.xml</string>
+                </Value>
+              </OutputFile>
+              <Parameters />
+            </XsltTransform>
+          </Task>
+          <Task type="Zynk.Ecommerce.EasyWebstore.UpdateOrderStatus, Zynk.Ecommerce.EasyWebstore, Version=1.6.19.27986, Culture=neutral, PublicKeyToken=null">
+            <UpdateOrderStatus>
+              <LastResult>Unknown</LastResult>
+              <Name>Update Order Status on Easy Webstore</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>e09aa406-3088-407d-b3f6-84374c8140e7</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>easy_webstore_order_updates.xml</string>
+                </Value>
+              </InputFile>
+              <SuccessFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>easy_webstore_order_updates_success.xml</string>
+                </Value>
+              </SuccessFile>
+              <FailFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>easy_webstore_order_updates_fail.xml</string>
+                </Value>
+              </FailFile>
+              <SendAlerts>false</SendAlerts>
+            </UpdateOrderStatus>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Unknown</LastResult>
+        <Name>Upload Stock Levels to Easy Webstore</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>dfb29dd9-6f82-41c9-b1d3-835127e6696e</Id>
+        <Tasks>
+          <Task type="Zynk.Connect.Sage50.ExportStockRecords, Zynk.Connect.Sage50, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <ExportStockRecords>
+              <LastResult>Unknown</LastResult>
+              <Name>Export Stock Records from Sage</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>f4213bd6-2437-4d3c-8768-06a4e7560964</Id>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_products.xml</string>
+                </Value>
+              </OutputFile>
+              <QuerySettings>
+                <Columns />
+                <Joins />
+                <Where />
+              </QuerySettings>
+              <QueryTimeout xsi:nil="true" />
+              <ExportAll>false</ExportAll>
+              <ExportSettings>
+                <DateTimeModified>1753-01-01T00:00:00</DateTimeModified>
+                <ExportType>Modified</ExportType>
+              </ExportSettings>
+              <ExportPublished>false</ExportPublished>
+              <ExportAttachments>false</ExportAttachments>
+              <AttachmentSearchPattern>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </AttachmentSearchPattern>
+            </ExportStockRecords>
+          </Task>
+          <Task type="Zynk.Tasks.AutoMapperTask, Zynk.Tasks, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+            <AutoMapperTask>
+              <LastResult>Unknown</LastResult>
+              <Name>Transform to Easy Webstore Inventory</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>5802e912-f10a-4193-a785-0d1b9675b4b9</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_products.xml</string>
+                </Value>
+              </InputFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>easy_webstore_inventory.xml</string>
+                </Value>
+              </OutputFile>
+              <Mapping>
+                <TaskId>5802e912-f10a-4193-a785-0d1b9675b4b9</TaskId>
+                <InputFormat>Zynk XML</InputFormat>
+                <InputType>Products</InputType>
+                <OutputFormat>EasyWebstore</OutputFormat>
+                <OutputType>Inventory</OutputType>
+                <IntermediateConnectType />
+                <InputEditingEnabled>true</InputEditingEnabled>
+                <OutputEditingEnabled>true</OutputEditingEnabled>
+                <Parameters />
+              </Mapping>
+            </AutoMapperTask>
+          </Task>
+          <Task type="Zynk.Ecommerce.EasyWebstore.UpdateInventory, Zynk.Ecommerce.EasyWebstore, Version=1.6.19.27986, Culture=neutral, PublicKeyToken=null">
+            <UpdateInventory>
+              <LastResult>Unknown</LastResult>
+              <Name>Upload Inventory to Easy Webstore</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>994f857a-8ec1-48e4-945b-8a30e1fe1c1f</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>easy_webstore_inventory.xml</string>
+                </Value>
+              </InputFile>
+              <SuccessFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>easy_webstore_inventory_success.xml</string>
+                </Value>
+              </SuccessFile>
+              <FailFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>easy_webstore_inventory_fail.xml</string>
+                </Value>
+              </FailFile>
+            </UpdateInventory>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.6.19.27972, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Unknown</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>8454fb8a-519c-4be6-8414-59efae2c425f</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+        <HouseKeepingSettings>
+          <Enabled>false</Enabled>
+          <Type>NumberOfDays</Type>
+          <Number>30</Number>
+        </HouseKeepingSettings>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>b600ad07-2ca0-42d3-a96e-099a975e2066</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>Easy Webstore to Sage 50</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.6.19</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+</Workflow>
