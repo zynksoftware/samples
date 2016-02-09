@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<orders type="array">
+  <order>
+    <id type="integer">137673524</id>
+    <email>adam.wardle@internetware.co.uk</email>
+    <closed-at type="dateTime" nil="true" />
+    <created-at type="dateTime">2012-08-16T07:49:39-04:00</created-at>
+    <updated-at type="dateTime">2015-04-17T18:55:31-04:00</updated-at>
+    <number type="integer">4</number>
+    <note></note>
+    <token>e12fca57913fad965ae5be92954faf01</token>
+    <gateway>bogus</gateway>
+    <test type="boolean">true</test>
+    <total-price type="decimal">77.00</total-price>
+    <subtotal-price type="decimal">57.00</subtotal-price>
+    <total-weight type="integer">0</total-weight>
+    <total-tax type="decimal">0.00</total-tax>
+    <taxes-included type="boolean">false</taxes-included>
+    <currency>GBP</currency>
+    <financial-status>authorized</financial-status>
+    <confirmed type="boolean">true</confirmed>
+    <total-discounts type="decimal">0.00</total-discounts>
+    <total-line-items-price type="decimal">57.00</total-line-items-price>
+    <cart-token>5c3cb3980ca0f415fefdeb3b5e929796</cart-token>
+    <buyer-accepts-marketing type="boolean">true</buyer-accepts-marketing>
+    <name>#1004</name>
+    <referring-site></referring-site>
+    <landing-site>/</landing-site>
+    <cancelled-at type="dateTime" nil="true" />
+    <cancel-reason nil="true" />
+    <total-price-usd type="decimal">120.73</total-price-usd>
+    <checkout-token nil="true" />
+    <reference nil="true" />
+    <user-id type="integer" nil="true" />
+    <location-id type="integer" nil="true" />
+    <source-identifier nil="true" />
+    <source-url nil="true" />
+    <processed-at type="dateTime">2012-08-16T07:49:39-04:00</processed-at>
+    <device-id type="integer" nil="true" />
+    <browser-ip>217.23.234.89</browser-ip>
+    <landing-site-ref nil="true" />
+    <order-number type="integer">1004</order-number>
+    <discount-codes type="array" />
+    <note-attributes type="array"></note-attributes>
+    <payment-gateway-names type="array">
+      <payment-gateway-name>bogus</payment-gateway-name>
+    </payment-gateway-names>
+    <processing-method>direct</processing-method>
+    <checkout-id nil="true" />
+    <source-name>web</source-name>
+    <fulfillment-status nil="true" />
+    <tax-lines type="array" />
+    <tags></tags>
+    <contact-email>adam.wardle@internetware.co.uk</contact-email>
+    <line-items type="array">
+      <line-item>
+        <id type="integer">224202370</id>
+        <variant-id type="integer">232945610</variant-id>
+        <title>Proactive maximized monitoring</title>
+        <quantity type="integer">1</quantity>
+        <price type="decimal">19.00</price>
+        <grams type="integer">0</grams>
+        <sku></sku>
+        <variant-title nil="true" />
+        <vendor>Shopify</vendor>
+        <fulfillment-service>manual</fulfillment-service>
+        <product-id type="integer">100040856</product-id>
+        <requires-shipping type="boolean">true</requires-shipping>
+        <taxable type="boolean">true</taxable>
+        <gift-card type="boolean">false</gift-card>
+        <name>Proactive maximized monitoring</name>
+        <variant-inventory-management nil="true" />
+        <properties type="array"></properties>
+        <product-exists type="boolean">true</product-exists>
+        <fulfillable-quantity type="integer">1</fulfillable-quantity>
+        <total-discount>0.00</total-discount>
+        <fulfillment-status nil="true" />
+        <tax-lines type="array" />
+      </line-item>
+      <line-item>
+        <id type="integer">224202372</id>
+        <variant-id type="integer">232945604</variant-id>
+        <title>Integrated hybrid internet solution</title>
+        <quantity type="integer">2</quantity>
+        <price type="decimal">19.00</price>
+        <grams type="integer">0</grams>
+        <sku></sku>
+        <variant-title nil="true" />
+        <vendor>Shopify</vendor>
+        <fulfillment-service>manual</fulfillment-service>
+        <product-id type="integer">100040850</product-id>
+        <requires-shipping type="boolean">true</requires-shipping>
+        <taxable type="boolean">true</taxable>
+        <gift-card type="boolean">false</gift-card>
+        <name>Integrated hybrid internet solution</name>
+        <variant-inventory-management nil="true" />
+        <properties type="array"></properties>
+        <product-exists type="boolean">true</product-exists>
+        <fulfillable-quantity type="integer">2</fulfillable-quantity>
+        <total-discount>0.00</total-discount>
+        <fulfillment-status nil="true" />
+        <tax-lines type="array" />
+      </line-item>
+    </line-items>
+    <shipping-lines type="array">
+      <shipping-line>
+        <id type="integer">368338064</id>
+        <title>International Shipping</title>
+        <price type="decimal">20.00</price>
+        <code>International Shipping</code>
+        <source>shopify</source>
+        <phone nil="true" />
+        <tax-lines type="array" />
+      </shipping-line>
+    </shipping-lines>
+    <billing-address type="Address">
+      <first-name>Adam</first-name>
+      <address1>6 Charlotte Square</address1>
+      <phone>0123456789</phone>
+      <city>Newcastle</city>
+      <zip>NE1 4XF</zip>
+      <province>Tyne &amp; Wear</province>
+      <country>United Kingdom</country>
+      <last-name>Wardle</last-name>
+      <address2>address2</address2>
+      <company>Internetware</company>
+      <latitude type="float">54.971188</latitude>
+      <longitude type="float">-1.619922</longitude>
+      <name>Adam Wardle</name>
+      <country-code>GB</country-code>
+      <province-code nil="true" />
+    </billing-address>
+    <shipping-address type="Address">
+      <first-name>Adam</first-name>
+      <address1>6 Charlotte Square</address1>
+      <phone>0123456789</phone>
+      <city>Newcastle</city>
+      <zip>NE1 4XF</zip>
+      <province>Tyne &amp; Wear</province>
+      <country>United Kingdom</country>
+      <last-name>Wardle</last-name>
+      <address2>address2</address2>
+      <company>Internetware</company>
+      <latitude type="float">54.971188</latitude>
+      <longitude type="float">-1.619922</longitude>
+      <name>Adam Wardle</name>
+      <country-code>GB</country-code>
+      <province-code nil="true" />
+    </shipping-address>
+    <fulfillments type="array" />
+    <client-details>
+      <browser-ip>217.23.234.89</browser-ip>
+      <accept-language>en-us,en;q=0.5</accept-language>
+      <user-agent>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:14.0) Gecko/20100101 Firefox/14.0.1</user-agent>
+      <session-hash>d62d43425198941e2689157244cf400e1277d1b79ca91d257e339d67dfdb046f</session-hash>
+      <browser-width type="integer" nil="true" />
+      <browser-height type="integer" nil="true" />
+    </client-details>
+    <refunds type="array" />
+    <payment-details>
+      <credit-card-bin>1</credit-card-bin>
+      <avs-result-code nil="true" />
+      <cvv-result-code nil="true" />
+      <credit-card-number>•••• •••• •••• 1</credit-card-number>
+      <credit-card-company>Bogus</credit-card-company>
+    </payment-details>
+    <customer>
+      <id type="integer">96430088</id>
+      <email>adam.wardle@internetware.co.uk</email>
+      <accepts-marketing type="boolean">false</accepts-marketing>
+      <created-at type="dateTime">2012-08-16T07:49:39-04:00</created-at>
+      <updated-at type="dateTime">2015-09-28T10:48:28-04:00</updated-at>
+      <first-name>Adam</first-name>
+      <last-name>Wardle</last-name>
+      <orders-count type="integer">0</orders-count>
+      <state>disabled</state>
+      <total-spent type="decimal">0.00</total-spent>
+      <last-order-id type="integer" nil="true" />
+      <note>Update</note>
+      <verified-email type="boolean">true</verified-email>
+      <multipass-identifier nil="true" />
+      <tax-exempt type="boolean">false</tax-exempt>
+      <tags></tags>
+      <last-order-name nil="true" />
+      <default-address>
+        <id type="integer">133155492</id>
+        <first-name>Adam</first-name>
+        <last-name>Wardle</last-name>
+        <company>Internetware</company>
+        <address1>6 Charlotte Square</address1>
+        <address2>address2</address2>
+        <city>Newcastle</city>
+        <province>Tyne &amp; Wear</province>
+        <country>United Kingdom</country>
+        <zip>NE1 4XF</zip>
+        <phone>0123456789</phone>
+        <name>Adam Wardle</name>
+        <province-code nil="true" />
+        <country-code>GB</country-code>
+        <country-name>United Kingdom</country-name>
+        <default type="boolean">true</default>
+      </default-address>
+    </customer>
+  </order>
+</orders>
