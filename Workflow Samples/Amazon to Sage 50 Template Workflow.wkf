@@ -1,0 +1,634 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>1753-01-01T00:00:00</LastRan>
+  <LastResult>Unknown</LastResult>
+  <Tasks>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Unknown</LastResult>
+        <Name>Download Sales Orders</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>194c2672-5703-4fc8-bec7-b535595c6815</Id>
+        <Tasks>
+          <Task type="Zynk.Ecommerce.Amazon.DownloadOrders, Zynk.Ecommerce.Amazon, Version=1.5.39.16918, Culture=neutral, PublicKeyToken=null">
+            <DownloadOrders>
+              <LastResult>Unknown</LastResult>
+              <Name>Download Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>a8596934-9974-416b-a481-ccf810ad87ec</Id>
+              <MerchantId>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </MerchantId>
+              <MarketPlaceId>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </MarketPlaceId>
+              <Country>UK</Country>
+              <APICallDelay>1000</APICallDelay>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>amazon_orders.xml</string>
+                </Value>
+              </OutputFile>
+              <OrderStatus>Shipped</OrderStatus>
+              <DownloadFrom>2013-05-10T16:27:21.0337853+01:00</DownloadFrom>
+            </DownloadOrders>
+          </Task>
+          <Task type="Zynk.Tasks.AutoMapperTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+            <AutoMapperTask>
+              <LastResult>Unknown</LastResult>
+              <Name>Amazon Sales Orders to Zynk Sales Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>b7243289-8204-46b7-b06c-84becea7eef4</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>amazon_orders.xml</string>
+                </Value>
+              </InputFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_orders.xml</string>
+                </Value>
+              </OutputFile>
+              <Mapping>
+                <TaskId>b7243289-8204-46b7-b06c-84becea7eef4</TaskId>
+                <InputFormat>Amazon</InputFormat>
+                <InputType>Orders</InputType>
+                <OutputFormat>Zynk XML</OutputFormat>
+                <OutputType>Sales Orders</OutputType>
+                <IntermediateConnectType />
+                <Parameters>
+                  <VariableWithDescription Description="Leave empty to NOT set value" Key="AccountReference" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>AMAZONSALES</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="Leave empty to NOT set value" Key="TaxCode" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>1</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="Leave empty to NOT set value" Key="TaxRate" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>20</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="Leave empty to NOT set value" Key="NominalCode" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>5000</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="Leave empty to NOT set value" Key="CarriageCode" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>CARRIAGE</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="Leave empty to import standard carriage" Key="CarriageAsItemLine" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>false</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="" Key="TakenBy" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>Amazon_Zynk</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="" Key="VATInclusiveItem" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>true</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="" Key="VATInclusiveCarriage" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>true</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="" Key="VATInclusiveOrder" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>true</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="" Key="AddPaymentDetails" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>true</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="" Key="BankAccount" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>1200</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="" Key="PaymentMethod" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>PayPal</string>
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                  <VariableWithDescription Description="" Key="ShippingSku" Encrypt="False" Encrypted="False">
+                    <ZynkObject>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </ZynkObject>
+                  </VariableWithDescription>
+                </Parameters>
+              </Mapping>
+            </AutoMapperTask>
+          </Task>
+          <Task type="Zynk.Connect.Sage50.ImportSalesOrders, Zynk.Connect.Sage50, Version=1.5.39.16908, Culture=neutral, PublicKeyToken=null">
+            <ImportSalesOrders>
+              <LastResult>Unknown</LastResult>
+              <Name>Import Sales Orders</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>e4e60210-5258-4264-b469-4116465f370e</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_orders.xml</string>
+                </Value>
+              </InputFile>
+              <SuccessFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_orders_success.xml</string>
+                </Value>
+              </SuccessFile>
+              <FailFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_orders_fail.xml</string>
+                </Value>
+              </FailFile>
+              <AutoGenerateAccountReference>true</AutoGenerateAccountReference>
+              <AlphabeticLength>3</AlphabeticLength>
+              <NumericLength>3</NumericLength>
+              <CreateMultipleDeliveryAddresses>false</CreateMultipleDeliveryAddresses>
+              <MatchFields />
+              <AccountReferenceConvention>CompanyOtherwiseFullname</AccountReferenceConvention>
+              <Mask>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Mask>
+              <VatSettings>
+                <Base>
+                  <Enabled>false</Enabled>
+                  <Sales>1</Sales>
+                  <Carriage>1</Carriage>
+                </Base>
+                <Eu>
+                  <Enabled>false</Enabled>
+                  <Sales>1</Sales>
+                  <Carriage>1</Carriage>
+                </Eu>
+                <EuVatReg>
+                  <Enabled>false</Enabled>
+                  <Sales>4</Sales>
+                  <Carriage>4</Carriage>
+                </EuVatReg>
+                <Row>
+                  <Enabled>false</Enabled>
+                  <Sales>0</Sales>
+                  <Carriage>0</Carriage>
+                </Row>
+              </VatSettings>
+              <AutoCreateProducts>true</AutoCreateProducts>
+              <DefaultProductCode>S1</DefaultProductCode>
+              <AutoCreateCustomer>true</AutoCreateCustomer>
+              <ReadSalesLedgerData>false</ReadSalesLedgerData>
+              <PricesIncludeTax>false</PricesIncludeTax>
+              <ConvertToAccountCurrency>false</ConvertToAccountCurrency>
+              <PreventDuplicates>true</PreventDuplicates>
+              <UseManualSalesOrderNumber>false</UseManualSalesOrderNumber>
+              <AutoAllocateStock>false</AutoAllocateStock>
+              <DefaultBankAccount>1200</DefaultBankAccount>
+            </ImportSalesOrders>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+      <ContainerTask>
+        <LastResult>Unknown</LastResult>
+        <Name>Upload Inventory + Price Feed</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>e183bfab-698d-4acd-83ea-d29a5fc49d08</Id>
+        <Tasks>
+          <Task type="Zynk.Connect.Sage50.ExportStockRecords, Zynk.Connect.Sage50, Version=1.5.39.16908, Culture=neutral, PublicKeyToken=null">
+            <ExportStockRecords>
+              <LastResult>Unknown</LastResult>
+              <Name>Export Modified Stock Records</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>0e6dc3ca-7472-48ff-98bb-89a28e284684</Id>
+              <Filter>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Filter>
+              <Sort>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </Sort>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>zynk_stock_records.xml</string>
+                </Value>
+              </OutputFile>
+              <ExportAll>false</ExportAll>
+              <ExportPublished>false</ExportPublished>
+              <ExportAttachments>false</ExportAttachments>
+              <AttachmentSearchPattern>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </AttachmentSearchPattern>
+            </ExportStockRecords>
+          </Task>
+          <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+            <ContainerTask>
+              <LastResult>Unknown</LastResult>
+              <Name>Upload Inventory</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>d248da2e-a910-4f89-b8dd-5a284541e256</Id>
+              <Tasks>
+                <Task type="Zynk.Tasks.AutoMapperTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+                  <AutoMapperTask>
+                    <LastResult>Unknown</LastResult>
+                    <Name>Zynk Stock Records to Amazon Inventory</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>1753-01-01T00:00:00</LastRan>
+                    <Id>8b2472a3-ed87-49ea-adde-e4f00b0624bb</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>zynk_stock_records.xml</string>
+                      </Value>
+                    </InputFile>
+                    <OutputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>amazon_inventory.xml</string>
+                      </Value>
+                    </OutputFile>
+                    <Mapping>
+                      <TaskId>8b2472a3-ed87-49ea-adde-e4f00b0624bb</TaskId>
+                      <InputFormat>Zynk XML</InputFormat>
+                      <InputType>Products</InputType>
+                      <OutputFormat>Amazon</OutputFormat>
+                      <OutputType>Inventory</OutputType>
+                      <IntermediateConnectType />
+                      <Parameters>
+                        <VariableWithDescription Description="" Key="MerchantID" Encrypt="False" Encrypted="False">
+                          <ZynkObject>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string />
+                            </Value>
+                          </ZynkObject>
+                        </VariableWithDescription>
+                      </Parameters>
+                    </Mapping>
+                  </AutoMapperTask>
+                </Task>
+                <Task type="Zynk.Ecommerce.Amazon.SubmitInventoryFeed, Zynk.Ecommerce.Amazon, Version=1.5.39.16918, Culture=neutral, PublicKeyToken=null">
+                  <SubmitInventoryFeed>
+                    <LastResult>Unknown</LastResult>
+                    <Name>Upload Inventory Feed</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>1753-01-01T00:00:00</LastRan>
+                    <Id>016c3052-3745-443f-8f45-9838e383eb7c</Id>
+                    <MerchantId>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </MerchantId>
+                    <MarketPlaceId>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </MarketPlaceId>
+                    <Country>UK</Country>
+                    <APICallDelay>1000</APICallDelay>
+                    <OutputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>amazon_inventory_response.html</string>
+                      </Value>
+                    </OutputFile>
+                    <FeedType>_POST_PRODUCT_DATA_</FeedType>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>amazon_inventory.xml</string>
+                      </Value>
+                    </InputFile>
+                  </SubmitInventoryFeed>
+                </Task>
+              </Tasks>
+            </ContainerTask>
+          </Task>
+          <Task type="Zynk.Tasks.ContainerTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+            <ContainerTask>
+              <LastResult>Unknown</LastResult>
+              <Name>Upload Prices</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>f3e56bb4-774d-4eee-b840-6aa0d67df16e</Id>
+              <Tasks>
+                <Task type="Zynk.Tasks.AutoMapperTask, Zynk.Tasks, Version=1.5.39.16907, Culture=neutral, PublicKeyToken=null">
+                  <AutoMapperTask>
+                    <LastResult>Unknown</LastResult>
+                    <Name>Zynk Stock Records to Amazon Prices</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>1753-01-01T00:00:00</LastRan>
+                    <Id>9c367694-ead1-4ad6-abfd-8c42e7795992</Id>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>zynk_stock_records.xml</string>
+                      </Value>
+                    </InputFile>
+                    <OutputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>amazon_prices.xml</string>
+                      </Value>
+                    </OutputFile>
+                    <Mapping>
+                      <TaskId>9c367694-ead1-4ad6-abfd-8c42e7795992</TaskId>
+                      <InputFormat>Zynk XML</InputFormat>
+                      <InputType>Products</InputType>
+                      <OutputFormat>Amazon</OutputFormat>
+                      <OutputType>Prices</OutputType>
+                      <IntermediateConnectType />
+                      <Parameters>
+                        <VariableWithDescription Description="" Key="MerchantID" Encrypt="False" Encrypted="False">
+                          <ZynkObject>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string />
+                            </Value>
+                          </ZynkObject>
+                        </VariableWithDescription>
+                        <VariableWithDescription Description="" Key="Currency" Encrypt="False" Encrypted="False">
+                          <ZynkObject>
+                            <Type>StaticValue</Type>
+                            <UseRazorEngine>False</UseRazorEngine>
+                            <ReadContentsOfFile>False</ReadContentsOfFile>
+                            <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                              <string>GBP</string>
+                            </Value>
+                          </ZynkObject>
+                        </VariableWithDescription>
+                      </Parameters>
+                    </Mapping>
+                  </AutoMapperTask>
+                </Task>
+                <Task type="Zynk.Ecommerce.Amazon.SubmitPriceFeed, Zynk.Ecommerce.Amazon, Version=1.5.39.16918, Culture=neutral, PublicKeyToken=null">
+                  <SubmitPriceFeed>
+                    <LastResult>Unknown</LastResult>
+                    <Name>Upload Price Feed</Name>
+                    <Enabled>true</Enabled>
+                    <BreakOnFailure>true</BreakOnFailure>
+                    <LastRan>1753-01-01T00:00:00</LastRan>
+                    <Id>cde0b421-8e99-40b0-bf7a-31d76a05cbd8</Id>
+                    <MerchantId>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </MerchantId>
+                    <MarketPlaceId>
+                      <Type>StaticValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string />
+                      </Value>
+                    </MarketPlaceId>
+                    <Country>UK</Country>
+                    <APICallDelay>1000</APICallDelay>
+                    <OutputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>amazon_prices_response.html</string>
+                      </Value>
+                    </OutputFile>
+                    <FeedType>_POST_PRODUCT_DATA_</FeedType>
+                    <InputFile>
+                      <Type>FileValue</Type>
+                      <UseRazorEngine>False</UseRazorEngine>
+                      <ReadContentsOfFile>False</ReadContentsOfFile>
+                      <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                        <string>amazon_prices.xml</string>
+                      </Value>
+                    </InputFile>
+                  </SubmitPriceFeed>
+                </Task>
+              </Tasks>
+            </ContainerTask>
+          </Task>
+        </Tasks>
+      </ContainerTask>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.5.39.16908, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Unknown</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>b8cfbbca-2e6f-4aff-a9fe-1e10d5089af4</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>672c5c03-0702-4ac0-b08f-241a421170c4</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>Amazon to Sage 50 Template Workflow</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.5.39</Version>
+</Workflow>

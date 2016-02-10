@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2015-02-25T15:21:37.3874354+00:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Database.MsSql.SqlSelect, Zynk.Database.MsSql, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+      <SqlSelect>
+        <LastResult>Success</LastResult>
+        <Name>MS SQL Select</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-25T14:47:10.0995979+00:00</LastRan>
+        <Id>74a9560d-fd42-4fd6-a180-be82ca1dac8c</Id>
+        <Instance>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Instance>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Database>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Northwind</string>
+          </Value>
+        </Database>
+        <ConnectionString>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Data Source=;Initial Catalog=Northwind;User Id=;Password=;</string>
+          </Value>
+        </ConnectionString>
+        <Query>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>SELECT *
+FROM [Northwind].[dbo].[Orders]
+JOIN [Order Details] ON [Orders].[OrderID] = [Order Details].[OrderID]</string>
+          </Value>
+        </Query>
+        <TimeoutInt>30</TimeoutInt>
+        <Root>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Rows</string>
+          </Value>
+        </Root>
+        <Row>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Row</string>
+          </Value>
+        </Row>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>orders_query.xml</string>
+          </Value>
+        </OutputFile>
+        <ParameterInput>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ParameterInput>
+        <ParameterOutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ParameterOutputFile>
+        <ParameterField>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ParameterField>
+        <ExportAsElements>true</ExportAsElements>
+      </SqlSelect>
+    </Task>
+    <Task type="Zynk.Database.MsSql.SqlRepeater, Zynk.Database.MsSql, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+      <SqlRepeater>
+        <LastResult>Success</LastResult>
+        <Name>MS SQL Repeater</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-25T15:14:59.7794783+00:00</LastRan>
+        <Id>2c2ecff4-3637-4bcc-9311-d2ef0e6b81b9</Id>
+        <Instance>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Instance>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Database>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>NorthWind</string>
+          </Value>
+        </Database>
+        <ConnectionString>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Data Source=;Initial Catalog=NorthWind;User Id=;Password=;</string>
+          </Value>
+        </ConnectionString>
+        <Query>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>SELECT [Suppliers].[SupplierID], 
+    [Suppliers].[CompanyName], 
+	Count([ProductID]) As [ProductCount] 
+FROM [Suppliers] 
+JOIN [Products] ON [Suppliers].[SupplierID] = [Products].[SupplierID] 
+GROUP BY [Suppliers].[SupplierID], 
+    [Suppliers].[CompanyName]</string>
+          </Value>
+        </Query>
+        <TimeoutInt>30</TimeoutInt>
+        <Tasks>
+          <Task type="Zynk.UserInterface.LogInfoMessage, Zynk.UserInterface, Version=1.6.19.27978, Culture=neutral, PublicKeyToken=null">
+            <LogInfoMessage>
+              <LastResult>Success</LastResult>
+              <Name>Log Info Message</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2015-02-25T15:14:59.5835539+00:00</LastRan>
+              <Id>8b913518-1ff0-4b4f-aa1a-c584e382b937</Id>
+              <Input>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>True</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>@(Context.Current["CompanyName"]) has @(Context.Current["ProductCount"]) products(s).</string>
+                </Value>
+              </Input>
+            </LogInfoMessage>
+          </Task>
+        </Tasks>
+      </SqlRepeater>
+    </Task>
+    <Task type="Zynk.Database.MsSql.SqlExecuteScalar, Zynk.Database.MsSql, Version=1.6.19.27970, Culture=neutral, PublicKeyToken=null">
+      <SqlExecuteScalar>
+        <LastResult>Success</LastResult>
+        <Name>MS SQL Execute Scalar</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-25T15:21:36.7865962+00:00</LastRan>
+        <Id>ca3bf03f-3f0c-4e5a-8266-08b3e7120543</Id>
+        <Instance>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Instance>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <Database>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Northwind</string>
+          </Value>
+        </Database>
+        <ConnectionString>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Data Source=;Initial Catalog=Northwind;User Id=;Password=;</string>
+          </Value>
+        </ConnectionString>
+        <Query>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>SELECT Count(*) FROM Customers</string>
+          </Value>
+        </Query>
+        <TimeoutInt>30</TimeoutInt>
+      </SqlExecuteScalar>
+    </Task>
+    <Task type="Zynk.UserInterface.LogInfoMessage, Zynk.UserInterface, Version=1.6.19.27978, Culture=neutral, PublicKeyToken=null">
+      <LogInfoMessage>
+        <LastResult>Success</LastResult>
+        <Name>Log Info Message</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-25T15:21:37.1791236+00:00</LastRan>
+        <Id>ba99b1e1-0143-4e7c-a54f-7b57d30f8f9a</Id>
+        <Input>
+          <Type>PreviousValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Input>
+      </LogInfoMessage>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>2ef0fff0-bae5-4dde-b940-7b786ff62f85</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>SQL Server Example</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.6.19</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+</Workflow>

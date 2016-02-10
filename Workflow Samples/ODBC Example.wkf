@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>1753-01-01T00:00:00</LastRan>
+  <LastResult>Unknown</LastResult>
+  <Tasks>
+    <Task type="Zynk.Database.Odbc.OdbcSelect, Zynk.Database.Odbc, Version=1.6.19.27976, Culture=neutral, PublicKeyToken=null">
+      <OdbcSelect>
+        <LastResult>Unknown</LastResult>
+        <Name>ODBC Select</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>e5918593-3e25-4804-adad-9573a0655b0f</Id>
+        <DSN>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </DSN>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <AdditionalParameters>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </AdditionalParameters>
+        <ConnectionString>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>sgrf</string>
+          </Value>
+        </ConnectionString>
+        <Query>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>SELECT * 
+FROM Orders 
+JOIN `Order Details` ON Orders.OrderID = `Order Details`.OrderID</string>
+          </Value>
+        </Query>
+        <Root>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Rows</string>
+          </Value>
+        </Root>
+        <Row>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Row</string>
+          </Value>
+        </Row>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>orders_query.xml</string>
+          </Value>
+        </OutputFile>
+        <ParameterInput>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ParameterInput>
+        <ParameterOutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ParameterOutputFile>
+        <ParameterField>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ParameterField>
+      </OdbcSelect>
+    </Task>
+    <Task type="Zynk.Database.Odbc.OdbcRepeater, Zynk.Database.Odbc, Version=1.6.19.27976, Culture=neutral, PublicKeyToken=null">
+      <OdbcRepeater>
+        <LastResult>Unknown</LastResult>
+        <Name>ODBC Repeater</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>69450472-2a00-4e2b-bbb1-ec744d5761bb</Id>
+        <DSN>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </DSN>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <AdditionalParameters>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </AdditionalParameters>
+        <ConnectionString>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ConnectionString>
+        <Query>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>SELECT Suppliers.SupplierID, 
+    Suppliers.CompanyName, 
+	Count(ProductID) As ProductCount 
+FROM Suppliers 
+JOIN Products ON Suppliers.SupplierID = Products.SupplierID 
+GROUP BY Suppliers.SupplierID, 
+    Suppliers.CompanyName</string>
+          </Value>
+        </Query>
+        <Tasks>
+          <Task type="Zynk.UserInterface.LogInfoMessage, Zynk.UserInterface, Version=1.6.19.27978, Culture=neutral, PublicKeyToken=null">
+            <LogInfoMessage>
+              <LastResult>Unknown</LastResult>
+              <Name>Log Info Message</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>570658ec-198a-4cdb-a79e-e2fd36faaaf5</Id>
+              <Input>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>True</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>@(Context.Current["CompanyName"]) has @(Context.Current["ProductCount"]) products(s).</string>
+                </Value>
+              </Input>
+            </LogInfoMessage>
+          </Task>
+        </Tasks>
+      </OdbcRepeater>
+    </Task>
+    <Task type="Zynk.Database.Odbc.OdbdExecuteScalar, Zynk.Database.Odbc, Version=1.6.19.27976, Culture=neutral, PublicKeyToken=null">
+      <OdbdExecuteScalar>
+        <LastResult>Unknown</LastResult>
+        <Name>ODBC Execute Scalar</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>f889ae1e-6ebe-4a02-8a9f-5b0d7ce5abe7</Id>
+        <DSN>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </DSN>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <AdditionalParameters>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </AdditionalParameters>
+        <ConnectionString>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </ConnectionString>
+        <Query>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>SELECT Count(*) FROM Customers</string>
+          </Value>
+        </Query>
+      </OdbdExecuteScalar>
+    </Task>
+    <Task type="Zynk.UserInterface.LogInfoMessage, Zynk.UserInterface, Version=1.6.19.27978, Culture=neutral, PublicKeyToken=null">
+      <LogInfoMessage>
+        <LastResult>Unknown</LastResult>
+        <Name>Log Info Message</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>59fb5d86-8ce9-40cf-b557-32e54abbd014</Id>
+        <Input>
+          <Type>PreviousValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Input>
+      </LogInfoMessage>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>d4fa6f0b-2055-4fe5-bd48-8102d450e0b9</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>ODBC Example</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.6.19</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+</Workflow>

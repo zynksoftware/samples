@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2015-02-23T17:10:32.1170834+00:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Documents.PDF.HtmlToPdfTask, Zynk.Documents.PDF, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <HtmlToPdfTask>
+        <LastResult>Success</LastResult>
+        <Name>HTML To PDF</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-23T16:53:55.6897059+00:00</LastRan>
+        <Id>fa0b3bbf-41a6-40a4-8587-a9a8167a8bdb</Id>
+        <InputURI>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>http://help.zynk.com/articles/tutorials/generating-pdf-documents</string>
+          </Value>
+        </InputURI>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Generating PDFs Article.pdf</string>
+          </Value>
+        </OutputFile>
+        <Portrait>true</Portrait>
+        <KeepWidth>true</KeepWidth>
+        <EnableJavaScript>true</EnableJavaScript>
+        <AutoDetectPageBreak>true</AutoDetectPageBreak>
+        <EnableHyperlinks>true</EnableHyperlinks>
+        <MetaFile>true</MetaFile>
+        <SplitTextLines>false</SplitTextLines>
+        <SplitImages>false</SplitImages>
+        <MarginLeft>40</MarginLeft>
+        <MarginTop>40</MarginTop>
+        <MarginRight>40</MarginRight>
+        <MarginBottom>40</MarginBottom>
+      </HtmlToPdfTask>
+    </Task>
+    <Task type="Zynk.Documents.PDF.ExcelToPdfTask, Zynk.Documents.PDF, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <ExcelToPdfTask>
+        <LastResult>Success</LastResult>
+        <Name>Excel To PDF</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-23T17:00:29.5491403+00:00</LastRan>
+        <Id>f3499a73-d8e0-4aed-adfa-89433f1d578a</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>customer_spreadsheet.xls</string>
+          </Value>
+        </InputFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Customer Spreadsheet.pdf</string>
+          </Value>
+        </OutputFile>
+      </ExcelToPdfTask>
+    </Task>
+    <Task type="Zynk.Documents.PDF.WordToPdfTask, Zynk.Documents.PDF, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+      <WordToPdfTask>
+        <LastResult>Success</LastResult>
+        <Name>Word To PDF</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-23T17:10:31.9357708+00:00</LastRan>
+        <Id>5355ed8e-3c0a-48d5-8986-445c2e302656</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>zynk_article.doc</string>
+          </Value>
+        </InputFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Zynk Article.pdf</string>
+          </Value>
+        </OutputFile>
+      </WordToPdfTask>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>21013082-4fca-4a22-a517-405cf3a7af31</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>PDF Example</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.6.19</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+</Workflow>

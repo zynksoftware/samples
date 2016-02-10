@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2015-02-18T15:00:31.6102987+00:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Connect.Sage50.ExportInvoices, Zynk.Connect.Sage50, Version=2.0.0.17252, Culture=neutral, PublicKeyToken=null">
+      <ExportInvoices>
+        <LastResult>Success</LastResult>
+        <Name>Export Invoices</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-18T15:00:06.7331529+00:00</LastRan>
+        <Id>71c71ed5-c47c-4dac-b4a8-0d1e2b20594e</Id>
+        <ConnectionPointer>
+          <Id>735eb15f-1df1-4679-90cc-5f0fd11f62dd</Id>
+        </ConnectionPointer>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>invoices.xml</string>
+          </Value>
+        </OutputFile>
+        <QuerySettings>
+          <Columns />
+          <Joins />
+          <Where>
+            <Where>
+              <Comparison>GreaterOrEquals</Comparison>
+              <Value>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>90</string>
+                </Value>
+              </Value>
+              <LiteralValue>true</LiteralValue>
+              <FieldName>INVOICE_NUMBER</FieldName>
+              <SubClauses />
+            </Where>
+          </Where>
+        </QuerySettings>
+        <QueryTimeout xsi:nil="true" />
+        <ExportAll>false</ExportAll>
+        <ExportSettings>
+          <DateTimeModified>2015-01-30T17:13:01</DateTimeModified>
+          <ExportType>All</ExportType>
+        </ExportSettings>
+        <UseBaseCurrency>true</UseBaseCurrency>
+      </ExportInvoices>
+    </Task>
+    <Task type="Zynk.Documents.XML.XmlRepeaterTask, Zynk.Documents.XML, Version=2.0.0.17251, Culture=neutral, PublicKeyToken=null">
+      <XmlRepeaterTask>
+        <LastResult>Success</LastResult>
+        <Name>XML Repeater</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-18T15:00:31.4864274+00:00</LastRan>
+        <Id>63e57ba7-2c45-4c4c-b2bd-9f6ba95040b8</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>invoices.xml</string>
+          </Value>
+        </InputFile>
+        <XPathQuery>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Company/Invoices/Invoice</string>
+          </Value>
+        </XPathQuery>
+        <Tasks>
+          <Task type="Zynk.Sage.Reporting.Sage50.ExportReportBase, Zynk.Sage.Reporting.Sage50, Version=2.0.0.17252, Culture=neutral, PublicKeyToken=null">
+            <ExportReportBase>
+              <LastResult>Success</LastResult>
+              <Name>Export Report</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2015-02-18T15:00:31.3611006+00:00</LastRan>
+              <Id>e4ded6f3-0340-496b-9f41-4128d776e5e4</Id>
+              <ConnectionPointer>
+                <Id>735eb15f-1df1-4679-90cc-5f0fd11f62dd</Id>
+              </ConnectionPointer>
+              <ReportFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>C:\ProgramData\Sage\Accounts\2015\Company.000\Reports\Invoice\Invoice Details Reports\INVSUM.report</string>
+                </Value>
+              </ReportFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>True</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>@(Context.Current["InvoiceNumber"]).pdf</string>
+                </Value>
+              </OutputFile>
+              <OutputType>pdf</OutputType>
+              <Criteria>
+                <Variable Key="INVOICE_NUMBER" Encrypt="False" Encrypted="False">
+                  <ZynkObject>
+                    <Type>StaticValue</Type>
+                    <UseRazorEngine>True</UseRazorEngine>
+                    <ReadContentsOfFile>False</ReadContentsOfFile>
+                    <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                      <string>@(Context.Current["InvoiceNumber"])</string>
+                    </Value>
+                  </ZynkObject>
+                </Variable>
+              </Criteria>
+            </ExportReportBase>
+          </Task>
+        </Tasks>
+      </XmlRepeaterTask>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>1228da2a-bb0a-4d26-bd29-783d6a9aad31</Id>
+  <Variables>
+    <Variable Key="SAGE50_NAME" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Stationery &amp; Computer Mart UK [SAGE DEMO DATA]</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="SAGE50_DATAPATH" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>C:\ProgramData\Sage\Accounts\2015\demodata\ACCDATA</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="SAGE50_MAJOR" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>21</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="SAGE50_MINOR" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>0</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="SAGE50_BUGFIX" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>51</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="SAGE50_USERNAME" Encrypt="False" Encrypted="False">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>manager</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+    <Variable Key="SAGE50_PASSWORD" Encrypt="True" Encrypted="True">
+      <ZynkObject>
+        <Type>StaticValue</Type>
+        <UseRazorEngine>False</UseRazorEngine>
+        <ReadContentsOfFile>False</ReadContentsOfFile>
+        <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string>Qq+VK2iRnhLg6FdQxdtSZA==</string>
+        </Value>
+      </ZynkObject>
+    </Variable>
+  </Variables>
+  <ContextVariables />
+  <Name>#ZYNKSITE - Export Invoice as PDF from Sage 50</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>2.0.0</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+  <WorkingDirectory>C:\ProgramData\Zynk Software Ltd\Zynk\2.0\Data\Testing - Zynk\#ZYNKSITE - Export Invoice as PDF from Sage 50</WorkingDirectory>
+</Workflow>

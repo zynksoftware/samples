@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2015-02-13T14:36:47.1465664+00:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Filesystem.CopyFile, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+      <CopyFile>
+        <LastResult>Success</LastResult>
+        <Name>Copy File</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-13T11:18:48.0345862+00:00</LastRan>
+        <Id>ff38f441-8d0b-44ef-9982-37cde17711b4</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>../copy.txt</string>
+          </Value>
+        </InputFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>copy.txt</string>
+          </Value>
+        </OutputFile>
+        <OverwriteFile>true</OverwriteFile>
+      </CopyFile>
+    </Task>
+    <Task type="Zynk.Filesystem.DeleteFile, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+      <DeleteFile>
+        <LastResult>Success</LastResult>
+        <Name>Delete File</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-13T14:27:42.2920621+00:00</LastRan>
+        <Id>9b9c9e21-8842-4aee-aa16-436a7e829077</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>delete.txt</string>
+          </Value>
+        </InputFile>
+      </DeleteFile>
+    </Task>
+    <Task type="Zynk.Filesystem.FileRepeater, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+      <FileRepeater>
+        <LastResult>Success</LastResult>
+        <Name>File Repeater</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2015-02-13T14:36:47.0577534+00:00</LastRan>
+        <Id>a1d5a40d-05e5-4a56-ba66-4bbafb909e4b</Id>
+        <InputDirectory>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>../</string>
+          </Value>
+        </InputDirectory>
+        <SearchPattern>*.txt*</SearchPattern>
+        <Tasks>
+          <Task type="Zynk.Filesystem.CopyFile, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+            <CopyFile>
+              <LastResult>Success</LastResult>
+              <Name>Copy File</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>2015-02-13T14:36:46.9802631+00:00</LastRan>
+              <Id>35f083c5-e9f9-44aa-8f4e-2500c8b2da9e</Id>
+              <InputFile>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>True</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>@(Context.Current["FullName"])</string>
+                </Value>
+              </InputFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>True</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>@(Context.Current["Name"])</string>
+                </Value>
+              </OutputFile>
+              <OverwriteFile>true</OverwriteFile>
+            </CopyFile>
+          </Task>
+        </Tasks>
+        <Recursive>false</Recursive>
+        <OnlyModifiedFiles>false</OnlyModifiedFiles>
+      </FileRepeater>
+    </Task>
+    <Task type="Zynk.Filesystem.FindAndReplaceText, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+      <FindAndReplaceText>
+        <LastResult>Unknown</LastResult>
+        <Name>Find and Replace Text</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>e94f55da-cbd3-43c6-af93-93e299db2950</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>fandr.txt</string>
+          </Value>
+        </InputFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>fandr.txt</string>
+          </Value>
+        </OutputFile>
+        <OverwriteInputFile>true</OverwriteInputFile>
+        <Find>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>x</string>
+          </Value>
+        </Find>
+        <Replace>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>y</string>
+          </Value>
+        </Replace>
+      </FindAndReplaceText>
+    </Task>
+    <Task type="Zynk.Filesystem.FileExists, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+      <FileExists>
+        <LastResult>Unknown</LastResult>
+        <Name>If File Exists</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>fedda832-626f-404e-91b2-57e77aca035d</Id>
+        <Equal>true</Equal>
+        <Tasks>
+          <Task type="Zynk.Filesystem.CopyFile, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+            <CopyFile>
+              <LastResult>Unknown</LastResult>
+              <Name>Copy File</Name>
+              <Enabled>true</Enabled>
+              <BreakOnFailure>true</BreakOnFailure>
+              <LastRan>1753-01-01T00:00:00</LastRan>
+              <Id>affd6892-ddad-44f2-bd93-82961c3dfc5b</Id>
+              <InputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>../copy.txt</string>
+                </Value>
+              </InputFile>
+              <OutputFile>
+                <Type>FileValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>ifexists.txt</string>
+                </Value>
+              </OutputFile>
+              <OverwriteFile>true</OverwriteFile>
+            </CopyFile>
+          </Task>
+        </Tasks>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>../copy.txt</string>
+          </Value>
+        </InputFile>
+        <MinimumLength>1</MinimumLength>
+      </FileExists>
+    </Task>
+    <Task type="Zynk.Filesystem.ListFiles, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+      <ListFiles>
+        <LastResult>Unknown</LastResult>
+        <Name>List Files</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>d5d9400a-17a2-4f7b-8a56-b1db0b0365e2</Id>
+        <Folder>
+          <Type>UriValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>.</string>
+          </Value>
+        </Folder>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>list.txt</string>
+          </Value>
+        </OutputFile>
+        <Recursive>false</Recursive>
+        <SearchPattern>*.txt*</SearchPattern>
+      </ListFiles>
+    </Task>
+    <Task type="Zynk.Filesystem.MoveFile, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+      <MoveFile>
+        <LastResult>Unknown</LastResult>
+        <Name>Move File</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>928011d1-7ec6-4c8d-aaaf-132323234366</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Move/move.txt</string>
+          </Value>
+        </InputFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>move.txt</string>
+          </Value>
+        </OutputFile>
+        <PrependTimestamp>false</PrependTimestamp>
+        <TimestampFormat>yyyyMMddHHmmssffff</TimestampFormat>
+        <OverwriteFile>true</OverwriteFile>
+      </MoveFile>
+    </Task>
+    <Task type="Zynk.Filesystem.RemoveCharactersFromFile, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+      <RemoveCharactersFromFile>
+        <LastResult>Unknown</LastResult>
+        <Name>Remove Characters From File</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>b161126b-980e-458b-bc4c-6e98413c36b6</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>removechars.txt</string>
+          </Value>
+        </InputFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>removechars.txt</string>
+          </Value>
+        </OutputFile>
+        <OverwriteInputFile>true</OverwriteInputFile>
+        <Match>
+          <Type>ListValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.Collections.Generic.List`1[[Zynk.Core.Objects.ZynkObject, Zynk.Core, Version=2.0.0.20299, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <ArrayOfZynkObject>
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>aeiou</string>
+                </Value>
+              </ZynkObject>
+            </ArrayOfZynkObject>
+          </Value>
+        </Match>
+      </RemoveCharactersFromFile>
+    </Task>
+    <Task type="Zynk.Filesystem.ZipFiles, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+      <ZipFiles>
+        <LastResult>Unknown</LastResult>
+        <Name>Zip Files</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>56fcda44-0878-42e8-98f7-663c9e7ec661</Id>
+        <Files>
+          <Type>ListValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.Collections.Generic.List`1[[Zynk.Core.Objects.ZynkObject, Zynk.Core, Version=2.0.0.20299, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <ArrayOfZynkObject>
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>move.txt</string>
+                </Value>
+              </ZynkObject>
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>list.txt</string>
+                </Value>
+              </ZynkObject>
+            </ArrayOfZynkObject>
+          </Value>
+        </Files>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>zip.zip</string>
+          </Value>
+        </OutputFile>
+        <CompressionLevel>Nine</CompressionLevel>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <PrependTimestamp>false</PrependTimestamp>
+        <TimestampFormat>yyyyMMddHHmmssffff</TimestampFormat>
+      </ZipFiles>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=2.0.0.20301, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Unknown</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>cb6e80d4-dc8a-4f00-9344-37d8bbff80bf</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+        <HouseKeepingSettings>
+          <Enabled>false</Enabled>
+          <Type>NumberOfDays</Type>
+          <Number>30</Number>
+        </HouseKeepingSettings>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>ba9ed252-24f2-4490-bb89-172adf453361</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>#ZYNKSITE - File Library</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>2.0.0</Version>
+  <LogHouseKeeping>
+    <Type>NumberOfDays</Type>
+    <Number>90</Number>
+  </LogHouseKeeping>
+  <WorkingDirectory>C:\ProgramData\Zynk Software Ltd\Zynk\2.0\Data\Testing - Zynk\#ZYNKSITE - File Library</WorkingDirectory>
+</Workflow>
