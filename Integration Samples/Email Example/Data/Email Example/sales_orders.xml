@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SalesOrders>
+    <SalesOrder>
+      <Id>123</Id>
+      <AccountReference>JOE001</AccountReference>
+      <SalesOrderDate>2014-01-01T00:00:00</SalesOrderDate>
+      <SalesOrderAddress>
+        <Title>Mr</Title>
+        <Forename>Joe</Forename>
+        <Surname>Harrison</Surname>
+        <Company>Zynk Software Limited</Company>
+        <Address1>Nelson House, Fleming Business Centre</Address1>
+        <Address2>Jesmond</Address2>
+        <Town>Newcastle upon Tyne</Town>
+        <Postcode>NE2 3AE</Postcode>
+        <County>Tyne and Wear</County>
+      </SalesOrderAddress>
+      <SalesOrderDeliveryAddress>
+        <Title>Mr</Title>
+        <Forename>Joe</Forename>
+        <Surname>Harrison</Surname>
+        <Company>Zynk Software Limited</Company>
+        <Address1>Nelson House, Fleming Business Centre</Address1>
+        <Address2>Jesmond</Address2>
+        <Town>Newcastle upon Tyne</Town>
+        <Postcode>NE2 3AE</Postcode>
+        <County>Tyne and Wear</County>
+      </SalesOrderDeliveryAddress>
+      <SalesOrderItems>
+        <Item>
+          <Sku>TEST01</Sku>
+          <QtyOrdered>1</QtyOrdered>
+          <UnitPrice>200</UnitPrice>
+        </Item>
+      </SalesOrderItems>
+    </SalesOrder>
+  </SalesOrders>
+</Company>

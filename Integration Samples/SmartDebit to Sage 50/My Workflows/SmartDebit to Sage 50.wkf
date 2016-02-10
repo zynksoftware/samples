@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LastRan>2013-05-09T10:17:13.2795058+01:00</LastRan>
+  <LastResult>Success</LastResult>
+  <Tasks>
+    <Task type="Zynk.Payments.SmartDebit.DownloadVariableDirectDebits, Zynk.Payments.SmartDebit, Version=1.5.39.15599, Culture=neutral, PublicKeyToken=null">
+      <DownloadVariableDirectDebits>
+        <LastResult>Success</LastResult>
+        <Name>Download Direct Debits</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-05-02T16:45:00.2679481+01:00</LastRan>
+        <Id>e7a76120-e537-48ba-afa1-c23ffeb1a039</Id>
+        <Username>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Username>
+        <Password>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Password>
+        <PLSID>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </PLSID>
+        <DownloadDate>2013-05-01T00:00:00</DownloadDate>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>smartdebit.xml</string>
+          </Value>
+        </OutputFile>
+      </DownloadVariableDirectDebits>
+    </Task>
+    <Task type="Zynk.Tasks.AutoMapperTask, Zynk.Tasks, Version=1.5.39.15601, Culture=neutral, PublicKeyToken=null">
+      <AutoMapperTask>
+        <LastResult>Success</LastResult>
+        <Name>Auto Mapper</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-05-03T14:35:31.6111756+01:00</LastRan>
+        <Id>5fc05dbc-31e7-43ce-b2cd-6be16c95cbac</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>smartdebit.xml</string>
+          </Value>
+        </InputFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>transactions.xml</string>
+          </Value>
+        </OutputFile>
+        <Mapping>
+          <TaskId>5fc05dbc-31e7-43ce-b2cd-6be16c95cbac</TaskId>
+          <InputFormat>SmartDebit</InputFormat>
+          <InputType>Transactions</InputType>
+          <OutputFormat>Zynk XML</OutputFormat>
+          <OutputType>Transactions</OutputType>
+          <IntermediateConnectType />
+          <Parameters>
+            <VariableWithDescription Description="Bank code for imported transaction" Key="BankCode" Encrypt="False" Encrypted="False">
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>1200</string>
+                </Value>
+              </ZynkObject>
+            </VariableWithDescription>
+            <VariableWithDescription Description="Nominal code for imported transactions" Key="NominalCode" Encrypt="False" Encrypted="False">
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>4000</string>
+                </Value>
+              </ZynkObject>
+            </VariableWithDescription>
+            <VariableWithDescription Description="Department for imported transactions" Key="Department" Encrypt="False" Encrypted="False">
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>0</string>
+                </Value>
+              </ZynkObject>
+            </VariableWithDescription>
+            <VariableWithDescription Description="Transaction type to import: SalesReceipt or BankReceipt" Key="TransactionType" Encrypt="False" Encrypted="False">
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>SalesReceipt</string>
+                </Value>
+              </ZynkObject>
+            </VariableWithDescription>
+            <VariableWithDescription Description="The SmartDebit field or text to use for account references" Key="AccountReference" Encrypt="False" Encrypted="False">
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>payer_reference</string>
+                </Value>
+              </ZynkObject>
+            </VariableWithDescription>
+            <VariableWithDescription Description="The SmartDebit field or text to use for references" Key="Reference" Encrypt="False" Encrypted="False">
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string>reference_number</string>
+                </Value>
+              </ZynkObject>
+            </VariableWithDescription>
+            <VariableWithDescription Description="The SmartDebit field or text to use for payment references" Key="PaymentReference" Encrypt="False" Encrypted="False">
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </ZynkObject>
+            </VariableWithDescription>
+            <VariableWithDescription Description="The SmartDebit field or text to use for details" Key="Details" Encrypt="False" Encrypted="False">
+              <ZynkObject>
+                <Type>StaticValue</Type>
+                <UseRazorEngine>False</UseRazorEngine>
+                <ReadContentsOfFile>False</ReadContentsOfFile>
+                <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                  <string />
+                </Value>
+              </ZynkObject>
+            </VariableWithDescription>
+          </Parameters>
+        </Mapping>
+      </AutoMapperTask>
+    </Task>
+    <Task type="Zynk.Connect.Sage50.ImportTransactions, Zynk.Connect.Sage50, Version=1.5.39.15603, Culture=neutral, PublicKeyToken=null">
+      <ImportTransactions>
+        <LastResult>Success</LastResult>
+        <Name>Import Transactions</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-05-09T10:02:53.1333082+01:00</LastRan>
+        <Id>d7087a64-7d14-4b74-904a-2fa6545ada64</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>transactions.xml</string>
+          </Value>
+        </InputFile>
+        <SuccessFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>success.xml</string>
+          </Value>
+        </SuccessFile>
+        <FailFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>fail.xml</string>
+          </Value>
+        </FailFile>
+        <AutoAllocateTransactions>false</AutoAllocateTransactions>
+        <PreventDuplicates>true</PreventDuplicates>
+      </ImportTransactions>
+    </Task>
+    <Task type="Zynk.Documents.XML.XsltTransform, Zynk.Documents.XML, Version=1.5.39.15601, Culture=neutral, PublicKeyToken=null">
+      <XsltTransform>
+        <LastResult>Success</LastResult>
+        <Name>Create Report</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-05-09T10:17:13.0604932+01:00</LastRan>
+        <Id>cc7d5414-5d04-4a63-a5f3-2b7396912855</Id>
+        <InputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>success.xml</string>
+          </Value>
+        </InputFile>
+        <XsltFile>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;xsl:stylesheet 
+	version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:ms="urn:schemas-microsoft-com:xslt"
+	xmlns:zynk="http://www.zynk.com"&gt;
+
+	&lt;xsl:param name="FailFile" /&gt;
+	&lt;xsl:param name="FullPath"&gt;/Company/Transactions/Transaction&lt;/xsl:param&gt;
+
+	&lt;ms:script language ="C#" implements-prefix="zynk"&gt;
+		public int CountNodes(XPathNodeIterator context, string xpath)
+		{
+			var rtnVal = 0;
+			
+			try
+			{
+				context.MoveNext();
+				rtnVal = context.Current.Select(xpath).Count;
+			} catch {}
+			
+			return rtnVal;
+		}
+
+		public string FormatDate(string data, string format)
+		{
+			var rtnVal = string.Empty;
+
+			try
+			{
+				rtnVal = DateTime.Parse(data).ToString(format);
+			}
+			catch {}
+
+			return rtnVal;
+		}
+	&lt;/ms:script&gt;
+
+	&lt;xsl:variable name="SuccessCount" select="zynk:CountNodes(., $FullPath)" /&gt;
+	&lt;xsl:variable name="FailCount" select="zynk:CountNodes(document($FailFile), $FullPath)" /&gt;
+	&lt;xsl:variable name="TotalCount" select="$SuccessCount + $FailCount" /&gt;
+
+	&lt;xsl:template match="/Company"&gt;
+
+		&lt;html&gt;
+			&lt;style type="text/CSS"&gt;
+				* {	font-family:verdana; }
+				body,td,th { 	font-size: 62.5%; }
+				h1 {font-size: 1.9em; padding: 10px; background-color: #ccc; font-weight:normal; color: #336699; font-family: Trebuchet MS}
+				h2 {font-size: 1.6em; padding: 10px; background-color: #ccc; font-weight:normal; color: #225577; font-family: Trebuchet MS}
+				h3 {font-size: 1.4em; font-weight:normal; color: #114477; font-family: Trebuchet MS}
+				h4 {font-size: 1.2em; font-weight:normal; color: #336699; font-family: Trebuchet MS}
+				h5 {font-size: 1.1em; margin-top:0; font-weight:normal; color: #336699; font-family: Trebuchet MS}
+				table {width: 100%;}  
+				td {padding: 2px; background-color: #DFDFDF;}
+				th {padding: 2px; background-color: #090; color:white;}
+				.item {padding: 2px; background-color: #EFEFEF; color: #666;}
+				.blank {padding: 2px; background-color: white; color: #666;}
+				a, h2 a:hover {text-decoration: none;}
+				ul a, p a {color: black;}
+				a:hover {text-decoration: underline;}
+				p { float: right; margin-right: 5px; font-size: 90%}
+				.description { visibility: hidden; display: none; font-size: 10px;}
+			&lt;/style&gt;
+			
+			&lt;body&gt;
+				&lt;h1&gt;&lt;a name="top"&gt;Zynk Import Report&lt;/a&gt;&lt;/h1&gt;
+
+				&lt;ul&gt;
+
+					&lt;li&gt;
+						&lt;strong&gt;&lt;xsl:value-of select="$TotalCount"/&gt;&lt;/strong&gt; Transactions Downloaded from SmartDebit
+						&lt;ul&gt;
+							&lt;li&gt;&lt;a href="#success"&gt;&lt;strong&gt;&lt;xsl:value-of select="$SuccessCount"/&gt;&lt;/strong&gt; Transactions imported&lt;/a&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;a href="#error"&gt;&lt;strong&gt;&lt;xsl:value-of select="$FailCount"/&gt;&lt;/strong&gt; Transaction with errors&lt;/a&gt;&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/li&gt;
+				&lt;/ul&gt;
+				
+				&lt;h1&gt;Detailed Report&lt;/h1&gt;
+				&lt;xsl:if test="$SuccessCount &amp;gt; 0"&gt;
+					&lt;h2&gt;&lt;a name="success"&gt;Transactions (&lt;xsl:value-of select="$SuccessCount" /&gt; Total)&lt;/a&gt;&lt;/h2&gt;
+				    &lt;table&gt;
+					    &lt;tr&gt;
+						  &lt;th align="left"&gt;Type&lt;/th&gt;
+					      &lt;th align="left"&gt;Account Reference&lt;/th&gt;
+						  &lt;th align="left"&gt;Reference&lt;/th&gt;
+						  &lt;th align="left"&gt;Date&lt;/th&gt;
+						  &lt;th align="left"&gt;Details&lt;/th&gt;
+						  &lt;th align="left"&gt;Amount&lt;/th&gt;
+					    &lt;/tr&gt;
+						&lt;xsl:for-each select="Transactions/Transaction"&gt;
+							&lt;xsl:sort select="AccountReference"/&gt;
+							&lt;tr&gt;
+								&lt;td&gt;&lt;xsl:value-of select="TransactionType"/&gt;&lt;/td&gt;
+								&lt;td&gt;&lt;xsl:value-of select="AccountReference"/&gt;&lt;/td&gt;
+								&lt;td&gt;&lt;xsl:value-of select="Reference"/&gt;&lt;/td&gt;
+								&lt;td&gt;&lt;xsl:value-of select="zynk:FormatDate(TransactionDate, 'dd/MM/yyyy')" /&gt;&lt;/td&gt;
+								&lt;td&gt;&lt;xsl:value-of select="Details"/&gt;&lt;/td&gt;
+								&lt;td&gt;&lt;xsl:value-of select="format-number(NetAmount, '0.00')"/&gt;&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/xsl:for-each&gt;
+				    &lt;/table&gt;
+					&lt;p&gt;&lt;a href="#top"&gt;Top&lt;/a&gt;&lt;/p&gt;
+				&lt;/xsl:if&gt;
+
+				&lt;xsl:if test="$FailCount &amp;gt; 0"&gt;
+					&lt;h2&gt;&lt;a name="error"&gt;Failed Transactions (&lt;xsl:value-of select="$FailCount" /&gt; Total)&lt;/a&gt;&lt;/h2&gt;
+				    &lt;table&gt;
+					    &lt;tr&gt;
+						  &lt;th align="left"&gt;Type&lt;/th&gt;
+					      &lt;th align="left"&gt;Account Reference&lt;/th&gt;
+						  &lt;th align="left"&gt;Reference&lt;/th&gt;
+						  &lt;th align="left"&gt;Date&lt;/th&gt;
+						  &lt;th align="left"&gt;Details&lt;/th&gt;
+						  &lt;th align="left"&gt;Amount&lt;/th&gt;
+						  &lt;th align="left"&gt;Errors&lt;/th&gt;
+					    &lt;/tr&gt;
+						&lt;xsl:for-each select="document($FailFile)/Company/Transactions/Transaction"&gt;
+							&lt;xsl:sort select="AccountReference"/&gt;
+							&lt;tr&gt;
+								&lt;td&gt;&lt;xsl:value-of select="TransactionType"/&gt;&lt;/td&gt;
+								&lt;td&gt;&lt;xsl:value-of select="AccountReference"/&gt;&lt;/td&gt;
+								&lt;td&gt;&lt;xsl:value-of select="Reference"/&gt;&lt;/td&gt;
+								&lt;td&gt;&lt;xsl:value-of select="zynk:FormatDate(TransactionDate, 'dd/MM/yyyy')" /&gt;&lt;/td&gt;
+								&lt;td&gt;&lt;xsl:value-of select="Details"/&gt;&lt;/td&gt;
+								&lt;td&gt;&lt;xsl:value-of select="format-number(NetAmount, '0.00')"/&gt;&lt;/td&gt;
+								&lt;td&gt;
+									&lt;xsl:call-template name="OutputErrors"&gt;
+										&lt;xsl:with-param name="errors" select="Errors/Error" /&gt;
+									&lt;/xsl:call-template&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/xsl:for-each&gt;
+				    &lt;/table&gt;
+					&lt;p&gt;&lt;a href="#top"&gt;Top&lt;/a&gt;&lt;/p&gt;
+				&lt;/xsl:if&gt;
+
+			&lt;/body&gt;
+		&lt;/html&gt;
+	&lt;/xsl:template&gt;
+
+	&lt;xsl:template name="OutputErrors"&gt;
+		&lt;xsl:param name="errors" /&gt;
+
+		&lt;xsl:if test="count($errors) &amp;gt; 0"&gt;
+			&lt;table&gt;
+				&lt;xsl:for-each select="$errors"&gt;
+					&lt;tr&gt;
+						&lt;td&gt;&lt;xsl:value-of select="Description" /&gt;&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/xsl:for-each&gt;
+			&lt;/table&gt;
+		&lt;/xsl:if&gt;
+	&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</string>
+          </Value>
+        </XsltFile>
+        <OutputFile>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>report.html</string>
+          </Value>
+        </OutputFile>
+        <Parameters>
+          <Variable Key="FailFile" Encrypt="False" Encrypted="False">
+            <ZynkObject>
+              <Type>FileValue</Type>
+              <UseRazorEngine>False</UseRazorEngine>
+              <ReadContentsOfFile>False</ReadContentsOfFile>
+              <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <string>fail.xml</string>
+              </Value>
+            </ZynkObject>
+          </Variable>
+        </Parameters>
+      </XsltTransform>
+    </Task>
+    <Task type="Zynk.Internet.Email.SendEmail, Zynk.Internet.Email, Version=1.5.39.15602, Culture=neutral, PublicKeyToken=null">
+      <SendEmail>
+        <LastResult>Unknown</LastResult>
+        <Name>Send Email</Name>
+        <Enabled>false</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>1753-01-01T00:00:00</LastRan>
+        <Id>4bf6dad4-c271-4123-9836-464fd381bd76</Id>
+        <From>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </From>
+        <To>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </To>
+        <Subject>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Subject>
+        <Body>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Body>
+        <Attachments>
+          <Type>ListValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </Attachments>
+        <SmtpServer>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>127.0.0.1</string>
+          </Value>
+        </SmtpServer>
+        <SmtpUsername>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </SmtpUsername>
+        <SmtpPassword>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string />
+          </Value>
+        </SmtpPassword>
+        <Port>25</Port>
+        <EnableSSL>false</EnableSSL>
+        <HTMLBody>false</HTMLBody>
+        <Timeout>
+          <Type>StaticValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>6000</string>
+          </Value>
+        </Timeout>
+      </SendEmail>
+    </Task>
+    <Task type="Zynk.Filesystem.ArchiveWorkflowData, Zynk.Filesystem, Version=1.5.39.15603, Culture=neutral, PublicKeyToken=null">
+      <ArchiveWorkflowData>
+        <LastResult>Success</LastResult>
+        <Name>Archive Workflow Data</Name>
+        <Enabled>true</Enabled>
+        <BreakOnFailure>true</BreakOnFailure>
+        <LastRan>2013-05-09T10:03:30.9204695+01:00</LastRan>
+        <Id>f58b8977-89f2-46f0-852b-8dd89375904c</Id>
+        <ArchiveDirectory>
+          <Type>FileValue</Type>
+          <UseRazorEngine>False</UseRazorEngine>
+          <ReadContentsOfFile>False</ReadContentsOfFile>
+          <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <string>Archive</string>
+          </Value>
+        </ArchiveDirectory>
+      </ArchiveWorkflowData>
+    </Task>
+  </Tasks>
+  <Schedule>
+    <Occurence>Never</Occurence>
+    <LastRun>0001-01-01T00:00:00</LastRun>
+    <NextRun>0001-01-01T00:00:00</NextRun>
+    <OnceDate>0001-01-01T00:00:00</OnceDate>
+    <StartDate>0001-01-01T00:00:00</StartDate>
+    <EndDate>0001-01-01T00:00:00</EndDate>
+    <OnceTime>0001-01-01T00:00:00</OnceTime>
+    <StartTime>0001-01-01T00:00:00</StartTime>
+    <EndTime>0001-01-01T00:00:00</EndTime>
+    <Minutes>0</Minutes>
+    <Name />
+    <ApplicationName />
+    <Parameters />
+    <Comment />
+    <UseDomainAccount>false</UseDomainAccount>
+    <NoAccountMessage>Unable to establish existence of the account specified.</NoAccountMessage>
+  </Schedule>
+  <Id>de1241a7-843d-4b00-9699-9f6ca4d516e6</Id>
+  <Variables />
+  <ContextVariables />
+  <Name>SmartDebit to Sage 50</Name>
+  <Description />
+  <Documentation />
+  <ShowHelp>false</ShowHelp>
+  <UseMutex>false</UseMutex>
+  <EmailReport>Never</EmailReport>
+  <EmailReportAddresses />
+  <EmailLog>OnFailure</EmailLog>
+  <Version>1.5.39</Version>
+</Workflow>
