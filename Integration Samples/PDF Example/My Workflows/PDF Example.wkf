@@ -1,22 +1,25 @@
 <?xml version="1.0"?>
 <Workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <LastRan>2015-02-23T17:10:32.1170834+00:00</LastRan>
+  <ShouldResume>true</ShouldResume>
   <LastResult>Success</LastResult>
   <Tasks>
-    <Task type="Zynk.Documents.PDF.HtmlToPdfTask, Zynk.Documents.PDF, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+    <Task type="Zynk.Documents.PDF.HtmlToPdfTask, Zynk.Documents.PDF, Version=2.4.0.23958, Culture=neutral, PublicKeyToken=null">
       <HtmlToPdfTask>
         <LastResult>Success</LastResult>
         <Name>HTML To PDF</Name>
         <Enabled>true</Enabled>
         <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
         <LastRan>2015-02-23T16:53:55.6897059+00:00</LastRan>
         <Id>fa0b3bbf-41a6-40a4-8587-a9a8167a8bdb</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
         <InputURI>
           <Type>UriValue</Type>
           <UseRazorEngine>False</UseRazorEngine>
           <ReadContentsOfFile>False</ReadContentsOfFile>
           <Value type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-            <string>http://help.zynk.com/articles/tutorials/generating-pdf-documents</string>
+            <string>http://workflow.zynk.com/article/642-using-pdf-connector</string>
           </Value>
         </InputURI>
         <OutputFile>
@@ -41,14 +44,16 @@
         <MarginBottom>40</MarginBottom>
       </HtmlToPdfTask>
     </Task>
-    <Task type="Zynk.Documents.PDF.ExcelToPdfTask, Zynk.Documents.PDF, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+    <Task type="Zynk.Documents.PDF.ExcelToPdfTask, Zynk.Documents.PDF, Version=2.4.0.23958, Culture=neutral, PublicKeyToken=null">
       <ExcelToPdfTask>
         <LastResult>Success</LastResult>
         <Name>Excel To PDF</Name>
         <Enabled>true</Enabled>
         <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
         <LastRan>2015-02-23T17:00:29.5491403+00:00</LastRan>
         <Id>f3499a73-d8e0-4aed-adfa-89433f1d578a</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
         <InputFile>
           <Type>FileValue</Type>
           <UseRazorEngine>False</UseRazorEngine>
@@ -67,14 +72,16 @@
         </OutputFile>
       </ExcelToPdfTask>
     </Task>
-    <Task type="Zynk.Documents.PDF.WordToPdfTask, Zynk.Documents.PDF, Version=1.6.19.27971, Culture=neutral, PublicKeyToken=null">
+    <Task type="Zynk.Documents.PDF.WordToPdfTask, Zynk.Documents.PDF, Version=2.4.0.23958, Culture=neutral, PublicKeyToken=null">
       <WordToPdfTask>
         <LastResult>Success</LastResult>
         <Name>Word To PDF</Name>
         <Enabled>true</Enabled>
         <BreakOnFailure>true</BreakOnFailure>
+        <CanResume>true</CanResume>
         <LastRan>2015-02-23T17:10:31.9357708+00:00</LastRan>
         <Id>5355ed8e-3c0a-48d5-8986-445c2e302656</Id>
+        <DebugLoggingEnabled>false</DebugLoggingEnabled>
         <InputFile>
           <Type>FileValue</Type>
           <UseRazorEngine>False</UseRazorEngine>
@@ -123,9 +130,10 @@
   <EmailReport>Never</EmailReport>
   <EmailReportAddresses />
   <EmailLog>OnFailure</EmailLog>
-  <Version>1.6.19</Version>
+  <Version>2.4.0</Version>
   <LogHouseKeeping>
     <Type>NumberOfDays</Type>
     <Number>90</Number>
   </LogHouseKeeping>
+  <WorkingDirectory>C:\ProgramData\Zynk Software\Zynk\2.0\Data\Samples\PDF Example</WorkingDirectory>
 </Workflow>
