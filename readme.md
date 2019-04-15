@@ -13,7 +13,7 @@ These example files and scripts in this repository are provided as part of the Z
 
 If you require our developers to customise these scripts in any way please contact our sales team on 0845 123 2920 and ask them to provide an estimate for the work.
 
-All thse scripts form part of our Zynk product and are provided on an as-is basis without any warranty implied as to their suitability for your specific project. They are Copyright 2012, Internetware Limited and are subject to the standard Zynk End User License agreement which can be viewed at www.internetware.co.uk/eula
+All thse scripts form part of our Zynk product and are provided on an as-is basis without any warranty implied as to their suitability for your specific project. They are Copyright 2012, Internetware Limited and are subject to the standard Zynk End User License agreement which can be viewed at https://zynk.com/eula/
 
 Permission to make derivitive works from these files is permitted provided that all copyright notices stay intact.
 
