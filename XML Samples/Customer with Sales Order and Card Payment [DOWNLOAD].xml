@@ -105,9 +105,6 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       </Carriage>
       <TakenBy>Connect Web Order</TakenBy>
       <SettlementDays>0</SettlementDays>
-      <GlobalNominalCode />
-      <GlobalDetails />
-      <GlobalTaxCode>0</GlobalTaxCode>
       <PaymentRef>VISA</PaymentRef>
       <PaymentAmount>234.88</PaymentAmount>
       <BankAccount>1200</BankAccount>
