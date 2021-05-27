@@ -103,7 +103,7 @@
           <TaxRate>20</TaxRate>
           <TaxCode>1</TaxCode>
           <NominalCode>4000</NominalCode>
-          <Department>1200</Department>
+          <Department>1</Department>
           <Type>Stock</Type>
         </Item>
         <Item>
@@ -114,7 +114,7 @@
           <TaxRate>20</TaxRate>
           <TaxCode>1</TaxCode>
           <NominalCode>4000</NominalCode>
-          <Department>1200</Department>
+          <Department>1</Department>
           <Type>Stock</Type>
         </Item>
       </InvoiceItems>
@@ -126,7 +126,7 @@
         <TaxRate>20</TaxRate>
         <TaxCode>1</TaxCode>
         <NominalCode>4000</NominalCode>
-        <Department>1200</Department>
+        <Department>1</Department>
         <Type>NonStock</Type>
       </Carriage>
       <InvoiceType>ProductInvoice</InvoiceType>
@@ -136,7 +136,7 @@
       <GlobalNominalCode />
       <GlobalDetails />
       <GlobalTaxCode>1</GlobalTaxCode>
-      <GlobalDepartment>1200</GlobalDepartment>
+      <GlobalDepartment>1</GlobalDepartment>
     </Invoice>
   </Invoices>
 </Company>
